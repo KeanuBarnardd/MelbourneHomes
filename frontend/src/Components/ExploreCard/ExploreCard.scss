@@ -1,0 +1,13 @@
+.explore__card{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 0.0625rem 0.25rem 0px;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+  }
+}

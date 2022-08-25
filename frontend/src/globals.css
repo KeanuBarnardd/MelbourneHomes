@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*Import this file into your project into the MAIN index component, so it can be accessed by every child. */
+
+:root {
+  --font-base: "DM Sans", sans-serif;
+  --p-0: 0.8rem;
+  --p-1: 1rem;
+  --p-2: 1.5rem;
+  --p-3: 3rem;
+  --gap-0: 10px;
+  --gap-1: 20px;
+  --gap-2: 40px;
+  --gap-3: 60px;
+  --pad-btn-1-w: 1.7rem;
+  --pad-btn-1-h: 0.8rem;
+
+  --fs-1: 0.9rem;
+  --fs-2: 1.2rem;
+
+  --fs-header-1: 5.6rem;
+
+  /*Custom-Main Colours to be changed to suit theme for website.*/
+  --white-color: #fff;
+  --primary-color: #2a2829;
+  --secondary-color: rgb(54, 118, 202);
+  /*rgb(255, 126, 5);*/
+
+  /* #81352b */
+  --accent-color: white;
+  --gray-color: grey;
+  --black-color: black;
+
+  /*Set Colours*/
+  --grey-100: #e9ecef;
+  --grey-200: #dee2e6;
+  --grey-300: #adb5bd;
+  --grey-400: #6c757d;
+  --grey-500: #495057;
+  --grey-600: #495057;
+  --grey-700: #343a40;
+  --black-100: #212529;
+
+  --green-100: #d9ed92;
+  --green-200: #b5e48c;
+  --green-300: #99d98c;
+  --green-400: #76c893;
+  --green-500: #52b69a;
+  --green-600: #358600;
+
+  /*Timers and Animations*/
+  --timer-short: 0.2s;
+  --anim-slid-up: translateY(-4px);
+  /*Border Stylign*/
+  --border-1: 2px;
+  --border-w: 2px;
+  --shadow-soft: 0 3px 10px rgba(3, 0, 0, 0.205);
+
+  /*Screen sizes*/
+  --screen-1: 1000px;
+  --screen-2: 539px;
+
+  --screen-mobile: 600px;
+
+  /*Box Shadows*/
+  --box-shadow-1: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  --box-shadow-2: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --box-shadow-3: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  --box-shadow-4: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  --box-shadow-5: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  --box-shadow-6: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  --box-shadow-7: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  --box-shadow-8: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  --box-shadow-9: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  --box-shadow-10: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  --box-shadow-11: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  --box-shadow-12: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  --box-shadow-13: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+
+  font-family: 'Nunito', sans-serif;
+}
+
+button {
+  cursor: pointer;
+  transition: all ease-in-out var(--timer-short);
+   font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+}

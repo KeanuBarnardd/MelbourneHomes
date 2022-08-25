@@ -1,0 +1,159 @@
+.app{
+  padding-top: 85px;
+}
+
+// Use this to set all the general styling for your application.
+.app__container {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  padding: 7rem 0;
+}
+
+.mobile-app__container {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  padding: 7rem 0;
+
+  @media screen and (max-width: 600px) {
+    min-height: auto;
+    padding: 4rem 0;
+  }
+}
+
+.page__content{
+  display: flex;
+  padding: 4rem 0;
+  flex-direction: column;
+}
+.content-title{
+  margin-bottom: 1rem;
+  color: var(--grey-500);
+  span{
+    background-color: rgba(28, 44, 139, 0.089);
+    padding: 0 0.3rem;
+    border-radius: 10px;
+    color: var(--secondary-color);
+  }
+}
+
+.app__container-width {
+  width: 95%;
+  max-width: 1200px;
+  // Smaller screen sizes make it 100%
+}
+
+.app__flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app__whitebg {
+  color: var(--white-color);
+}
+
+.app__primarybg {
+  color: var(--primary-color);
+}
+
+hr {
+  width: 100%;
+  max-width: 700px;
+  margin: 1rem 0 1rem 0;
+  border: 0;
+  border-top: 1px solid rgb(211, 210, 210);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.head-text {
+  font-size: 2.75rem;
+  font-weight: 800;
+  text-align: center;
+  // Colour here
+  text-transform: capitalize;
+
+  span {
+    color: var(--secondary-color);
+  }
+
+  @media screen and (min-width: 2000px) {
+    font-size: 4rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 2rem;
+  }
+}
+
+// .p-text {
+//   font-size: 0.8rem;
+//   text-align: left;
+//   color: var(--gray-color);
+//   line-height: 1.5;
+
+//   @media screen and (min-width: 2000px) {
+//     font-size: 1.75rem;
+//   }
+// }
+
+.brown__button {
+  background-color: var(--primary-color);
+  color: white;
+  border: 2px solid var(--primary-color);
+
+  &:hover {
+    border-color: #1f1d1e;
+    color: #1f1d1e;
+    background-color: white;
+  }
+}
+
+.white__button {
+  background-color: white;
+  width: 100%;
+  max-width: 230px;
+  padding: 0.7rem;
+  font-size: 1rem;
+  font-family: "Titillium Web", sans-serif;
+  border: none;
+  transition: all ease-in-out var(--timer-short);
+  &:hover {
+    background-color: rgb(185, 185, 185);
+  }
+}
+
+.primary-col {
+  color: var(--primary-color);
+}
+
+.secondary-col {
+  color: var(--secondary-color);
+}
+
+.primary-bg {
+  background-color: var(--primary-color);
+}
+
+.secondary-bg {
+  background-color: var(--secondary-color);
+}
+
+.section-h1 {
+  font-size: 2.5rem;
+  margin-top: 5rem;
+  color: white;
+}
+
+
+.p-text {
+  color: var(--grey-500);
+  font-size: 1rem;
+  font-family: "Titillium Web", sans-serif;
+}

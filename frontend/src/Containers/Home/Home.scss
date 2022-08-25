@@ -1,0 +1,34 @@
+.header {
+  height: 70vh;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  padding-top: 3rem;
+}
+
+.explore__buttons-container {
+  display: flex;
+  gap: 15px;
+
+  .explore-btn {
+    padding: 0.5rem 0.8rem;
+    border: 1px solid var(--grey-300);
+    border-radius: 50px;
+    font-size: 1rem;
+    background-color: white;
+    font-weight: 500;
+    color: var(--grey-400);
+  }
+
+  .explore-btn.active {
+    border-color: var(--grey-500);
+    color: var(--grey-500);
+  }
+}
+
+.explore__grid {
+  display: grid;
+  gap: 25px;
+  margin-top: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
