@@ -26,9 +26,100 @@
   }
 }
 
+.dreamhouse__container {
+  width: 100%;
+  border: 15px;
+  display: flex;
+  gap: 30px;
+  background-color: var(--grey-000);
+  border-radius: 15px;
+  box-shadow: var(--box-shadow-3);
+  img {
+    width: 100%;
+    max-width: 500px;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+  }
+
+  .dreamhouse__container-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      color: var(--grey-500);
+      margin-bottom: 1.5rem;
+      span {
+        color: var(--secondary-color);
+      }
+    }
+    h1{
+      font-size: 2.2rem;
+      color: var(--grey-700);
+      margin-bottom: 0.8rem;
+    }
+    p{
+      margin-bottom: 1rem;
+      color: var(--grey-500);
+      font-size: 1rem;
+    }
+    button{
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 0.5rem 1.5rem;
+      background-color: var(--grey-400);
+      border-radius: 15px;
+      border: none;
+      color: white;
+      transition: all ease-in-out var(--timer-short);
+      &:hover{
+        background-color: var(--grey-500);
+      }
+    }
+  }
+
+  @media screen and (max-width:930px) {
+    .dreamhouse__container-content{
+
+      h2{
+        font-size: 1.2rem;
+      }
+      h1{
+        font-size: 1.5rem;
+      }
+    }
+   
+  }
+
+  @media screen and (max-width:600px) {
+    flex-direction: column;
+    img{
+      max-width: 100%;
+      border-top-right-radius: 15px;
+      border-bottom-left-radius: 0;
+    }
+
+    .dreamhouse__container-content{
+      align-items: center;
+      padding-bottom: 1.5rem;
+      h1{
+        //text-align: center;
+        line-height: 30px;
+        font-size: 1.5rem;
+      }
+      h2{
+        font-size: 2rem;
+      } 
+    }
+  }
+}
+
 .explore__grid {
-  display: grid;
-  gap: 25px;
   margin-top: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.house__grid{
+  display: grid;
+	gap:10px; 
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
