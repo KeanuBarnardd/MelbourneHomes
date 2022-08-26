@@ -6,6 +6,7 @@ import ExploreGrid from "../ExploreGrid/ExploreGrid";
 import { Link } from "react-router-dom";
 import { HouseCard } from "../../Components";
 
+
 const Home = () => {
   return (
     <div className="app__flex">
@@ -33,7 +34,7 @@ const Home = () => {
               <h2>
                 Melbourne<span>Homes</span>
               </h2>
-              <h1>Your dream home is one swearch away.</h1>
+              <h1>Your dream home is one search away.</h1>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae autem nihil dolores
                 in, itaque laudantium voluptate?{" "}
@@ -49,7 +50,7 @@ const Home = () => {
             Top <span>Features</span> this week
           </h1>
           <div className="house__grid">
-            <HouseCard/>
+          <HouseCard postedAgo={"3"} sellType="Rent" title="13 Averson Road" price={500} payType="Week"/>
           </div>
         </div>
       </div>
