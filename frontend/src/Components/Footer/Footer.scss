@@ -1,0 +1,118 @@
+// Variables
+$text-col: var(--grey-500);
+$input-padding: 0.4rem;
+$input-radius: 10px;
+.footer__container {
+  background-color: var(--grey-000);
+  margin-top: 3rem;
+  .navbar__content {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+    .navbar__grid {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      
+      .navbar__content-container {
+        h2 {
+          margin-bottom: 0.5rem;
+          color: $text-col;
+        }
+        ul {
+          li {
+            list-style: none;
+            color: $text-col;
+            a {
+              text-decoration: none;
+              color: $text-col;
+            }
+          }
+        }
+        .input-container {
+          width: 100%;
+          margin-bottom: 1rem;
+          input,
+          button {
+            padding: $input-padding;
+            border: none;
+            font-size: 1rem;
+          }
+          input {
+            border-top-left-radius: $input-radius;
+            //border-bottom-left-radius: $input-radius;
+            padding-left: 0.5rem;
+          }
+          button {
+            background-color: var(--secondary-color);
+            font-weight: bold;
+            color: white;
+            border-bottom-right-radius: $input-radius;
+          }
+        }
+      }
+      .socials__container {
+        display: flex;
+        gap: 5px;
+        button {
+          color: var(--grey-500);
+          background-color: var(--shadow-color);
+          border: none;
+          display: flex;
+          padding: 5px;
+          border-radius: 50px;
+          &:hover{
+            background-color: var(--secondary-color);
+            color: white;
+          }
+          .socials-icon {
+            font-size: 1.7rem;
+          }
+        }
+      }
+    }
+    .navbar__bottom-container {
+      margin-top: 1.2rem;
+      h3 {
+        span {
+          color: var(--secondary-color);
+        }
+      }
+
+      p,
+      h3 {
+        text-align: center;
+      }
+      p{
+        color: var(--grey-400);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+    .navbar__content {
+      .navbar__grid {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        .navbar__content-container {
+          h2{
+            font-size: 1rem;
+          }
+          ul {
+            li {
+              font-size: 0.9rem;
+            }
+          }
+        }
+
+        .socials__container{
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

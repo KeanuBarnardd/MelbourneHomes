@@ -1,118 +1,134 @@
-.header {
-  height: 70vh;
-  background-position: center;
-  background-size: cover;
-  border-radius: 20px;
-  padding-top: 3rem;
-}
 
-.explore__buttons-container {
+
+.home{
   display: flex;
-  gap: 15px;
+  flex-direction: column;
 
-  .explore-btn {
-    padding: 0.5rem 0.8rem;
-    border: 1px solid var(--grey-300);
-    border-radius: 50px;
-    font-size: 1rem;
-    background-color: white;
-    font-weight: 500;
-    color: var(--grey-400);
-  }
+  .header {
+    height: 70vh;
+    background-position: center;
+    background-size: cover;
 
-  .explore-btn.active {
-    border-color: var(--grey-500);
-    color: var(--grey-500);
-  }
-}
-
-.dreamhouse__container {
-  width: 100%;
-  border: 15px;
-  display: flex;
-  gap: 30px;
-  background-color: var(--grey-000);
-  border-radius: 15px;
-  box-shadow: var(--box-shadow-3);
-  img {
+    padding-top: 3rem;
     width: 100%;
-    max-width: 500px;
-    border-top-left-radius: 16px;
-    border-bottom-left-radius: 16px;
-  }
-
-  .dreamhouse__container-content {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    h2 {
-      color: var(--grey-500);
-      margin-bottom: 1.5rem;
-      span {
-        color: var(--secondary-color);
-      }
-    }
     h1{
-      font-size: 2.2rem;
-      color: var(--grey-700);
-      margin-bottom: 0.8rem;
-    }
-    p{
-      margin-bottom: 1rem;
-      color: var(--grey-500);
-      font-size: 1rem;
-    }
-    button{
-      font-size: 1rem;
-      font-weight: bold;
-      padding: 0.5rem 1.5rem;
-      background-color: var(--grey-400);
-      border-radius: 15px;
-      border: none;
+      text-align: center;
       color: white;
-      transition: all ease-in-out var(--timer-short);
-      &:hover{
-        background-color: var(--grey-500);
-      }
+      text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.123);
+      margin-bottom: 1.2rem;
+      margin-top: 2rem;
     }
   }
-
-  @media screen and (max-width:930px) {
-    .dreamhouse__container-content{
-
-      h2{
-        font-size: 1.2rem;
-      }
-      h1{
-        font-size: 1.5rem;
-      }
+  
+  .explore__buttons-container {
+    display: flex;
+    gap: 15px;
+  
+    .explore-btn {
+      padding: 0.5rem 0.8rem;
+      border: 1px solid var(--grey-300);
+      border-radius: 50px;
+      font-size: 1rem;
+      background-color: white;
+      font-weight: 500;
+      color: var(--grey-400);
     }
-   
+  
+    .explore-btn.active {
+      border-color: var(--grey-500);
+      color: var(--grey-500);
+    }
   }
-
-  @media screen and (max-width:600px) {
-    flex-direction: column;
-    img{
-      max-width: 100%;
-      border-top-right-radius: 15px;
-      border-bottom-left-radius: 0;
+  
+  .dreamhouse__container {
+    width: 100%;
+    border: 15px;
+    display: flex;
+    gap: 30px;
+    background-color: var(--grey-000);
+    border-radius: 15px;
+    box-shadow: var(--box-shadow-3);
+    img {
+      width: 100%;
+      max-width: 500px;
+      border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
     }
-
-    .dreamhouse__container-content{
-      align-items: center;
-      padding-bottom: 1.5rem;
-      h1{
-        //text-align: center;
-        line-height: 30px;
-        font-size: 1.5rem;
+  
+    .dreamhouse__container-content {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h2 {
+        color: var(--grey-500);
+        margin-bottom: 1.5rem;
+        span {
+          color: var(--secondary-color);
+        }
       }
-      h2{
-        font-size: 2rem;
-      } 
+      h1{
+        font-size: 2.2rem;
+        color: var(--grey-700);
+        margin-bottom: 0.8rem;
+      }
+      p{
+        margin-bottom: 1rem;
+        color: var(--grey-500);
+        font-size: 1rem;
+      }
+      button{
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 0.5rem 1.5rem;
+        background-color: var(--grey-400);
+        border-radius: 15px;
+        border: none;
+        color: white;
+        transition: all ease-in-out var(--timer-short);
+        &:hover{
+          background-color: var(--grey-500);
+        }
+      }
+    }
+  
+    @media screen and (max-width:930px) {
+      .dreamhouse__container-content{
+  
+        h2{
+          font-size: 1.2rem;
+        }
+        h1{
+          font-size: 1.5rem;
+        }
+      }
+     
+    }
+  
+    @media screen and (max-width:600px) {
+      flex-direction: column;
+      img{
+        max-width: 100%;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0;
+      }
+  
+      .dreamhouse__container-content{
+        align-items: center;
+        padding-bottom: 1.5rem;
+        h1{
+          //text-align: center;
+          line-height: 30px;
+          font-size: 1.5rem;
+        }
+        h2{
+          font-size: 2rem;
+        } 
+      }
     }
   }
 }
+
 
 .explore__grid {
   margin-top: 1.5rem;

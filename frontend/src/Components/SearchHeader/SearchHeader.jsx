@@ -6,12 +6,12 @@ import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import BedIcon from "@mui/icons-material/Bed";
 import ShowerIcon from "@mui/icons-material/Shower";
 import TimeToLeaveIcon from "@mui/icons-material/TimeToLeave";
+import { Link } from "react-router-dom";
 const SearchHeader = () => {
   const [isRent, setIsRent] = useState(false);
 
   return (
     <div className="search__header-form">
-
       <div className="select__section">
         <button
           onClick={() => setIsRent(false)}
@@ -83,5 +83,3 @@ const SearchHeader = () => {
 };
 
 export default SearchHeader;
-
-//location, Price(min-max), Sqfeet, Bedrooms, bathrooms, garage,

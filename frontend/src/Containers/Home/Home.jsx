@@ -6,27 +6,58 @@ import ExploreGrid from "../ExploreGrid/ExploreGrid";
 import { Link } from "react-router-dom";
 import { HouseCard } from "../../Components";
 
-
 const Home = () => {
   return (
-    <div className="app__flex">
+    <div className="app__flex home">
+      <header className="header" style={{ backgroundImage: `url(${images.header1})` }}>
+        <h1>Find a home with us </h1>
+        <SearchHeader />
+      </header>
       <div className="app__container-width">
-        <header className="header" style={{ backgroundImage: `url(${images.header1})` }}>
-          <SearchHeader />
-        </header>
         <div className="page__content">
           <h1 className="content-title">
-            {" "}
-            <span>Exploring</span> all things property
+            Top <span>Features</span> this week
           </h1>
-          <div className="explore__buttons-container">
-            <button className="explore-btn active">Buying</button>
-            <button className="explore-btn">Renting</button>
-            <button className="explore-btn">Selling</button>
-            <button className="explore-btn">Researching</button>
+          <div className="house__grid">
+            <HouseCard
+              postedAgo={"3"}
+              sellType="Rent"
+              title="13 Averson Road"
+              price={500}
+              payType="Week"
+              image={images.house1_1}
+              details="Beautiful water front city house with a dream view."
+              square={5000}
+              beds={2}
+              baths={2}
+            />
+            <HouseCard
+              postedAgo={"3"}
+              sellType="Rent"
+              title="13 Averson Road"
+              price={500}
+              payType="Week"
+              image={images.house1_2}
+              details="Beautiful water front city house with a dream view."
+              square={5000}
+              beds={2}
+              baths={2}
+            />
+            <HouseCard
+              postedAgo={"3"}
+              sellType="Rent"
+              title="13 Averson Road"
+              price={500}
+              payType="Week"
+              image={images.house1_3}
+              details="Beautiful water front city house with a dream view."
+              square={5000}
+              beds={2}
+              baths={2}
+            />
           </div>
-          <ExploreGrid />
         </div>
+
         <div className="page__content">
           <div className="dreamhouse__container">
             <img src={images.dreamHomeImage} alt="" />
@@ -45,15 +76,19 @@ const Home = () => {
             </div>
           </div>
         </div>
+
         <div className="page__content">
           <h1 className="content-title">
-            Top <span>Features</span> this week
+            {" "}
+            <span>Exploring</span> all things property
           </h1>
-          <div className="house__grid">
-          <HouseCard postedAgo={"3"} sellType="Rent" title="13 Averson Road" price={500} payType="Week" image={images.house1_1} details="Beautiful water front city house with a dream view." square={5000} beds={2} baths={2}/>
-          <HouseCard postedAgo={"3"} sellType="Rent" title="13 Averson Road" price={500} payType="Week" image={images.house1_2} details="Beautiful water front city house with a dream view." square={5000} beds={2} baths={2}/>
-          <HouseCard postedAgo={"3"} sellType="Rent" title="13 Averson Road" price={500} payType="Week" image={images.house1_3} details="Beautiful water front city house with a dream view." square={5000} beds={2} baths={2}/>
+          <div className="explore__buttons-container">
+            <button className="explore-btn active">Buying</button>
+            <button className="explore-btn">Renting</button>
+            <button className="explore-btn">Selling</button>
+            <button className="explore-btn">Researching</button>
           </div>
+          <ExploreGrid />
         </div>
       </div>
     </div>
