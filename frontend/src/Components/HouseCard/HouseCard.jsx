@@ -11,7 +11,7 @@ import CameraAltIcon from "@mui/icons-material/CameraAlt";
 const HouseCard = ({
   price,
   title,
-  location,
+  details,
   square,
   beds,
   baths,
@@ -25,44 +25,46 @@ const HouseCard = ({
     <div className="housecard__container">
       <div className="housecard__img" style={{ backgroundImage: `url(${image})` }}>
         <div className="image__top">
-          <p>{postedAgo} Days Ago</p>
-          <p>For {sellType}</p>
+          <p className="image-tag">{postedAgo} Days Ago</p>
+          <p className="image-tag">For {sellType}</p>
         </div>
         <div className="image__bottom">
-          <p>
+          <button className="image-tag">
             <CameraAltIcon /> {totalImages}
-          </p>
+          </button>
         </div>
       </div>
-      <div className="housecard__container-top-row-details">
-        <p className="price">
-          $ {price}/{payType}
-        </p>
-        <div className="interactions__container">
-          <button className="interaction__btn">
-            <PhoneIcon />
-          </button>
-          <button className="interaction__btn">
-            <FavoriteIcon />
-          </button>
-          <button className="interaction__btn">
-            <EmailIcon />
-          </button>
+      <div className="housecard-content">
+        <div className="housecard__container-top-row-details">
+          <p className="price">
+            ${price}/{payType}
+          </p>
+          <div className="interactions__container">
+            <button className="interaction__btn">
+              <PhoneIcon className="interaction__btn-logo" />
+            </button>
+            <button className="interaction__btn">
+              <FavoriteIcon className="interaction__btn-logo" />
+            </button>
+            <button className="interaction__btn">
+              <EmailIcon className="interaction__btn-logo" />
+            </button>
+          </div>
         </div>
         <h1>{title}</h1>
-        <p>{location}</p>
+        <p>{details}</p>
         <div className="housecard__grid">
           <p>
-            <SquareFootIcon /> {square}
+            <SquareFootIcon className="" />{square} Sqft
           </p>
           <p>
-            <BedIcon /> {beds}
+            <BedIcon className="" />{beds} Beds
           </p>
           <p>
-            <ShowerIcon /> {baths}
+            <ShowerIcon className="" />{baths} Baths
           </p>
         </div>
-        <div className="housecard__buttons-contain">
+        <div className="housecard__buttons-container">
           <button>Request Info</button>
           <button>View Details</button>
         </div>

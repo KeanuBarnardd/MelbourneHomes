@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home, Contact, Listing, Services, Agents, Featured } from "./Containers/index";
-import { Navbar } from "./Components/index";
+import { Navbar, Footer } from "./Components/index";
 import "./App.scss";
 
 const App = () => {
@@ -18,6 +18,7 @@ const App = () => {
           <Route path="/featured" element={<Featured />} />
         </Routes>
       </div>
+      <Footer/>
     </BrowserRouter>
   );
 };
