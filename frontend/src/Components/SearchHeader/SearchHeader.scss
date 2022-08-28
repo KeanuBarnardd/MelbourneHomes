@@ -43,14 +43,14 @@
     select {
       width: 100%;
       background-color: var(--grey-100);
-      background-color: white;
       border: none;
       font-size: 1rem;
-      padding: 0.2rem;
+      padding: 0.4rem 0.7rem;
       padding-left: 2rem;
-      border: 1px solid var(--grey-300);
       border-radius: 8px;
       color: var(--grey-400);
+      display: flex;
+      align-items: center;
     }
     .input-icon {
       top: 26px;

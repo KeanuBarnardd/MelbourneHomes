@@ -8,14 +8,24 @@ const Navbar = () => {
     <nav className="app__flex">
       <div className="navbar__content app__container-width">
         <Link className="link" to="/">
-          <h1><span>Melbourne</span>Homes</h1>
+          <h1>
+            <span>Melbourne</span>Homes
+          </h1>
         </Link>
 
         <div className="navbar__links-container">
-          <NavLink className="navlink"  to="/">Home</NavLink>
-          <NavLink className="navlink" to="listings">Listings</NavLink>
-          <NavLink className="navlink" to="services">Services</NavLink>
-          <NavLink className="navlink" to="contact">Contact</NavLink>
+          <NavLink className="navlink" to="/">
+            Home
+          </NavLink>
+          <NavLink className="navlink" to="listings">
+            Listings
+          </NavLink>
+          <NavLink className="navlink" to="services">
+            Services
+          </NavLink>
+          <NavLink className="navlink" to="contact">
+            Contact
+          </NavLink>
         </div>
         <div className="navbar__buttons-container">
           <button>
