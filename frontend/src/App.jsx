@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home, Contact, Listing, Services, Agents, Featured } from "./Containers/index";
+import { Home, Contact, Listing, Services, Agents, Featured, About } from "./Containers/index";
 import { Navbar, Footer } from "./Components/index";
 import "./App.scss";
 
@@ -16,6 +16,7 @@ const App = () => {
           <Route path="/services" element={<Services />} />
           <Route path="/agents" element={<Agents />} />
           <Route path="/featured" element={<Featured />} />
+          <Route path="/about" element={<About/>}/>
         </Routes>
       </div>
       <Footer/>

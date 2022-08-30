@@ -1,0 +1,6 @@
+.about__team-grid{
+  display: grid;
+	gap:35px; 
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-top: 2rem;
+}

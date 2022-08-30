@@ -1,0 +1,26 @@
+.agent__card-container {
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: var(--box-shadow-3);
+  position: relative;
+
+  img {
+    width: 100%;
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    border-radius: 15px;
+    border: 1px solid var(--grey-000);
+  }
+
+  .agent__position{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+    padding: 0.5rem;
+    top: 72%;
+   
+  }
+}

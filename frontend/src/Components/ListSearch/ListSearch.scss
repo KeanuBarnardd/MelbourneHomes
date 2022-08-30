@@ -7,7 +7,8 @@
   .navbar__container {
     button,
     input,
-    select {
+    select,
+    .select__type {
       display: flex;
       align-items: center;
       font-size: 1rem;
@@ -36,6 +37,33 @@
           color: white;
         }
       }
+
+      select {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        cursor: pointer;
+        padding-right: 0.2rem;
+        position: relative;
+        letter-spacing: 2px;
+      }
+
+      .select__container {
+        display: flex;
+        width: 100%;
+        user-select: none;
+        select {
+          width: 100%;
+        }
+      }
+
+      .select__type {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        background-color: var(--secondary-color);
+        color: white;
+        display: flex;
+        gap: 8px;
+      }
     }
     .navbar__top {
       display: flex;
@@ -44,20 +72,56 @@
     }
   }
 
+
+
+  // !!!!!!!!!!!!!!THIS NEEDS TO BE CLEANED UP!!!!!!!!!!!!!!!!!!!!!!!!!!
   .navbar__bottom {
-    
     .navbar__bottom-content {
       transition: all 1s ease-in-out;
     }
-
-    .price-nav{
+    .price-nav {
       display: none;
     }
 
-    .navbar__bottom-content.price-nav.active{
+    .navbar__bottom-content.price-nav.active {
       margin-top: 1rem;
       display: flex;
       gap: 10px;
     }
+
+    .rooms-nav {
+      display: none;
+    }
+
+    .navbar__bottom-content.rooms-nav.active {
+      margin-top: 1rem;
+   
+      display: flex;
+      gap: 8px;
+      select {
+        width: 100%;
+      }
+    }
+
+    .type-nav {
+     display: none;
+    }
+
+    .type-nav.active{
+      margin-top: 1rem;
+      display: flex;
+      gap: 8px;
+    }
+
+    .filter{
+      display: none;
+    }
+
+    .filter.active{
+      margin-top: 1rem;
+      display: flex;
+      gap: 8px;
+    }
+
   }
 }

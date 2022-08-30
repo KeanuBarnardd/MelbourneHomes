@@ -5,3 +5,4 @@ export {default as Home } from './Home/Home';
 export {default as Listing } from './Listing/Listing';
 export {default as Featured } from './Featured/Featured';
 export {default as ExploreGrid} from './ExploreGrid/ExploreGrid';
+export {default as About} from './About/About';
