@@ -7,7 +7,6 @@ import EmailIcon from "@mui/icons-material/Email";
 const AgentCard = ({ image, name, position, phone, email, description }) => {
   return (
     <div className="agent__card-container">
-      <img src={image} alt="" />
       <div className="agent__img-container">
         {/* <button className="agent__button">
           <EmailIcon className="agent__icon" />
@@ -17,13 +16,23 @@ const AgentCard = ({ image, name, position, phone, email, description }) => {
           <LocalPhoneIcon className="agent__icon" />
           {phone}
         </button> */}
-
-      
+        <img src={image} alt="" />
+        <p className="agent__position">
+          <span>{position}</span>
+        </p>
       </div>
-      <p className="agent__position">{position}</p>
+
       <div className="agent__card-details">
         <h1 className="agent__name">{name}</h1>
         <p>{description}</p>
+      </div>
+      <div className="agent__card-contact">
+        <div className="agent__contact">
+          <p>
+            {phone}
+          </p>
+        </div>
+       
       </div>
     </div>
   );

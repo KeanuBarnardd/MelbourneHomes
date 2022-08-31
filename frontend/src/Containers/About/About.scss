@@ -1,6 +1,18 @@
-.about__team-grid{
+.about__team-grid {
   display: grid;
-	gap:35px; 
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.about__stats-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  .stats__grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
 }

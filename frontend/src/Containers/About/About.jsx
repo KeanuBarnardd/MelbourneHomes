@@ -1,54 +1,90 @@
 import React from "react";
 import "./About.scss";
 import { images } from "../../Constants/index";
-import AgentCard from "../../Components/AgentCard/AgentCard";
+import { InfoCard, AgentCard } from "../../Components";
 
 const About = () => {
   return (
-    <div className="page__content app__flex">
-      <div className="app__container-width">
-        <div className="team-intro">
+    <>
+      <div className="page__content app__flex">
+        <div className="app__container-width">
+          <div className="team-intro">
+            <h1 className="content__title-text">
+              Our <span>team</span>
+            </h1>
+            <p className="p-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. In laboriosam quasi porro
+              veniam magnam voluptatibus molestias deleniti accusamus nemo velit error quaerat ullam
+              molestiae libero illum dolore, explicabo reiciendis quo?
+            </p>
+            <div className="about__team-grid">
+              <AgentCard
+                image={images.agent1}
+                name="Paul Sharma"
+                email={"psharma@goldkeyre.com.au"}
+                position={"Head Manager"}
+                phone={"0455847818"}
+                description={"Your favourite real estate seller dude thing that does something."}
+              />
+              <AgentCard
+                image={images.agent2}
+                name="Paul Sharma"
+                email={"psharma@goldkeyre.com.au"}
+                position={"Head Manager"}
+                phone={"0455847818"}
+                description={"Your favourite real estate seller dude thing that does something."}
+              />
+              <AgentCard
+                image={images.agent3}
+                name="Paul Sharma"
+                email={"psharma@goldkeyre.com.au"}
+                position={"Head Manager"}
+                phone={"0455847818"}
+                description={"Your favourite real estate seller dude thing that does something."}
+              />
+              <AgentCard
+                image={images.agent4}
+                name="Paul Sharma"
+                email={"psharma@goldkeyre.com.au"}
+                position={"Head Manager"}
+                phone={"0455847818"}
+                description={"Your favourite real estate seller dude thing that does something."}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="page__content app__flex app__primarybg bg-grey">
+        <div className="app__container-width about__stats-container">
           <h1 className="content__title-text">
-            Our <span>team</span>
+            What do we <span>offer?</span>
           </h1>
-          <p className="p-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. In laboriosam quasi porro
-            veniam magnam voluptatibus molestias deleniti accusamus nemo velit error quaerat ullam
-            molestiae libero illum dolore, explicabo reiciendis quo?
-          </p>
-          <div className="about__team-grid">
-            <AgentCard
-              image={images.agent1}
-              name="Paul Sharma"
-              email={"psharma@goldkeyre.com.au"}
-              position={"Head Manager"}
-              phone={"0455847818"}
+          <div className="stats__grid">
+            <InfoCard
+              title={"Competetive rates"}
+              text={
+                "With over 4,000 home loans to compare you can find a home loan thats right for you."
+              }
+              link={"Compare home loans"}
             />
-            <AgentCard
-              image={images.agent2}
-              name="Paul Sharma"
-              email={"psharma@goldkeyre.com.au"}
-              position={"Head Manager"}
-              phone={"0455847818"}
+            <InfoCard
+              title={"Competetive rates"}
+              text={
+                "With over 4,000 home loans to compare you can find a home loan thats right for you."
+              }
+              link={"Compare home loans"}
             />
-            <AgentCard
-              image={images.agent3}
-              name="Paul Sharma"
-              email={"psharma@goldkeyre.com.au"}
-              position={"Head Manager"}
-              phone={"0455847818"}
-            />
-            <AgentCard
-              image={images.agent4}
-              name="Paul Sharma"
-              email={"psharma@goldkeyre.com.au"}
-              position={"Head Manager"}
-              phone={"0455847818"}
+            <InfoCard
+              title={"Competetive rates"}
+              text={
+                "With over 4,000 home loans to compare you can find a home loan thats right for you."
+              }
+              link={"Compare home loans"}
             />
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

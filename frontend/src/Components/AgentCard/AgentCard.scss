@@ -12,15 +12,52 @@
     border-radius: 15px;
     border: 1px solid var(--grey-000);
   }
+  .agent__img-container {
+    position: relative;
+    .agent__position {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      color: var(--grey-500);
+      padding: 0.5rem;
+      bottom: -2px;
+      span {
+        border-radius: 10px;
+        background-color: white;
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+  .agent__card-details {
+    h1 {
+      text-align: center;
+      color: var(--grey-600);
+      font-size: 1.6rem;
+      margin-top: 0.5rem;
+    }
+    p {
+      color: var(--grey-400);
+      text-align: center;
+    }
+  }
 
-  .agent__position{
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    background-color: white;
-    border-radius: 15px;
-    padding: 0.5rem;
-    top: 72%;
-   
+  .agent__card-contact {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.3rem;
+    gap: 7px;
+    .agent__contact {
+      
+      p {
+
+        gap: 10px;
+        text-align: center;
+        background-color: var(--shadow-color);
+        color: var(--secondary-color);
+        padding: 0.2rem;
+        border-radius: 6px;
+        font-size: 0.9rem;
+      }
+    }
   }
 }

@@ -1,0 +1,30 @@
+.infocard__container{
+
+
+
+  padding: 1rem;
+  background-color: white;
+  box-shadow: var(--box-shadow-4);
+  border-radius: 15px;
+
+  h1{
+    font-size: 1.6rem;
+    color: var(--grey-500);
+  }
+
+  p{
+    margin-top: 0.5rem;
+    color: var(--grey-500);
+  }
+
+  .infocard__link{
+    margin-top: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    span{
+      background-color: rgb(252, 252, 229);
+      padding: 0.2rem 0.5rem;
+      border-radius: 10px;
+    }
+  }
+}

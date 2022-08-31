@@ -105,7 +105,7 @@ const ListSearch = () => {
             <button>Confirm</button>
           </div>
           {/* TYPE CONTAINER */}
-          <div className="navbar__bottom-content type-nav ">
+          <div className="navbar__bottom-content type-nav active">
             <div className="input-container">
               <input type="text" />
               <button>
