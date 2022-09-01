@@ -46,6 +46,7 @@ import agent4 from "../Assets/Images/Agents/agent4.PNG";
 import header1 from "../Assets/Images/Header/header1.jpg";
 import luxuryHome from "../Assets/Images/Header/luxuryHome.jpg";
 import luxuryContact from "../Assets/Images/Header/luxuryContact.jpg";
+import serviceHeader from "../Assets/Images/Header/serviceHeader.jpg";
 // Explore card Images
 
 // Dream home Section
@@ -56,6 +57,7 @@ export default {
   dreamHomeImage,
   luxuryHome,
   luxuryContact,
+  serviceHeader,
   // House 1
   house1_1,
   house1_2,
