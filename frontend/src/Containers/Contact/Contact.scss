@@ -1,0 +1,18 @@
+.header-small {
+  height: 45vh;
+  background-position: center;
+  background-size: cover;
+
+  width: 100%;
+  display: flex;
+  h1 {
+    color: var(--accent-color);
+    font-size: 2.6rem;
+    width: 100%;
+    max-width: 900px;
+  }
+  p {
+    color: white;
+    font-size: 1.2rem;
+  }
+}

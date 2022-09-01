@@ -44,7 +44,8 @@ import agent4 from "../Assets/Images/Agents/agent4.PNG";
 
 // Headers
 import header1 from "../Assets/Images/Header/header1.jpg";
-
+import luxuryHome from "../Assets/Images/Header/luxuryHome.jpg";
+import luxuryContact from "../Assets/Images/Header/luxuryContact.jpg";
 // Explore card Images
 
 // Dream home Section
@@ -53,6 +54,9 @@ export default {
   //Header Images
   header1,
   dreamHomeImage,
+  luxuryHome,
+  luxuryContact,
+  // House 1
   house1_1,
   house1_2,
   house1_3,
@@ -81,7 +85,7 @@ export default {
   house4_8,
   house4_9,
   house4_10,
-
+  // House 5
   house5_1,
   house5_2,
   house5_3,

@@ -3,7 +3,6 @@
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   margin-top: 2rem;
-  margin-bottom: 3rem;
 }
 
 .about__stats-container {
@@ -15,4 +14,45 @@
     gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
+}
+
+.header-small {
+  height: 45vh;
+  background-position: center;
+  background-size: cover;
+
+  width: 100%;
+  display: flex;
+  h1 {
+    color: var(--accent-color);
+    font-size: 2.6rem;
+    width: 100%;
+    max-width: 900px;
+  }
+  p {
+    color: white;
+    font-size: 1.2rem;
+  }
+
+  :nth-child(3) {
+    margin-top: 1rem;
+    background-color: var(--secondary-color);
+    padding: 0.8rem 3rem;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    &:hover{
+      background-color: rgb(29, 69, 177);
+    }
+    :nth-child(1){
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+.p-top {
+  padding: 0 !important;
 }
