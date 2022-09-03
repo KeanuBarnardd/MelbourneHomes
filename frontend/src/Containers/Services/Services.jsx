@@ -2,17 +2,17 @@ import React from "react";
 import "./Services.scss";
 import { images } from "../../Constants";
 import { useState } from "react";
-
+import { MortgageOutput } from "../../Components/index";
 const Services = () => {
   // Input Values
-  const [loanAmount, setLoanAmount] = useState(0);
-  const [interestRate, setInterestRate] = useState(4.8);
-  const [repaymentTerm, setRepaymentTerm] = useState(30);
-  const [repaymentFreq, setRepaymentFreq] = useState(12);
+  const [loanAmount, setLoanAmount] = useState(0); // Loan Amount
+  const [interestRate, setInterestRate] = useState(4.8); // Interest Rates
+  const [repaymentTerm, setRepaymentTerm] = useState(30); // Length of loan
   // Display Values
   const [mortageTotal, setMortageTotal] = useState(0);
   const [interestTotal, setInterestTotal] = useState(0);
-  const [yearlyTotal, setYearlyTotal] = useState(0);
+  // Filters
+  const [filterType, setFilterType] = useState(["daily,weekly,monthly,annually,total"]);
 
   // ----------- GET INPUT HANDLERS -----------
   const getLoanInputHandler = (e) => {
@@ -30,23 +30,13 @@ const Services = () => {
     console.log(repaymentTerm);
   };
 
-  const getFreqHandler = (e) => {
-    setRepaymentFreq(e.target.value);
-    console.log(repaymentFreq);
-  };
   // ------------------------------------------
 
   const calculateMortgage = (e) => {
     // Stop form from refreshing on Submit.
     e.preventDefault();
     const p = loanAmount; // 100
-    const r = loanAmount / interestRate / 365; //Example 0.4 / 10000 = 25000/ 365. R = 68.4 ( Interest Rate )
-    const t = loanAmount / repaymentTerm; // 30
-    const n = t / repaymentFreq; // 12
-    // 300,000 / 30 / 12 = 833 per month
-    let total = n + r;
-    console.log(`Loan Amount(P) : ${p} InterestRate(R) : ${r} Term(T): ${t}  Freq: ${n}`);
-    console.log(`Mortgage Total = ${total} per month`);
+    const r = loanAmount / interestRate / 365; //Example 0.4 / 10000 = 25000/ 365. R =
   };
 
   return (
@@ -64,16 +54,19 @@ const Services = () => {
           </p>
         </div>
       </header>
-      <div className="page__content app__flex">
-        <form className="app__container-width">
+      <div className="page__content app__flex mortgage__container">
+        <form className="app__container-width mortgage__input-form">
           {/* P = LOAN AMOUNT  */}
-          <input
-            onChange={getLoanInputHandler}
-            type="text"
-            name=""
-            placeholder="Amount Borrowed"
-            id=""
-          />
+          <div className="form__input-container">
+            <p>Loan Amount</p>
+            <input
+              onChange={getLoanInputHandler}
+              type="text"
+              name=""
+              placeholder="Amount Borrowed"
+              id=""
+            />
+          </div>
           <div className="form__input-container">
             <p>Interest Rate</p>
             {/* R = INTEREST RATE   */}
@@ -85,38 +78,26 @@ const Services = () => {
             <input
               onChange={getTermHandler}
               type="text"
-              placeholder="4.8%"
+              placeholder="Length of loan"
               max={40}
               min={0}
-              required
             />
           </div>
-          <div className="form__input-container">
-            <p>Repayment Frequency</p>
-            {/* N = Number of payments per year  */}
-            <select onChange={getFreqHandler} name="" id="">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-            </select>
-          </div>
-          <button onClick={calculateMortgage}>Calculate</button>
+          <button className="mortgage__button" onClick={calculateMortgage}>Calculate</button>
         </form>
-        <div className="mortgage__output-container">
-          
-        </div>
+        <div className="mortgage__output-container"></div>
       </div>
     </>
   );
 };
 
 export default Services;
+/*
+Change the way this will be done 
+- Enter the interest rate 
+- Enter the Total Amount 
+- Enter Length of the loan
+---------------------------
+- Calculate that value - and display the default monthly value. 
+- Filter Select to change if its daily,weekly,monthly,quarterly,annually,total.
+*/

@@ -61,7 +61,7 @@ $input-radius: 10px;
           border: none;
           display: flex;
           padding: 5px;
-          border-radius: 50px;
+          border-radius:var(--border-rad-1);
           &:hover{
             background-color: var(--secondary-color);
             color: white;

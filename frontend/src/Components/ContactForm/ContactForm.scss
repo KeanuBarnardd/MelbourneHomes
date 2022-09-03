@@ -45,7 +45,7 @@ form {
       margin-top: 0.7rem;
       button {
         display: flex;
-        border-radius: 50px;
+        border-radius:var(--border-rad-1);
         padding: 0.3rem;
         border: none;
 
@@ -69,7 +69,7 @@ form {
       font-size: 1rem;
       padding: 0.4rem 0.7rem;
       border: none;
-      border-radius: 8px;
+      border-radius:var(--border-rad-1);
       color: var(--grey-800);
       background-color: var(--grey-100);
       resize: none;
@@ -88,7 +88,7 @@ form {
       text-decoration: none;
       color: white;
       border: none;
-      border-radius: 8px;
+      border-radius:var(--border-rad-1);
       width: 100%;
       max-width: 200px;
       text-transform: uppercase;

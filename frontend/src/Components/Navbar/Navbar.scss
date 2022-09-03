@@ -28,7 +28,7 @@ nav {
       text-decoration: none;
       color: var(--grey-500);
       padding: 0.3rem 0.5rem;
-      border-radius: 10px;
+      border-radius:var(--border-rad-1);
       transition: all ease-in-out var(--timer-short);
       border: 1px solid white;
       &:hover {
@@ -50,7 +50,7 @@ nav {
     button {
       border: none;
       padding: 0.3rem 0.5rem;
-      border-radius: 10px;
+      border-radius:var(--border-rad-1);
       color: var(--secondary-color);
       //background-color: rgba(255, 217, 192, 0.596);
       background-color: var(--shadow-color);

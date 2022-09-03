@@ -1,5 +1,5 @@
 .agent__card-container {
-  border-radius: 15px;
+  border-radius:var(--border-rad-1);
   padding: 1rem;
   box-shadow: var(--box-shadow-3);
   position: relative;
@@ -9,7 +9,7 @@
     background-position: center;
     background-repeat: none;
     background-size: cover;
-    border-radius: 15px;
+    border-radius:var(--border-rad-1);
     border: 1px solid var(--grey-000);
   }
   .agent__img-container {
@@ -22,7 +22,7 @@
       padding: 0.5rem;
       bottom: -2px;
       span {
-        border-radius: 10px;
+        border-radius:var(--border-rad-1);
         background-color: white;
         padding: 0.5rem 1rem;
       }

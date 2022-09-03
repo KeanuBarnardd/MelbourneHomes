@@ -1,0 +1,35 @@
+.mortgage__container {
+  .mortgage__input-form {
+    display: flex;
+    gap: 20px;
+    .form__input-container {
+      width: 100%;
+      p{
+        color: var(--grey-500);
+        margin-bottom: 0.2rem;
+      }
+      input {
+        width: 100%;
+      }
+    }
+
+    .mortgage__button {
+      background-color: var(--secondary-color);
+      padding: 0.8rem 3rem;
+      font-size: 1rem;
+      text-decoration: none;
+      color: white;
+      border: none;
+      border-radius: var(--border-rad-1);
+      width: 100%;
+      max-width: 200px;
+      &:hover {
+        background-color: rgb(29, 69, 177);
+      }
+      :nth-child(1) {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+}

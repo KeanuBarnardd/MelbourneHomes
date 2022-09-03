@@ -44,7 +44,7 @@
     text-decoration: none;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius:var(--border-rad-1);
     &:hover{
       background-color: rgb(29, 69, 177);
     }

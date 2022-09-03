@@ -37,7 +37,7 @@
   span {
     background-color: rgba(28, 44, 139, 0.089);
     padding: 0 0.3rem;
-    border-radius: 10px;
+    border-radius:var(--border-rad-1);
     color: var(--secondary-color);
   }
 
@@ -169,7 +169,18 @@ hr {
   span {
     color: var(--secondary-color);
     background-color: var(--shadow-color);
-    border-radius: 10px;
+    border-radius:var(--border-rad-1);
     padding: 0px 5px;
   }
+}
+
+input {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  padding: 0.4rem 0.7rem;
+  border: none;
+  border-radius:var(--border-rad-1);
+  color: var(--grey-800);
+  background-color: var(--grey-100);
 }

@@ -7,3 +7,4 @@ export {default as SearchList} from "./ListSearch/ListSearch";
 export {default as InfoCard} from "./InfoCard/InfoCard";
 export {default as AgentCard} from "./AgentCard/AgentCard";
 export {default as ContactForm} from "./ContactForm/ContactForm";
+export {default as MortgageOutput} from "./MortgageOutput/MortgageOutput";

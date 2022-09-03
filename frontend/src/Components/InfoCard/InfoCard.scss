@@ -5,7 +5,7 @@
   padding: 1rem;
   background-color: white;
   box-shadow: var(--box-shadow-4);
-  border-radius: 15px;
+  border-radius:var(--border-rad-1);
 
   h1{
     font-size: 1.6rem;
@@ -24,7 +24,7 @@
     span{
       background-color: rgb(252, 252, 229);
       padding: 0.2rem 0.5rem;
-      border-radius: 10px;
+      border-radius:var(--border-rad-1);
     }
   }
 }

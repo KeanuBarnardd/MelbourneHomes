@@ -1,4 +1,4 @@
-$house-card-radius: 10px;
+$house-card-radius: var(--border-rad-1);
 $card-padding: 0.7rem;
 $card-tag-image: rgba(8, 8, 8, 0.534);
 .housecard__container {
@@ -21,7 +21,7 @@ $card-tag-image: rgba(8, 8, 8, 0.534);
       color: white;
       background-color: $card-tag-image;
       padding: 0.2rem 0.6rem;
-      border-radius: 10px;
+      border-radius:var(--border-rad-1);
     }
     .image__top {
       display: flex;
@@ -84,7 +84,7 @@ $card-tag-image: rgba(8, 8, 8, 0.534);
       justify-content: space-evenly;
       align-items: center;
       border: 1px solid var(--grey-300);
-      border-radius: 5px;
+      border-radius: var(--border-rad-1);
       margin-bottom: 0.7rem;
       margin-top: 0.4rem;
       p {
@@ -107,7 +107,7 @@ $card-tag-image: rgba(8, 8, 8, 0.534);
         font-weight: bold;
         color: var(--secondary-color);
         background-color: var(--shadow-color);
-        border-radius: 10px;
+        border-radius:var(--border-rad-1);
         border: none;
         &:hover {
           background-color: var(--shadow-color-hover);
