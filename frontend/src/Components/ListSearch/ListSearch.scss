@@ -14,7 +14,7 @@
       font-size: 1rem;
       padding: 0.4rem 0.7rem;
       border: none;
-      border-radius:var(--border-rad-1);
+      border-radius: var(--border-rad-1);
       color: var(--grey-800);
       background-color: var(--grey-100);
     }
@@ -72,8 +72,6 @@
     }
   }
 
-
-
   // !!!!!!!!!!!!!!THIS NEEDS TO BE CLEANED UP!!!!!!!!!!!!!!!!!!!!!!!!!!
   .navbar__bottom {
     .navbar__bottom-content {
@@ -95,7 +93,7 @@
 
     .navbar__bottom-content.rooms-nav.active {
       margin-top: 1rem;
-   
+
       display: flex;
       gap: 8px;
       select {
@@ -104,24 +102,23 @@
     }
 
     .type-nav {
-     display: none;
-    }
-
-    .type-nav.active{
-      margin-top: 1rem;
-      display: flex;
-      gap: 8px;
-    }
-
-    .filter{
       display: none;
     }
 
-    .filter.active{
+    .type-nav.active {
       margin-top: 1rem;
       display: flex;
       gap: 8px;
     }
 
+    .filter {
+      display: none;
+    }
+
+    .filter.active {
+      margin-top: 1rem;
+      display: flex;
+      gap: 8px;
+    }
   }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Services.scss";
 import { images } from "../../Constants";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MortgageOutput } from "../../Components/index";
 const Services = () => {
   // Input Values
@@ -11,36 +11,78 @@ const Services = () => {
   // Display Values
   const [mortageTotal, setMortageTotal] = useState(0);
   const [interestTotal, setInterestTotal] = useState(0);
+  const [displayText, setDisplayText] = useState("in Total");
   // Filters
-  const [filterType, setFilterType] = useState(["daily,weekly,monthly,annually,total"]);
-
+  const [filterType, setFilterType] = useState("Total");
+  const [filteredMortgage, setFilteredMortgage] = useState(0);
+  const [filteredInterest, setFilteredInterest] = useState(0);
   // ----------- GET INPUT HANDLERS -----------
   const getLoanInputHandler = (e) => {
-    setLoanAmount(e.target.value);
-    console.log(loanAmount);
+    setLoanAmount(parseFloat(e.target.value));
   };
-
   const getInterestInputHandler = (e) => {
-    setInterestRate(e.target.value);
-    console.log(interestRate);
+    setInterestRate(parseFloat(e.target.value));
   };
-
   const getTermHandler = (e) => {
-    setRepaymentTerm(e.target.value);
-    console.log(repaymentTerm);
+    setRepaymentTerm(parseFloat(e.target.value));
   };
-
+  const getFilterHandler = (e) => {
+    setFilterType(e.target.value);
+    filterAmount(filterType);
+  };
   // ------------------------------------------
+
+  useEffect(() => {
+    filterAmount(filterType);
+  });
 
   const calculateMortgage = (e) => {
     // Stop form from refreshing on Submit.
     e.preventDefault();
-    const p = loanAmount; // 100
-    const r = loanAmount / interestRate / 365; //Example 0.4 / 10000 = 25000/ 365. R =
+    // Calculate Daily
+    setMortageTotal(loanAmount * interestRate + loanAmount);
+    setInterestTotal(loanAmount * interestRate);
+  };
+
+  const filterAmount = (v) => {
+    // Mortgage & Interest Values.
+    let m = 0,
+      i = 0,
+      mT = mortageTotal,
+      iT = interestTotal;
+    if (v === "Total") {
+      m = mT;
+      i = iT;
+      setDisplayText("in Total.");
+    } else if (v === "Daily") {
+      m = mT / repaymentTerm / 365;
+      i = iT / repaymentTerm / 365;
+      setDisplayText("daily.");
+    } else if (v === "Weekly") {
+      m = mT / repaymentTerm / 52;
+      i = iT / repaymentTerm / 52;
+      setDisplayText("weekly.");
+    } else if (v === "Fortnightly") {
+      m = mT / repaymentTerm / 26;
+      i = iT / repaymentTerm / 26;
+      setDisplayText("fortnightly.");
+    } else if (v === "Monthly") {
+      m = mT / repaymentTerm / 12;
+      i = iT / repaymentTerm / 12;
+      setDisplayText("monthly.");
+    } else if (v === "Annually") {
+      m = mT / repaymentTerm;
+      i = iT / repaymentTerm;
+      setDisplayText("annually.");
+    } else {
+      console.error(`FilteredType : ${v} Has no value `);
+    }
+    setFilteredInterest(i.toFixed(2));
+    setFilteredMortgage(m.toFixed(2));
   };
 
   return (
-    <>
+    <div>
       <header
         className="header-small app__flex"
         style={{ backgroundImage: `url(${images.serviceHeader})` }}
@@ -48,56 +90,62 @@ const Services = () => {
         <div className="app__container-width header-content">
           <h1>Mortgage Calculator</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, nesciunt! Nesciunt
-            corrupti unde impedit error, officia aut. Corporis, a est necessitatibus dolorem,
-            inventore error veritatis consequatur unde excepturi architecto suscipit.
+            We’ve made it easy for you to better understand your finances with our handy home loan
+            calculator. By working out your estimated loan amount, monthly repayments and upfront
+            costs, you can enjoy the confidence of knowing what you can afford. You can also save
+            this data to your realestate.com.au profile, so that when you find a property you like,
+            you can see how it might fit with your finances and impact your current lifestyle.
           </p>
         </div>
       </header>
-      <div className="page__content app__flex mortgage__container">
-        <form className="app__container-width mortgage__input-form">
-          {/* P = LOAN AMOUNT  */}
-          <div className="form__input-container">
-            <p>Loan Amount</p>
-            <input
-              onChange={getLoanInputHandler}
-              type="text"
-              name=""
-              placeholder="Amount Borrowed"
-              id=""
-            />
-          </div>
-          <div className="form__input-container">
-            <p>Interest Rate</p>
-            {/* R = INTEREST RATE   */}
-            <input onChange={getInterestInputHandler} type="text" placeholder="4.8%" />
-          </div>
-          <div className="form__input-container">
-            <p>Repayment Term length</p>
-            {/* T = NUMBER OF YEARS  */}
-            <input
-              onChange={getTermHandler}
-              type="text"
-              placeholder="Length of loan"
-              max={40}
-              min={0}
-            />
-          </div>
-          <button className="mortgage__button" onClick={calculateMortgage}>Calculate</button>
-        </form>
-        <div className="mortgage__output-container"></div>
+      <div className="page__content app__flex ">
+        <div className="mortgage__container app__container-width">
+          <form className="app__container-width mortgage__input-form">
+            {/* P = LOAN AMOUNT  */}
+            <div className="form__input-container">
+              <p>Loan Amount</p>
+              <input
+                onChange={getLoanInputHandler}
+                type="text"
+                name=""
+                placeholder="Amount Borrowed"
+                id=""
+              />
+            </div>
+            <div className="form__input-container">
+              <p>Interest Rate (%)</p>
+              {/* R = INTEREST RATE   */}
+              <input onChange={getInterestInputHandler} type="text" placeholder="4.8%" />
+            </div>
+            <div className="form__input-container">
+              <p>Repayment Term length</p>
+              {/* T = NUMBER OF YEARS  */}
+              <input
+                onChange={getTermHandler}
+                type="text"
+                placeholder="Length of loan"
+                max={40}
+                min={0}
+              />
+            </div>
+            <button className="mortgage__button" onClick={calculateMortgage}>
+              Calculate
+            </button>
+          </form>
+          <MortgageOutput
+            loanAmount={mortageTotal}
+            selectType="Monthly"
+            calculatedAmount={filteredMortgage}
+            calculatedInterest={filteredInterest}
+            loanDuration={repaymentTerm}
+            totalInterest={interestRate}
+            getFilterHandler={getFilterHandler}
+            displayText={displayText}
+          />
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 
 export default Services;
-/*
-Change the way this will be done 
-- Enter the interest rate 
-- Enter the Total Amount 
-- Enter Length of the loan
----------------------------
-- Calculate that value - and display the default monthly value. 
-- Filter Select to change if its daily,weekly,monthly,quarterly,annually,total.
-*/

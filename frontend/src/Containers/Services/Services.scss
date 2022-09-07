@@ -1,10 +1,19 @@
 .mortgage__container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    
+  }
+
   .mortgage__input-form {
     display: flex;
     gap: 20px;
     .form__input-container {
       width: 100%;
-      p{
+      p {
         color: var(--grey-500);
         margin-bottom: 0.2rem;
       }
@@ -23,6 +32,13 @@
       border-radius: var(--border-rad-1);
       width: 100%;
       max-width: 200px;
+
+      @media screen and (max-width: 600px) {
+        max-width: 100%;
+        
+      }
+    
+
       &:hover {
         background-color: rgb(29, 69, 177);
       }
@@ -32,4 +48,6 @@
       }
     }
   }
+
+
 }

@@ -1,0 +1,65 @@
+.mortgage__output {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--grey-100);
+  .output__sub {
+    color: var(--grey-500);
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    color: var(--secondary-color);
+    font-weight: bolder;
+    font-size: 1.7rem;
+    width: 100%;
+    max-width: 300px;
+    background-color: var(--grey-100);
+    margin-top: 0.2rem;
+    padding-left: 0.3rem;
+  }
+  .output__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: var(--grey-100);
+    padding: 0.5rem 1rem 1rem 1rem;
+    padding: 1rem;
+    .output__title {
+      h1 {
+        color: var(--secondary-color);
+        font-weight: bolder;
+        font-size: 2.4rem;
+      }
+    }
+
+    select {
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      padding: 0.4rem 0.7rem;
+      border: none;
+      border-radius: var(--border-rad-1);
+      color: white;
+      background-color: var(--secondary-color);
+    }
+  }
+  .output__values {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 1rem 1rem 1rem;
+  }
+  .output__info {
+    color: var(--grey-500);
+    padding: 0px 1rem 1rem 1rem;
+    p {
+      color: var(--grey-400);
+    }
+    span {
+      color: var(--secondary-color);
+      font-weight: bold;
+      //background-color: var(--shadow-color);
+      //padding: 0px 4px;
+    }
+  }
+}
