@@ -5,8 +5,8 @@ import { useState, useEffect } from "react";
 import { MortgageOutput } from "../../Components/index";
 const Services = () => {
   // Input Values
-  const [loanAmount, setLoanAmount] = useState(0); // Loan Amount
-  const [interestRate, setInterestRate] = useState(4.8); // Interest Rates
+  const [loanAmount, setLoanAmount] = useState(100); // Loan Amount
+  const [interestRate, setInterestRate] = useState(1); // Interest Rates
   const [repaymentTerm, setRepaymentTerm] = useState(30); // Length of loan
   // Display Values
   const [mortageTotal, setMortageTotal] = useState(0);
@@ -36,9 +36,24 @@ const Services = () => {
     filterAmount(filterType);
   });
 
+  // PROBLEM !!!!!!!!
+  /*
+
+  Bug 1. 
+  Interest Rate is being updated after our state render. So we dont see it render until after we click the button again. 
+
+  Bug 2. 
+  Stop values from compounding. Just resubmit the same values into the form so it shows the same thing- DONT compound.
+
+
+  */
+
   const calculateMortgage = (e) => {
     // Stop form from refreshing on Submit.
     e.preventDefault();
+    setInterestRate(interestRate / 100);
+    // Convert Interest Rate into two decimal places
+    console.log(interestRate);
     // Calculate Daily
     setMortageTotal(loanAmount * interestRate + loanAmount);
     setInterestTotal(loanAmount * interestRate);

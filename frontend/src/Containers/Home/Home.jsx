@@ -78,16 +78,7 @@ const Home = () => {
         </div>
 
         <div className="page__content">
-          <h1 className="content-title">
-            {" "}
-            <span>Exploring</span> all things property
-          </h1>
-          <div className="explore__buttons-container">
-            <button className="explore-btn active">Buying</button>
-            <button className="explore-btn">Renting</button>
-            <button className="explore-btn">Selling</button>
-            <button className="explore-btn">Researching</button>
-          </div>
+        
           <ExploreGrid />
         </div>
       </div>
