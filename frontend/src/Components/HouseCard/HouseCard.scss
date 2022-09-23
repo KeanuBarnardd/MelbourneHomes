@@ -18,9 +18,12 @@ $card-tag-image: rgba(8, 8, 8, 0.534);
     background-repeat: no-repeat;
     height: 195px;
     .image-tag {
+      display: flex;
+      align-items: center;
+      gap: 2px;
       color: white;
       background-color: $card-tag-image;
-      padding: 0.2rem 0.6rem;
+      padding: 0.4rem 0.5rem;
       border-radius:var(--border-rad-1);
     }
     .image__top {
@@ -48,10 +51,15 @@ $card-tag-image: rgba(8, 8, 8, 0.534);
       font-size: 1.6rem;
       color: var(--grey-700);
     }
-    p {
-      color: var(--grey-400);
+    .details__container{
+      height: 60px;
+      overflow: hidden;
+      p {
+        color: var(--grey-400);
+      }
+  
     }
-
+    
     .housecard__container-top-row-details {
       display: flex;
       justify-content: space-between;

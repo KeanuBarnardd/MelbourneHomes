@@ -1,6 +1,4 @@
-
-
-.home{
+.home {
   display: flex;
   flex-direction: column;
 
@@ -11,7 +9,7 @@
 
     padding-top: 3rem;
     width: 100%;
-    h1{
+    h1 {
       text-align: center;
       color: white;
       text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.123);
@@ -19,42 +17,41 @@
       margin-top: 2rem;
     }
   }
-  
+
   .explore__buttons-container {
     display: flex;
     gap: 15px;
-  
+
     .explore-btn {
       padding: 0.5rem 0.8rem;
       border: 1px solid var(--grey-300);
-      border-radius:var(--border-rad-1);
+      border-radius: var(--border-rad-1);
       font-size: 1rem;
       background-color: white;
       font-weight: 500;
       color: var(--grey-400);
     }
-  
+
     .explore-btn.active {
       border-color: var(--grey-500);
       color: var(--grey-500);
     }
   }
-  
+
   .dreamhouse__container {
     width: 100%;
     border: 15px;
     display: flex;
+  flex-direction: row;
     gap: 30px;
     background-color: var(--grey-000);
-    border-radius:var(--border-rad-1);
+    border-radius: var(--border-rad-1);
     box-shadow: var(--box-shadow-3);
     img {
       width: 100%;
       max-width: 500px;
-      border-top-left-radius: 16px;
-      border-bottom-left-radius: 16px;
     }
-  
+
     .dreamhouse__container-content {
       padding: 1rem;
       display: flex;
@@ -67,75 +64,70 @@
           color: var(--secondary-color);
         }
       }
-      h1{
+      h1 {
         font-size: 2.2rem;
         color: var(--grey-700);
         margin-bottom: 0.8rem;
       }
-      p{
+      p {
         margin-bottom: 1rem;
         color: var(--grey-500);
         font-size: 1rem;
       }
-      button{
+      button {
         font-size: 1rem;
         font-weight: bold;
         padding: 0.5rem 1.5rem;
         background-color: var(--grey-400);
-        border-radius:var(--border-rad-1);
+        border-radius: var(--border-rad-1);
         border: none;
         color: white;
         transition: all ease-in-out var(--timer-short);
-        &:hover{
+        &:hover {
           background-color: var(--grey-500);
         }
       }
     }
-  
-    @media screen and (max-width:930px) {
-      .dreamhouse__container-content{
-  
-        h2{
+
+    @media screen and (max-width: 930px) {
+      .dreamhouse__container-content {
+        h2 {
           font-size: 1.2rem;
         }
-        h1{
+        h1 {
           font-size: 1.5rem;
         }
       }
-     
     }
-  
-    @media screen and (max-width:600px) {
+
+    @media screen and (max-width: 600px) {
       flex-direction: column;
-      img{
+      img {
         max-width: 100%;
-        border-top-right-radius: 15px;
-        border-bottom-left-radius: 0;
       }
-  
-      .dreamhouse__container-content{
+
+      .dreamhouse__container-content {
         align-items: center;
         padding-bottom: 1.5rem;
-        h1{
+        h1 {
           //text-align: center;
           line-height: 30px;
           font-size: 1.5rem;
         }
-        h2{
+        h2 {
           font-size: 2rem;
-        } 
+        }
       }
     }
   }
 }
 
-
 .explore__grid {
   margin-top: 1.5rem;
 }
 
-.house__grid{
+.house__grid {
   display: grid;
-	gap:35px; 
-	grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
+  gap: 35px;
+  grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
 }

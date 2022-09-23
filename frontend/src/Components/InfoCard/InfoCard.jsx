@@ -6,7 +6,7 @@ const InfoCard = ({ title, text, link,icon }) => {
     <div className="infocard__container">
       <h1>{title}</h1>
       <p>{text}</p>
-      <p className="infocard__link"><span>Compare home loans</span> </p>
+      <p className="infocard__link"><span>{link}</span> </p>
     </div>
   );
 };

@@ -2,8 +2,27 @@ import React from "react";
 import "./Listing.scss";
 import ListSearch from "./../../Components/ListSearch/ListSearch";
 import HouseCard from "./../../Components/HouseCard/HouseCard";
-import {images} from "../../Constants/index";
+
+import { houseData } from "../../Constants/homeData";
+
 const Listing = ({ totalProperties }) => {
+  const listProperties = houseData.map((home, index) => {
+    return (
+      <HouseCard
+        title={home.address}
+        image={home.images[0]}
+        postedAgo={home.listedTime}
+        price={home.price}
+        beds={home.beds}
+        baths={home.baths}
+        sellType={home.sellType}
+        square={home.squareFeet}
+        totalImages={home.images.length}
+        details={home.description}
+      />
+    );
+  });
+
   return (
     <>
       <ListSearch />
@@ -14,10 +33,12 @@ const Listing = ({ totalProperties }) => {
               <h1 className="content__title-text">
                 Listing <span>Results</span>
               </h1>
-             
             </div>
             <div className="listings__container-filters">
-            <p> Showing <span>10</span> total properties</p>
+              <p>
+                {" "}
+                Showing <span>10</span> total properties
+              </p>
               <select name="" id="">
                 <option value="">Most Recent</option>
                 <option value="">Least Recent</option>
@@ -26,82 +47,7 @@ const Listing = ({ totalProperties }) => {
               </select>
             </div>
           </div>
-          <div className="listings__grid">
-          <HouseCard
-              postedAgo={"3"}
-              sellType="Rent"
-              title="13 Averson Road"
-              price={500}
-              payType="Week"
-              image={images.house1_1}
-              details="Beautiful water front city house with a dream view."
-              square={5000}
-              beds={2}
-              baths={2}
-            />
-            <HouseCard
-              postedAgo={"3"}
-              sellType="Rent"
-              title="13 Averson Road"
-              price={500}
-              payType="Week"
-              image={images.house2_2}
-              details="Beautiful water front city house with a dream view."
-              square={5000}
-              beds={2}
-              baths={2}
-            />
-            <HouseCard
-              postedAgo={"3"}
-              sellType="Rent"
-              title="13 Averson Road"
-              price={500}
-              payType="Week"
-              image={images.house4_1}
-              details="Beautiful water front city house with a dream view."
-              square={5000}
-              beds={2}
-              baths={2}
-            />
-<HouseCard
-              postedAgo={"3"}
-              sellType="Rent"
-              title="13 Averson Road"
-              price={500}
-              payType="Week"
-              image={images.house1_1}
-              details="Beautiful water front city house with a dream view."
-              square={5000}
-              beds={2}
-              baths={2}
-            />
-            <HouseCard
-              postedAgo={"3"}
-              sellType="Rent"
-              title="13 Averson Road"
-              price={500}
-              payType="Week"
-              image={images.house2_7}
-              details="Beautiful water front city house with a dream view."
-              square={5000}
-              beds={2}
-              baths={2}
-            />
-            <HouseCard
-              postedAgo={"3"}
-              sellType="Rent"
-              title="13 Averson Road"
-              price={500}
-              payType="Week"
-              image={images.house4_5}
-              details="Beautiful water front city house with a dream view."
-              square={5000}
-              beds={2}
-              baths={2}
-            />
-
-
-          </div>
+          <div className="listings__grid">{listProperties}</div>
         </div>
       </div>
     </>

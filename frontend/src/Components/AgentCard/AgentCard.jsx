@@ -24,15 +24,20 @@ const AgentCard = ({ image, name, position, phone, email, description }) => {
 
       <div className="agent__card-details">
         <h1 className="agent__name">{name}</h1>
+
         <p>{description}</p>
       </div>
       <div className="agent__card-contact">
         <div className="agent__contact">
+          <p className="email-box">
+            <i className="fa-solid fa-envelope"></i>
+            {email}
+          </p>
           <p>
+            <i className="fa-solid fa-phone"></i>
             {phone}
           </p>
         </div>
-       
       </div>
     </div>
   );

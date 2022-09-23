@@ -103,17 +103,28 @@ const Services = () => {
         style={{ backgroundImage: `url(${images.serviceHeader})` }}
       >
         <div className="app__container-width header-content">
-          <h1>Mortgage Calculator</h1>
-          <p>
-            We’ve made it easy for you to better understand your finances with our handy home loan
-            calculator. By working out your estimated loan amount, monthly repayments and upfront
-            costs, you can enjoy the confidence of knowing what you can afford. You can also save
-            this data to your realestate.com.au profile, so that when you find a property you like,
-            you can see how it might fit with your finances and impact your current lifestyle.
+          <h1>Our Services</h1>
+          <p className="p-text">
+            We have an array of services we provide with <span>Melbourne homes</span> that we hope
+            will boost your chances of finding a new home or getting the information you need to
+            make a decision. We have a mortgage calculator and articles to help in your home buying
+            ventures.
           </p>
         </div>
       </header>
       <div className="page__content app__flex ">
+        <div className="app__container-width">
+          <h1 className="content__title-text">
+            Mortgage <span>Calculator</span>
+          </h1>
+          <p className="p-text app__container-width">
+            We’ve made it easy for you to better understand your finances with our handy
+            <span> home loan calculator.</span> By working out your estimated loan amount, monthly
+            repayments and upfront costs, you can enjoy the confidence of knowing what you can
+            afford.
+          </p>
+        </div>
+
         <div className="mortgage__container app__container-width">
           <form className="app__container-width mortgage__input-form">
             {/* P = LOAN AMOUNT  */}

@@ -37,7 +37,7 @@
   span {
     background-color: rgba(28, 44, 139, 0.089);
     padding: 0 0.3rem;
-    border-radius:var(--border-rad-1);
+    border-radius: var(--border-rad-1);
     color: var(--secondary-color);
   }
 
@@ -65,7 +65,7 @@
   color: var(--primary-color);
 }
 
-.bg-grey{
+.bg-grey {
   background-color: var(--grey-000);
 }
 
@@ -161,6 +161,10 @@ hr {
 .p-text {
   color: var(--grey-500);
   font-size: 1rem;
+  span {
+    font-weight: bold;
+    color: var(--ser);
+  }
 }
 
 .content__title-text {
@@ -169,7 +173,7 @@ hr {
   span {
     color: var(--secondary-color);
     background-color: var(--shadow-color);
-    border-radius:var(--border-rad-1);
+    border-radius: var(--border-rad-1);
     padding: 0px 5px;
   }
 }
@@ -180,7 +184,12 @@ input {
   font-size: 1rem;
   padding: 0.4rem 0.7rem;
   border: none;
-  border-radius:var(--border-rad-1);
+  border-radius: var(--border-rad-1);
   color: var(--grey-800);
   background-color: var(--grey-100);
 }
+
+
+
+
+

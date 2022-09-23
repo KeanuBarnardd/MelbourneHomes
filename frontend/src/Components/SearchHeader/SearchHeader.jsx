@@ -6,7 +6,7 @@ import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import BedIcon from "@mui/icons-material/Bed";
 import ShowerIcon from "@mui/icons-material/Shower";
 import TimeToLeaveIcon from "@mui/icons-material/TimeToLeave";
-import SquareFootIcon from '@mui/icons-material/SquareFoot';
+import SquareFootIcon from "@mui/icons-material/SquareFoot";
 import { Link } from "react-router-dom";
 const SearchHeader = () => {
   const [isRent, setIsRent] = useState(false);

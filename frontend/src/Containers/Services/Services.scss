@@ -2,15 +2,16 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
-
+  margin-top: 2.5rem;
   @media screen and (max-width: 600px) {
     flex-direction: column;
-    
+    margin-top: 2rem;
   }
 
   .mortgage__input-form {
     display: flex;
     gap: 20px;
+    
     .form__input-container {
       width: 100%;
       p {
@@ -35,9 +36,7 @@
 
       @media screen and (max-width: 600px) {
         max-width: 100%;
-        
       }
-    
 
       &:hover {
         background-color: rgb(29, 69, 177);
@@ -48,6 +47,4 @@
       }
     }
   }
-
-
 }

@@ -39,9 +39,9 @@ const ListSearch = () => {
         </div>
         <div className="navbar__bottom">
           {/* PRICE CONTAINER */}
-          <div className="navbar__bottom-content price-nav">
+          <div className="navbar__bottom-content price-nav active">
             <div className="input-container">
-              <input type="text" placeholder="Enter your minimum" />
+              <input type="text" placeholder="Enter your minimum"  />
               <button>Min</button>
             </div>
             <div className="input-container">
@@ -52,7 +52,7 @@ const ListSearch = () => {
             <button>Confirm</button>
           </div>
           {/* ROOMS CONTAINER */}
-          <div className="navbar__bottom-content rooms-nav">
+          <div className="navbar__bottom-content rooms-nav active">
             <div className="input-container">
               <select name="" id="">
                 <option value="">1</option>
@@ -120,7 +120,7 @@ const ListSearch = () => {
             <button>Apartment</button>
           </div>
           {/* FILTER CONTAINER */}
-          <div className="navbar__bottom-content filter">
+          <div className="navbar__bottom-content filter active">
             <button>Aircon</button>
             <button>Pool</button>
             <button>Study</button>
