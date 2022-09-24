@@ -8,17 +8,9 @@ const Listing = ({ totalProperties }) => {
   const listProperties = houseData.map((home, index) => {
     return (
       <HouseCard
-        title={home.address}
-        image={home.images[0]}
-        postedAgo={home.listedTime}
-        price={home.price}
-        beds={home.beds}
-        baths={home.baths}
-        sellType={home.sellType}
-        square={home.squareFeet}
-        totalImages={home.images.length}
-        details={home.description}
+        homeData={home}
         key={`${index}-${home.address}`}
+        
       />
     );
   });
@@ -37,7 +29,6 @@ const Listing = ({ totalProperties }) => {
             </div>
             <div className="listings__container-filters">
               <p>
-                {" "}
                 Showing <span>10</span> total properties
               </p>
               <select name="" id="">
