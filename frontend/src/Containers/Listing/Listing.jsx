@@ -1,8 +1,7 @@
 import React from "react";
 import "./Listing.scss";
-import ListSearch from "./../../Components/ListSearch/ListSearch";
-import HouseCard from "./../../Components/HouseCard/HouseCard";
 
+import { ListSearch, HouseCard, HouseModal } from "../../Components/index";
 import { houseData } from "../../Constants/homeData";
 
 const Listing = ({ totalProperties }) => {
@@ -19,12 +18,14 @@ const Listing = ({ totalProperties }) => {
         square={home.squareFeet}
         totalImages={home.images.length}
         details={home.description}
+        key={`${index}-${home.address}`}
       />
     );
   });
 
   return (
     <>
+      <HouseModal />
       <ListSearch />
       <div className="app__flex">
         <div className="app__container-width">

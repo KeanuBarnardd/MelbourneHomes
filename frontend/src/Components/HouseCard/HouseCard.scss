@@ -24,7 +24,7 @@ $card-tag-image: rgba(8, 8, 8, 0.534);
       color: white;
       background-color: $card-tag-image;
       padding: 0.4rem 0.5rem;
-      border-radius:var(--border-rad-1);
+      border-radius: var(--border-rad-1);
     }
     .image__top {
       display: flex;
@@ -51,15 +51,14 @@ $card-tag-image: rgba(8, 8, 8, 0.534);
       font-size: 1.6rem;
       color: var(--grey-700);
     }
-    .details__container{
+    .details__container {
       height: 60px;
       overflow: hidden;
       p {
         color: var(--grey-400);
       }
-  
     }
-    
+
     .housecard__container-top-row-details {
       display: flex;
       justify-content: space-between;
@@ -80,9 +79,20 @@ $card-tag-image: rgba(8, 8, 8, 0.534);
           border: none;
           border-radius: $house-card-radius;
           background-color: var(--grey-200);
+          transition: all ease-in-out 0.2s;
           .interaction__btn-logo {
             font-size: 1.3rem;
             color: var(--grey-400);
+            transition: all ease-in-out 0.2s;
+          }
+
+          &:hover {
+            background-color: var(--grey-400);
+            
+            .interaction__btn-logo {
+              transform: scale(1.2);
+              color: white;
+            }
           }
         }
       }
@@ -109,16 +119,17 @@ $card-tag-image: rgba(8, 8, 8, 0.534);
       display: flex;
       gap: 5px;
 
-      button {
+      .housecard__btn {
         width: 100%;
         padding: 0.4rem;
         font-weight: bold;
         color: var(--secondary-color);
         background-color: var(--shadow-color);
-        border-radius:var(--border-rad-1);
+        border-radius: var(--border-rad-1);
         border: none;
         &:hover {
-          background-color: var(--shadow-color-hover);
+          background-color: var(--secondary-color);
+          color: white;
         }
       }
     }

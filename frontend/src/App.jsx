@@ -7,6 +7,7 @@ import "./App.scss";
 const App = () => {
   return (
     <BrowserRouter>
+    <div className="portal"></div>
       <Navbar />
       <div >
         <Routes>

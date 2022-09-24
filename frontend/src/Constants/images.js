@@ -100,7 +100,6 @@ import house12_7 from "../Assets/Images/Houses/House12/7.jpg";
 import house12_8 from "../Assets/Images/Houses/House12/8.jpg";
 import house12_9 from "../Assets/Images/Houses/House12/9.jpg";
 
-import house13_1 from "../Assets/Images/Houses/House13/1.jpg";
 import house13_2 from "../Assets/Images/Houses/House13/2.jpg";
 import house13_3 from "../Assets/Images/Houses/House13/3.jpg";
 import house13_4 from "../Assets/Images/Houses/House13/4.jpg";
@@ -270,7 +269,6 @@ export default {
   house12_8,
   house12_9,
   // House 13,
-  house13_1,
   house13_2,
   house13_3,
   house13_4,

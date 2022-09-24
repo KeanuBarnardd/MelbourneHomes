@@ -22,6 +22,8 @@ images = Images of the houses.
 
 import { images } from "./index";
 
+const agentData = [];
+
 export const houseData = [
   {
     // ==================== HOUSE 1 ===================
@@ -379,7 +381,7 @@ export const houseData = [
     baths: 2,
     garage: 3,
     living: 2,
-    squareFeet: 10000,
+    squareFeet: 4150,
     type: "house",
 
     filters: {
@@ -433,7 +435,6 @@ export const houseData = [
       balcony: true,
     },
     images: [
-      images.house13_1,
       images.house13_2,
       images.house13_3,
       images.house13_4,
@@ -487,9 +488,10 @@ export const houseData = [
     // ==================== HOUSE 15 ===================
     address: "722 BronzeDale Blvd",
     area: "Springvale",
-    price: 415,
+    price: 410,
     sellType: "rent",
-    description: "I ",
+    description:
+      "In the beautiufl community of Springvalue 722 BronzeDale Blvd is in a prime location with a 10 minutes walk from your local shops and resteraunts. Only a 30 minute drive from the Melbourne CBD its perfect for people looking for a busy but community centric life style.",
     listedTime: 63,
     beds: 3,
     baths: 2,
@@ -502,7 +504,7 @@ export const houseData = [
       aircon: true,
       pool: false,
       study: true,
-      dw: true,
+      dw: false,
       wir: true,
       heating: false,
       solar: false,
@@ -597,3 +599,5 @@ export const houseData = [
     ],
   },
 ];
+
+export const featuredHomes = [houseData[2], houseData[6], houseData[0]];

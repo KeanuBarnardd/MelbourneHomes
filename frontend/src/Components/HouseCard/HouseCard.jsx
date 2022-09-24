@@ -1,5 +1,11 @@
 import React from "react";
+import { useState } from "react";
+
 import "./HouseCard.scss";
+
+import { InfoModal, HouseModal } from "../index";
+
+// Icons
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
@@ -21,13 +27,13 @@ const HouseCard = ({
   postedAgo,
   payType,
 }) => {
-  function displaySellType() {
-    if (sellType === "purchase") {
-      return;
-    } else {
-      return `/Per week`;
-    }
-  }
+  const [toggleHouseModal, setToggleHouseModal] = useState(false);
+
+  const toggleHouseModalHandler = () => {
+    toggleHouseModal ? setToggleHouseModal(false) : setToggleHouseModal(true);
+
+    console.log(`House Modal is : ${toggleHouseModal}`);
+  };
 
   return (
     <div className="housecard__container">
@@ -80,10 +86,18 @@ const HouseCard = ({
           </p>
         </div>
         <div className="housecard__buttons-container">
-          <button>Request Info</button>
-          <button>View Details</button>
+          <button className="housecard__btn">Request Info</button>
+          <button
+            onClick={() => {
+              toggleHouseModalHandler();
+            }}
+            className="housecard__btn"
+          >
+            View Details
+          </button>
         </div>
       </div>
+      {toggleHouseModal && <HouseModal toggleHouseModalHandler={toggleHouseModalHandler} />}
     </div>
   );
 };
