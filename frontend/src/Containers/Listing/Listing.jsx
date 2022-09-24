@@ -9,15 +9,23 @@ const Listing = ({ totalProperties }) => {
     return (
       <HouseCard
         homeData={home}
+        title={home.address}
+        image={home.images[0]}
+        postedAgo={home.listedTime}
+        price={home.price}
+        beds={home.beds}
+        baths={home.baths}
+        sellType={home.sellType}
+        square={home.squareFeet}
+        totalImages={home.images.length}
+        details={home.description}
         key={`${index}-${home.address}`}
-        
       />
     );
   });
 
   return (
     <>
-      <HouseModal />
       <ListSearch />
       <div className="app__flex">
         <div className="app__container-width">

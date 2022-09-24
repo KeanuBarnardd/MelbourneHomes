@@ -9,8 +9,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.301);
-
+  background-color: rgba(0, 0, 0, 0.733);
+  box-shadow: var(--box-shadow-3);
   .modal__content {
     padding: 1rem;
     background-color: white;
@@ -19,19 +19,108 @@
 
     .modal__content-parent {
       display: flex;
-      gap: 10px;
+      flex-direction: column;
 
-      .modal__filters-container {
+      .top-row {
+        width: 100%;
         display: flex;
-        flex-wrap: wrap;
-        gap: 3px;
-       
-        .filter-tag {
-          background-color: var(--secondary-color);
-          padding: 0.1rem 0.5rem;
-          color: white;
+        align-items: center;
+        justify-content: space-between;
+
+        .modal-price {
+          color: var(--secondary-color);
+          font-weight: bold;
+          font-size: 2.2rem;
+        }
+        .type-tag {
+          background-color: var(--shadow-color);
+          padding: 0.5rem 1rem;
+          font-weight: bold;
+          color: var(--secondary-color);
+          text-transform: uppercase;
+        }
+      }
+
+      h1 {
+   
+        font-size: 2.2rem;
+        color: var(--grey-500);
+        margin-bottom: 0.5rem;
+        span{
+          color: var(--grey-400);
+        }
+      }
+
+      .modal__details-container {
+        display: flex;
+        width: 100%;
+        gap: 20px;
+        justify-content: space-between;
+        .features-title{
+          font-size: 1rem;
+          font-weight: bold;
+          margin-top: 0.5rem;
+          color: var(--grey-700);
+        }
+
+        .features__container{
+          display: flex;
+          gap: 5px;
+        
+          flex-wrap: wrap;
+          margin-bottom: 0.8rem;
+
+          .features__tag{
+            padding: 0.2rem 0.4rem;
+            color: var(--secondary-color);
+            background-color: var(--shadow-color);
+          }
+        }
+
+      }
+
+      .modal__rooms-container {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 700px;
+        .rooms-tag{
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          background-color: var(--grey-200);
+          padding: 0.2rem 0.4rem;
+          color: var(--grey-500);
+          border-left: 6px solid var(--secondary-color);
+          i{
+            display: flex;
+            align-items: center;
+            height: 100%;
+          }
         }
       }
     }
+    .modal__button-container{
+      display: flex;
+      
+      gap: 10px;
+      margin-top: 0.3rem;
+
+      .btn.contact{
+        background-color: var(--secondary-color);
+        color: white;
+      }
+
+      .btn.close{
+        color: var(--grey-600);
+        background-color: var(--grey-300);
+        color: white;
+      }
+    }
   }
+}
+
+
+.modal-sec-title{
+
 }

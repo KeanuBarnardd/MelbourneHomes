@@ -15,7 +15,17 @@ import ShowerIcon from "@mui/icons-material/Shower";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
 
 const HouseCard = ({
- homeData, id
+  title,
+  image,
+  postedAgo,
+  price,
+  beds,
+  baths,
+  sellType,
+  square,
+  totalImages,
+  details,
+  homeData,
 }) => {
   const [toggleHouseModal, setToggleHouseModal] = useState(false);
 
@@ -25,22 +35,22 @@ const HouseCard = ({
 
   return (
     <div className="housecard__container">
-      <div className="housecard__img" style={{ backgroundImage: `url(${homeData.images[0]})` }}>
+      <div className="housecard__img" style={{ backgroundImage: `url(${image})` }}>
         <div className="image__top">
-          <p className="image-tag">{homeData.listedTime} Days Ago</p>
-          <p className="image-tag">For {homeData.sellType}</p>
+          <p className="image-tag">{postedAgo} Days Ago</p>
+          <p className="image-tag">For {sellType}</p>
         </div>
         <div className="image__bottom">
           <button className="image-tag">
-            <CameraAltIcon /> {homeData.images.length}
+            <CameraAltIcon /> {totalImages}
           </button>
         </div>
       </div>
       <div className="housecard-content">
         <div className="housecard__container-top-row-details">
           <p className="price">
-            ${homeData.price.toLocaleString("en-US")}
-            {homeData.sellType === "purchase" ? "" : "/Weekly"}
+            ${price.toLocaleString("en-US")}
+            {sellType === "purchase" ? "" : "/Weekly"}
           </p>
           <div className="interactions__container">
             <button className="interaction__btn">
@@ -54,23 +64,23 @@ const HouseCard = ({
             </button>
           </div>
         </div>
-        <h1>{homeData.address}</h1>
+        <h1>{title}</h1>
         <div className="details__container">
-          <p>{homeData.description}</p>
+          <p>{details}</p>
         </div>
 
         <div className="housecard__grid">
           <p>
             <SquareFootIcon className="" />
-            {homeData.squareFeet} Sqft
+            {square} Sqft
           </p>
           <p>
             <BedIcon className="" />
-            {homeData.beds} Beds
+            {beds} Beds
           </p>
           <p>
             <ShowerIcon className="" />
-            {homeData.baths} Baths
+            {baths} Baths
           </p>
         </div>
         <div className="housecard__buttons-container">
