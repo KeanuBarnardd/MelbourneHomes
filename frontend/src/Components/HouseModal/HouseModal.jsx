@@ -1,13 +1,11 @@
 import React from "react";
-
+import { useState } from "react";
 import { ImageSlider } from "../index";
 import { houseData } from "../../Constants/homeData";
 
 import "./HouseModal.scss";
 
-const HouseModal = ({ homeData, toggleHouseModalHandler }) => {
-  const data = houseData[0];
-
+const HouseModal = ({ homeData, toggleHouseModalHandler, featureTags }) => {
   return (
     <div className="modal__background">
       <div className="modal__content">
@@ -27,15 +25,21 @@ const HouseModal = ({ homeData, toggleHouseModalHandler }) => {
           </h1>
           <div className="modal__details-container">
             <div>
+              <p className="features-title">Details</p>
               <p className="p-text">{homeData.description}</p>
-              <p className="features-title">Features</p>
-              <div className="features__container">
-                {/* THIS NEEDS TO BE CHANGED LATER */}
-                <p className="features__tag">Pool</p>
-                <p className="features__tag">Aircon</p>
-                <p className="features__tag">Balcony</p>
-                <p className="features__tag">Study</p>
-                <p className="features__tag">Walk in robe</p>
+              <div className="details-bottom">
+                <div className="features__container">
+                  <p className="features-title">Features</p>
+                  <div className="features__tag-parent">
+                    {featureTags.map((tag) => {
+                      return <p className="features__tag">{tag}</p>;
+                    })}
+                  </div>
+                </div>
+                <div className="features__container">
+                  <p className="features-title">Property Type</p>
+                  <p className="features__tag type">{homeData.type} </p>
+                </div>
               </div>
             </div>
 
@@ -63,8 +67,11 @@ const HouseModal = ({ homeData, toggleHouseModalHandler }) => {
             </div>
           </div>
         </div>
-        <div className="modal__button-container">
-          <button className="btn contact">Contact us</button>
+        <div className="modal__bottom-row">
+          <div className="modal__button-container">
+            <button className="btn contact">Contact us</button>
+            <button className="btn contact">Requst Info</button>
+          </div>
           <button
             className="btn close"
             onClick={() => {

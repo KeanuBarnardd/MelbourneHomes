@@ -28,10 +28,24 @@ const HouseCard = ({
   homeData,
 }) => {
   const [toggleHouseModal, setToggleHouseModal] = useState(false);
+  const [featureTags, setFeatureTags] = useState([]);
 
   const toggleHouseModalHandler = () => {
     toggleHouseModal ? setToggleHouseModal(false) : setToggleHouseModal(true);
   };
+
+  function displayFilterTags() {
+    const newTagsArray = [];
+    for (let i = 0; i < homeData.filters.length; i++) {
+      // Gets the name of our Objects Key at our I position...
+      var keyValue = Object.keys(homeData.filters[i]);
+      // Checks if that Object Key's value property is true...
+      if (homeData.filters[i][keyValue] === true) {
+        newTagsArray.push(keyValue.toString());
+      }
+    }
+    setFeatureTags(newTagsArray);
+  }
 
   return (
     <div className="housecard__container">
@@ -88,6 +102,7 @@ const HouseCard = ({
           <button
             onClick={() => {
               toggleHouseModalHandler();
+              displayFilterTags();
             }}
             className="housecard__btn"
           >
@@ -95,7 +110,9 @@ const HouseCard = ({
           </button>
         </div>
       </div>
-      {toggleHouseModal && <HouseModal homeData={homeData} toggleHouseModalHandler={toggleHouseModalHandler} />}
+      {toggleHouseModal && (
+        <HouseModal homeData={homeData} featureTags={featureTags} toggleHouseModalHandler={toggleHouseModalHandler} />
+      )}
     </div>
   );
 };

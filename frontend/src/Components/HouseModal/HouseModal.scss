@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   padding-top: 3rem;
-
   position: fixed;
   top: 0;
   left: 0;
@@ -11,6 +10,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.733);
   box-shadow: var(--box-shadow-3);
+  overflow-y: scroll;
   .modal__content {
     padding: 1rem;
     background-color: white;
@@ -42,11 +42,12 @@
       }
 
       h1 {
-   
         font-size: 2.2rem;
         color: var(--grey-500);
+        padding-bottom: 0.1rem;
+        border-bottom: 1px solid var(--shadow-color);
         margin-bottom: 0.5rem;
-        span{
+        span {
           color: var(--grey-400);
         }
       }
@@ -56,35 +57,54 @@
         width: 100%;
         gap: 20px;
         justify-content: space-between;
-        .features-title{
+
+        @media screen and (max-width: 600px) {
+          flex-direction: column;
+        }
+
+        .features-title {
           font-size: 1rem;
           font-weight: bold;
           margin-top: 0.5rem;
           color: var(--grey-700);
         }
 
-        .features__container{
+        .details-bottom {
           display: flex;
-          gap: 5px;
-        
-          flex-wrap: wrap;
-          margin-bottom: 0.8rem;
-
-          .features__tag{
-            padding: 0.2rem 0.4rem;
-            color: var(--secondary-color);
-            background-color: var(--shadow-color);
+          gap: 10px;
+          .features__container {
+            display: flex;
+            flex-direction: column;
+         
+           
+            margin-bottom: 0.8rem;
+            .features__tag-parent {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 5px;
+            }
+            .features__tag {
+              padding: 0.2rem 0.5rem;
+              color: var(--secondary-color);
+              background-color: var(--shadow-color);
+              text-align: center;
+            }
           }
         }
-
       }
 
       .modal__rooms-container {
         display: flex;
         flex-direction: column;
         gap: 5px;
-        width: 700px;
-        .rooms-tag{
+        align-items: flex-end;
+
+        @media screen and (max-width: 600px) {
+          width: 100%;
+          align-items: flex-start;
+          margin-bottom: 0.3rem;
+        }
+        .rooms-tag {
           display: flex;
           align-items: center;
           gap: 5px;
@@ -92,7 +112,13 @@
           padding: 0.2rem 0.4rem;
           color: var(--grey-500);
           border-left: 6px solid var(--secondary-color);
-          i{
+          width: 200px;
+
+          @media screen and (max-width: 600px) {
+            max-width: 100%;
+          }
+
+          i {
             display: flex;
             align-items: center;
             height: 100%;
@@ -100,27 +126,41 @@
         }
       }
     }
-    .modal__button-container{
+    .modal__bottom-row {
       display: flex;
-      
+      justify-content: space-between;
+      margin-top: 0.5rem;
       gap: 10px;
-      margin-top: 0.3rem;
+      .modal__button-container {
+        display: flex;
+        width: 100%;
+        gap: 10px;
 
-      .btn.contact{
-        background-color: var(--secondary-color);
-        color: white;
+        .btn.contact {
+          background-color: var(--secondary-color);
+          color: white;
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          gap: 5px;
+          max-width: 100%;
+          &:hover {
+            background-color: rgb(47, 102, 173);
+          }
+        }
       }
 
-      .btn.close{
-        color: var(--grey-600);
-        background-color: var(--grey-300);
+      .btn.close {
+        background-color: var(--grey-400);
         color: white;
+
+        &:hover {
+          background-color: var(--grey-500);
+        }
       }
     }
   }
 }
 
-
-.modal-sec-title{
-
+.modal-sec-title {
 }
