@@ -11,3 +11,4 @@ export { default as MortgageOutput } from "./MortgageOutput/MortgageOutput";
 export { default as InfoModal } from "./InfoModal/InfoModal";
 export { default as HouseModal } from "./HouseModal/HouseModal";
 export { default as ImageSlider } from "./ImageSlider/ImageSlider";
+export { default as AgentModal } from "./AgentModal/AgentModal";

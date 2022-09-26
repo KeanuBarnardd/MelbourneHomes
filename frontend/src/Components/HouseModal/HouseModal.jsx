@@ -5,7 +5,12 @@ import { houseData } from "../../Constants/homeData";
 
 import "./HouseModal.scss";
 
-const HouseModal = ({ homeData, toggleHouseModalHandler, featureTags }) => {
+const HouseModal = ({
+  homeData,
+  toggleHouseModalHandler,
+  toggleAgentModalHandler,
+  featureTags,
+}) => {
   return (
     <div className="modal__background">
       <div className="modal__content">
@@ -31,8 +36,12 @@ const HouseModal = ({ homeData, toggleHouseModalHandler, featureTags }) => {
                 <div className="features__container">
                   <p className="features-title">Features</p>
                   <div className="features__tag-parent">
-                    {featureTags.map((tag) => {
-                      return <p className="features__tag">{tag}</p>;
+                    {featureTags.map((tag, index) => {
+                      return (
+                        <p className="features__tag" key={index}>
+                          {tag}
+                        </p>
+                      );
                     })}
                   </div>
                 </div>
@@ -70,7 +79,14 @@ const HouseModal = ({ homeData, toggleHouseModalHandler, featureTags }) => {
         <div className="modal__bottom-row">
           <div className="modal__button-container">
             <button className="btn contact">Contact us</button>
-            <button className="btn contact">Requst Info</button>
+            <button
+              className="btn contact"
+              onClick={() => {
+                toggleAgentModalHandler();
+              }}
+            >
+              Requst Info
+            </button>
           </div>
           <button
             className="btn close"

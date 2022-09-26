@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import "./HouseCard.scss";
 
-import { InfoModal, HouseModal } from "../index";
+import { InfoModal, HouseModal, AgentModal } from "../index";
 
 // Icons
 import FavoriteIcon from "@mui/icons-material/Favorite";
@@ -28,10 +28,19 @@ const HouseCard = ({
   homeData,
 }) => {
   const [toggleHouseModal, setToggleHouseModal] = useState(false);
+  const [toggleAgentModal, setToggleAgentModal] = useState(false);
   const [featureTags, setFeatureTags] = useState([]);
 
   const toggleHouseModalHandler = () => {
+    setToggleAgentModal(false);
     toggleHouseModal ? setToggleHouseModal(false) : setToggleHouseModal(true);
+  };
+
+  const toggleAgentModalHandler = () => {
+    // Disable in case the house Modal is open
+    setToggleHouseModal(false);
+    toggleAgentModal ? setToggleAgentModal(false) : setToggleAgentModal(true);
+    console.log("This works");
   };
 
   function displayFilterTags() {
@@ -98,7 +107,14 @@ const HouseCard = ({
           </p>
         </div>
         <div className="housecard__buttons-container">
-          <button className="housecard__btn">Request Info</button>
+          <button
+            className="housecard__btn"
+            onClick={() => {
+              toggleAgentModalHandler();
+            }}
+          >
+            Request Info
+          </button>
           <button
             onClick={() => {
               toggleHouseModalHandler();
@@ -111,8 +127,15 @@ const HouseCard = ({
         </div>
       </div>
       {toggleHouseModal && (
-        <HouseModal homeData={homeData} featureTags={featureTags} toggleHouseModalHandler={toggleHouseModalHandler} />
+        <HouseModal
+          homeData={homeData}
+          featureTags={featureTags}
+          toggleHouseModalHandler={toggleHouseModalHandler}
+          toggleAgentModalHandler={toggleAgentModalHandler}
+          id={`${homeData.key}x${homeData.address}-x`}
+        />
       )}
+      {toggleAgentModal && <AgentModal toggleAgentModalHandler={toggleAgentModalHandler} />}
     </div>
   );
 };

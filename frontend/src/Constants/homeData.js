@@ -21,8 +21,12 @@ images = Images of the houses.
 */
 
 import { images } from "./index";
+import AGENT_DATA from "./agentData";
 
-const agentData = [];
+
+
+
+// ERROR CANT FIND AGENT_DATA ...... 
 
 export const houseData = [
   {
@@ -61,6 +65,7 @@ export const houseData = [
       images.house1_6,
       images.house1_7,
     ],
+    agent: AGENT_DATA.paul,
   },
   {
     // ==================== HOUSE 2 ===================
@@ -100,6 +105,7 @@ export const houseData = [
       images.house2_8,
       images.house2_9,
     ],
+    agent: AGENT_DATA.paul,
   },
   {
     // ==================== HOUSE 3 ===================
@@ -140,6 +146,7 @@ export const houseData = [
       images.house4_9,
       images.house4_10,
     ],
+    agent: AGENT_DATA.paul,
   },
   {
     // ==================== HOUSE 4 ===================
@@ -178,6 +185,7 @@ export const houseData = [
       images.house5_7,
       images.house5_8,
     ],
+    agent: AGENT_DATA.paul,
   },
   {
     // ==================== HOUSE 6 ===================
@@ -216,6 +224,7 @@ export const houseData = [
       images.house6_7,
       images.house6_8,
     ],
+    agent: AGENT_DATA.steve,
   },
   {
     // ==================== HOUSE 7 ===================
@@ -254,6 +263,7 @@ export const houseData = [
       images.house7_7,
       images.house7_8,
     ],
+    agent: AGENT_DATA.steve,
   },
   {
     // ==================== HOUSE 8 ===================
@@ -292,6 +302,7 @@ export const houseData = [
       images.house8_7,
       images.house8_8,
     ],
+    agent: AGENT_DATA.steve,
   },
   {
     // ==================== HOUSE 10 ===================
@@ -330,6 +341,7 @@ export const houseData = [
       images.house10_7,
       images.house10_8,
     ],
+    agent: AGENT_DATA.steve,
   },
   {
     // ==================== HOUSE 11 ===================
@@ -367,6 +379,7 @@ export const houseData = [
       images.house11_6,
       images.house11_7,
     ],
+    agent: AGENT_DATA.jeff,
   },
   {
     // ==================== HOUSE 12 ===================
@@ -406,6 +419,7 @@ export const houseData = [
       images.house12_8,
       images.house12_9,
     ],
+    agent: AGENT_DATA.jeff,
   },
   {
     // ==================== HOUSE 13 ===================
@@ -444,6 +458,7 @@ export const houseData = [
       images.house13_8,
       images.house13_9,
     ],
+    agent: AGENT_DATA.jeff,
   },
   {
     // ==================== HOUSE 14 ===================
@@ -483,6 +498,7 @@ export const houseData = [
       images.house14_8,
       images.house14_9,
     ],
+    agent: AGENT_DATA.jeff,
   },
   {
     // ==================== HOUSE 15 ===================
@@ -522,6 +538,7 @@ export const houseData = [
       images.house15_8,
       images.house15_9,
     ],
+    agent: AGENT_DATA.paul,
   },
   {
     // ==================== HOUSE 16 ===================
@@ -559,6 +576,7 @@ export const houseData = [
       images.house16_6,
       images.house16_7,
     ],
+    agent: AGENT_DATA.paul,
   },
   {
     // ==================== HOUSE 17 ===================
@@ -597,6 +615,7 @@ export const houseData = [
       images.house17_7,
       images.house17_8,
     ],
+    agent: AGENT_DATA.paul,
   },
 ];
 
