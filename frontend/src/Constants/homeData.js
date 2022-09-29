@@ -21,12 +21,38 @@ images = Images of the houses.
 */
 
 import { images } from "./index";
-import AGENT_DATA from "./agentData";
 
 
+// ERROR CANT FIND agentsData ...... 
+
+ const agentsData = {
+  paul: {
+    name: "Paul Sharma",
+    email: "psharma@melbhomes.com.au",
+    phone: "041-322-542",
+    description:
+      "Owner and operations manager of MelbourneHomes has had a passion from homes ever since he got on the market. With over 20+ years of experience Paul is a skilled veteran when it comes to putting houses on the market. There is no house too big or too small with some of his most succesful ventures being sold for over 2 million dollars. If you are interested in this property pleast get in contact below.",
+    image: images.agent1,
+  },
+  steve: {
+    name: "Steve Barrack",
+    email: "steveBarrack@melbhomes.com.au",
+    phone: "045-322-542",
+    description:
+      "Steven Barrack has been a succesful real estate for under 10 years but it does'nt make him a novice. With over 50 sold homes in a short 5 years of service. Steven will be sure to sell any property you place on the market. With a key eye for property estimation and marketing you can assure you are in the right hands with MelbourneHomes. If you are interested in this property please get in contact below. ",
+    image: images.agent2,
+  },
+  jeff: {
+    name: "Jeffery Stone",
+    email: "jeffstone@melbhomes.com.au",
+    phone: "042-322-542",
+    description:
+      "Jeffery Stone one of our newest real estate agents. Jeff has sold 15 houses with MelbourneHomes but 50 houses in his total career as a real estate agent. He provides you with the confidence to take selling your home in your stride. Making calculated decisions to take your closer to moving out and moving in to your dream home. If you are interested in this property please get in contact below.",
+    image: images.agent3,
+  },
+};
 
 
-// ERROR CANT FIND AGENT_DATA ...... 
 
 export const houseData = [
   {
@@ -65,7 +91,7 @@ export const houseData = [
       images.house1_6,
       images.house1_7,
     ],
-    agent: AGENT_DATA.paul,
+    agent: agentsData.paul,
   },
   {
     // ==================== HOUSE 2 ===================
@@ -105,7 +131,7 @@ export const houseData = [
       images.house2_8,
       images.house2_9,
     ],
-    agent: AGENT_DATA.paul,
+    agent: agentsData.paul,
   },
   {
     // ==================== HOUSE 3 ===================
@@ -146,7 +172,7 @@ export const houseData = [
       images.house4_9,
       images.house4_10,
     ],
-    agent: AGENT_DATA.paul,
+    agent: agentsData.paul,
   },
   {
     // ==================== HOUSE 4 ===================
@@ -185,7 +211,7 @@ export const houseData = [
       images.house5_7,
       images.house5_8,
     ],
-    agent: AGENT_DATA.paul,
+    agent: agentsData.paul,
   },
   {
     // ==================== HOUSE 6 ===================
@@ -224,7 +250,7 @@ export const houseData = [
       images.house6_7,
       images.house6_8,
     ],
-    agent: AGENT_DATA.steve,
+    agent: agentsData.steve,
   },
   {
     // ==================== HOUSE 7 ===================
@@ -263,7 +289,7 @@ export const houseData = [
       images.house7_7,
       images.house7_8,
     ],
-    agent: AGENT_DATA.steve,
+    agent: agentsData.steve,
   },
   {
     // ==================== HOUSE 8 ===================
@@ -302,7 +328,7 @@ export const houseData = [
       images.house8_7,
       images.house8_8,
     ],
-    agent: AGENT_DATA.steve,
+    agent: agentsData.steve,
   },
   {
     // ==================== HOUSE 10 ===================
@@ -341,7 +367,7 @@ export const houseData = [
       images.house10_7,
       images.house10_8,
     ],
-    agent: AGENT_DATA.steve,
+    agent: agentsData.steve,
   },
   {
     // ==================== HOUSE 11 ===================
@@ -379,7 +405,7 @@ export const houseData = [
       images.house11_6,
       images.house11_7,
     ],
-    agent: AGENT_DATA.jeff,
+    agent: agentsData.jeff,
   },
   {
     // ==================== HOUSE 12 ===================
@@ -419,7 +445,7 @@ export const houseData = [
       images.house12_8,
       images.house12_9,
     ],
-    agent: AGENT_DATA.jeff,
+    agent: agentsData.jeff,
   },
   {
     // ==================== HOUSE 13 ===================
@@ -458,7 +484,7 @@ export const houseData = [
       images.house13_8,
       images.house13_9,
     ],
-    agent: AGENT_DATA.jeff,
+    agent: agentsData.jeff,
   },
   {
     // ==================== HOUSE 14 ===================
@@ -498,7 +524,7 @@ export const houseData = [
       images.house14_8,
       images.house14_9,
     ],
-    agent: AGENT_DATA.jeff,
+    agent: agentsData.jeff,
   },
   {
     // ==================== HOUSE 15 ===================
@@ -538,7 +564,7 @@ export const houseData = [
       images.house15_8,
       images.house15_9,
     ],
-    agent: AGENT_DATA.paul,
+    agent: agentsData.paul,
   },
   {
     // ==================== HOUSE 16 ===================
@@ -576,7 +602,7 @@ export const houseData = [
       images.house16_6,
       images.house16_7,
     ],
-    agent: AGENT_DATA.paul,
+    agent: agentsData.paul,
   },
   {
     // ==================== HOUSE 17 ===================
@@ -615,7 +641,7 @@ export const houseData = [
       images.house17_7,
       images.house17_8,
     ],
-    agent: AGENT_DATA.paul,
+    agent: agentsData.paul,
   },
 ];
 

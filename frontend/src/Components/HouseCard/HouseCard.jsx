@@ -26,6 +26,7 @@ const HouseCard = ({
   totalImages,
   details,
   homeData,
+  agentData
 }) => {
   const [toggleHouseModal, setToggleHouseModal] = useState(false);
   const [toggleAgentModal, setToggleAgentModal] = useState(false);
@@ -135,7 +136,7 @@ const HouseCard = ({
           id={`${homeData.key}x${homeData.address}-x`}
         />
       )}
-      {toggleAgentModal && <AgentModal toggleAgentModalHandler={toggleAgentModalHandler} />}
+      {toggleAgentModal && <AgentModal agentData={agentData} toggleAgentModalHandler={toggleAgentModalHandler} />}
     </div>
   );
 };

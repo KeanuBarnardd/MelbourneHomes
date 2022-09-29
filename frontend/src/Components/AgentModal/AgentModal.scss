@@ -1,0 +1,78 @@
+.agent__modal-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: var(--box-shadow-3);
+
+  .modal__logo {
+    text-align: center;
+    padding-bottom: 0.3rem;
+    font-size: 1.2rem;
+    color: var(--grey-500);
+    font-weight: bold;
+    span{
+      color: var(--secondary-color);
+    }
+  }
+
+  .image__container {
+    width: 100%;
+    position: relative;
+    margin-bottom: 0.5rem;
+    img {
+      min-width: 100%;
+    }
+
+    h1 {
+      position: absolute;
+      bottom: 0;
+      text-align: center;
+      width: 100%;
+      color: var(--grey-500);
+      span {
+        background-color: white;
+        padding: 0.4rem 1rem;
+      }
+    }
+  }
+
+  .p-text {
+    text-align: center;
+  }
+
+  .contacts__container {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 0.8rem;
+    .contact__tag {
+      background-color: var(--grey-300);
+      color: white;
+      padding: 0.3rem;
+      padding-left: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .contact__tag.blue {
+      background-color: var(--secondary-color);
+    }
+  }
+
+  .buttons__container {
+    display: flex;
+    gap: 10px;
+    margin-top: 1rem;
+
+    @media screen and (max-width: 600px) {
+      flex-direction:column;
+      gap: 5px;
+      .btn.close{
+        max-width: 100%;
+      }
+    }
+  }
+}

@@ -75,8 +75,7 @@
           .features__container {
             display: flex;
             flex-direction: column;
-         
-           
+
             margin-bottom: 0.8rem;
             .features__tag-parent {
               display: flex;
@@ -135,30 +134,7 @@
         display: flex;
         width: 100%;
         gap: 10px;
-
-        .btn.contact {
-          background-color: var(--secondary-color);
-          color: white;
-          align-items: center;
-          display: flex;
-          justify-content: center;
-          gap: 5px;
-          max-width: 100%;
-          &:hover {
-            background-color: rgb(47, 102, 173);
-          }
-        }
-      }
-
-      .btn.close {
-        background-color: var(--grey-400);
-        color: white;
-
-        &:hover {
-          background-color: var(--grey-500);
-        }
       }
     }
   }
 }
-

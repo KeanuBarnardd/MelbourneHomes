@@ -2,13 +2,14 @@ import React from "react";
 import "./Listing.scss";
 
 import { ListSearch, HouseCard, HouseModal } from "../../Components/index";
-import { houseData } from "../../Constants/homeData";
+ import { houseData } from "../../Constants/homeData";
 
 const Listing = ({ totalProperties }) => {
   const listProperties = houseData.map((home, index) => {
     return (
       <HouseCard
         homeData={home}
+        agentData={home.agent}
         title={home.address}
         image={home.images[0]}
         postedAgo={home.listedTime}
@@ -20,6 +21,7 @@ const Listing = ({ totalProperties }) => {
         totalImages={home.images.length}
         details={home.description}
         key={`${index}-${home.address}`}
+        
       />
     );
   });
