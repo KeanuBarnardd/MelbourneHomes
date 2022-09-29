@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { ImageSlider } from "../index";
 import { houseData } from "../../Constants/homeData";
-
+import { Link } from "react-router-dom";
 import "./HouseModal.scss";
 
 const HouseModal = ({
@@ -78,7 +78,10 @@ const HouseModal = ({
         </div>
         <div className="modal__bottom-row">
           <div className="modal__button-container">
-            <button className="btn contact">Contact us</button>
+            <Link className="btn contact" to="/contact">
+              Contact us
+            </Link>
+
             <button
               className="btn contact"
               onClick={() => {

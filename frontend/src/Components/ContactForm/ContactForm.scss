@@ -7,8 +7,13 @@ form {
   }
   .form__container {
     display: flex;
-    gap: 30px;
+    gap: 0px;
     margin-top: 1rem;
+
+    @media screen and (max-width: 600px) {
+      flex-direction: column-reverse;
+      gap: 20px;
+    }
   }
   .form__container-detail {
     display: flex;
@@ -16,12 +21,28 @@ form {
     gap: 20px;
     width: 100%;
     max-width: 300px;
+    @media screen and (max-width: 600px) {
+      justify-content: center;
+      max-width: 100%;
+      align-items: center;
+    }
 
     .form__detail-tag {
       display: flex;
       gap: 10px;
+
+      @media screen and (max-width: 600px) {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0.2rem;
+        gap: 3px;
+        p {
+          text-align: center;
+        }
+      }
       .form__icon {
-        font-size: 2rem;
+        font-size: 1.4rem;
         color: var(--secondary-color);
       }
     }
@@ -45,7 +66,7 @@ form {
       margin-top: 0.7rem;
       button {
         display: flex;
-        border-radius:var(--border-rad-1);
+        border-radius: var(--border-rad-1);
         padding: 0.3rem;
         border: none;
 
@@ -69,7 +90,7 @@ form {
       font-size: 1rem;
       padding: 0.4rem 0.7rem;
       border: none;
-      border-radius:var(--border-rad-1);
+      border-radius: var(--border-rad-1);
       color: var(--grey-800);
       background-color: var(--grey-100);
       resize: none;
@@ -77,8 +98,12 @@ form {
     .form__top-row {
       display: flex;
       justify-content: space-between;
-      gap: 30px;
+      flex-direction: row;
+      gap: 5px;
       width: 100%;
+      @media screen and (max-width: 600px) {
+        gap: 10px;
+      }
     }
 
     button {
@@ -88,12 +113,17 @@ form {
       text-decoration: none;
       color: white;
       border: none;
-      border-radius:var(--border-rad-1);
+      border-radius: var(--border-rad-1);
       width: 100%;
       max-width: 200px;
       text-transform: uppercase;
       font-weight: bold;
       letter-spacing: 1px;
+
+      @media screen and (max-width: 600px) {
+        max-width: 100%;
+      }
+
       &:hover {
         background-color: rgb(29, 69, 177);
       }

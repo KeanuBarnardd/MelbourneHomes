@@ -1,12 +1,15 @@
 import React from "react";
 import "./ExploreGrid.scss";
 import { ExploreCard } from "../../Components";
+import { useState } from "react";
+
+
 import { images } from "../../Constants";
 const ExploreGrid = () => {
   return (
     <>
       <h1 className="content-title">
-        {" "}
+
         <span>Exploring</span> all things property
       </h1>
       <div className="explore__buttons-container">

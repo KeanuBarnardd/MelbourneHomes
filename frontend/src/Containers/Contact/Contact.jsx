@@ -13,14 +13,12 @@ const Contact = () => {
         <div className="app__container-width header-content">
           <h1>Want to work with the best crew in melbourne. </h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium soluta temporibus
-            pariatur ducimus itaque libero vero ratione ipsam quod, vitae cupiditate beatae? Cumque
-            eius saepe, ea maxime alias dolorum commodi!
+            If your sure you want to work with the best team in Melbourne be sure to email us below. Our response times will be from 7am-5pm Moday-Friday. We look forward to hearing from you and making you dream house come true.
           </p>
         </div>
       </header>
       <div className="page__content app__flex">
-        <ContactForm/>
+        <ContactForm />
       </div>
     </div>
   );

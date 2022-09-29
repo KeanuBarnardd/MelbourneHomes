@@ -16,7 +16,7 @@ const ContactForm = () => {
       <div className="form__container">
         <div className="form__container-detail">
           <div className="form__detail-tag">
-            <LocationOnIcon className="form__icon" />
+            <i className="fa-solid fa-location form__icon"></i>
             <div className="form__detail-info">
               <p className="form__detail-title">Address</p>
               <p className="form__info-p">2017 Hatton Drive</p>
@@ -24,14 +24,14 @@ const ContactForm = () => {
             </div>
           </div>
           <div className="form__detail-tag">
-            <LocationOnIcon className="form__icon" />
+          <i className="fa-solid fa-phone form__icon"></i>
             <div className="form__detail-info">
               <p className="form__detail-title">Phone</p>
               <p className="form__info-p">048766134</p>
             </div>
           </div>
           <div className="form__detail-tag">
-            <LocationOnIcon className="form__icon" />
+          <i className="fa-solid fa-envelope form__icon"></i>
             <div className="form__detail-info">
               <p className="form__detail-title">Email</p>
               <p className="form__info-p">melbournehomes@gmail.com.au</p>

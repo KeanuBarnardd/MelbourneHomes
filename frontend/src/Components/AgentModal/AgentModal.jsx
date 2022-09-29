@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./AgentModal.scss";
-
+import { Link } from "react-router-dom";
 const AgentModal = ({ toggleAgentModalHandler, agentData }) => {
   return (
     <div className="modal__background">
@@ -9,9 +9,12 @@ const AgentModal = ({ toggleAgentModalHandler, agentData }) => {
         <p className="modal__logo">
           Melbourne<span>Homes</span>
         </p>
-        <div className="image__container" >
+        <div className="image__container">
           <img src={agentData.image} alt="" />
-          <h1> <span>{agentData.name}</span> </h1>
+          <h1>
+            {" "}
+            <span>{agentData.name}</span>{" "}
+          </h1>
         </div>
         <p className="p-text">{agentData.description}</p>
         <div className="contacts__container">
@@ -23,7 +26,9 @@ const AgentModal = ({ toggleAgentModalHandler, agentData }) => {
           </p>
         </div>
         <div className="buttons__container">
-          <button className="btn contact">Contact</button>
+          <Link to="/contact" className="btn contact">
+            Contact
+          </Link>
           <button
             className="btn close"
             onClick={() => {
