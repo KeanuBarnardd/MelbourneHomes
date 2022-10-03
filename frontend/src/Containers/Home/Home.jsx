@@ -6,12 +6,28 @@ import ExploreGrid from "../ExploreGrid/ExploreGrid";
 import { Link } from "react-router-dom";
 import { HouseCard } from "../../Components";
 
-const Home = () => {
+const Home = ({
+  getLocationHandler,
+  getMinValueHandler,
+  getMaxValueHandler,
+  getBedHandler,
+  getBathHandler,
+  getGarageHandler,
+  submitSearch
+}) => {
   return (
     <div className="app__flex home">
       <header className="header" style={{ backgroundImage: `url(${images.header1})` }}>
         <h1>Find a home with us </h1>
-        <SearchHeader />
+        <SearchHeader
+          getLocationHandler={getLocationHandler}
+          getMinValueHandler={getMinValueHandler}
+          getMaxValueHandler={getMaxValueHandler}
+          getBedHandler={getBedHandler}
+          getBathHandler={getBathHandler}
+          getGarageHandler={getGarageHandler}
+          submitSearch={submitSearch}
+        />
       </header>
       <div className="app__container-width">
         <div className="page__content">
@@ -67,8 +83,9 @@ const Home = () => {
               </h2>
               <h1>Your dream home is one search away.</h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae autem nihil dolores
-                in, itaque laudantium voluptate?{" "}
+                With MelbourneHomes you can be sure to work with the industries best. We come with
+                variety of services and products to help you find your dream home, and we know that
+                your dream home is only a search away.
               </p>
               <Link to="listings" className="link">
                 <button>Find your home</button>
@@ -78,7 +95,6 @@ const Home = () => {
         </div>
 
         <div className="page__content">
-        
           <ExploreGrid />
         </div>
       </div>

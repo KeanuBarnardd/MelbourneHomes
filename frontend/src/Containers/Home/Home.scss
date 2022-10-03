@@ -9,32 +9,22 @@
 
     padding-top: 3rem;
     width: 100%;
+
+    @media screen and (max-width: 400px) {
+      padding-top: 0;
+    }
     h1 {
       text-align: center;
       color: white;
       text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.123);
       margin-bottom: 1.2rem;
       margin-top: 2rem;
-    }
-  }
 
-  .explore__buttons-container {
-    display: flex;
-    gap: 15px;
-
-    .explore-btn {
-      padding: 0.5rem 0.8rem;
-      border: 1px solid var(--grey-300);
-      border-radius: var(--border-rad-1);
-      font-size: 1rem;
-      background-color: white;
-      font-weight: 500;
-      color: var(--grey-400);
-    }
-
-    .explore-btn.active {
-      border-color: var(--grey-500);
-      color: var(--grey-500);
+      @media screen and (max-width: 500px) {
+        font-size: 1.6rem;
+        margin-top: 4rem;
+        margin-bottom: 0.2rem;
+      }
     }
   }
 
@@ -42,11 +32,12 @@
     width: 100%;
     border: 15px;
     display: flex;
-  flex-direction: row;
+    flex-direction: row;
     gap: 30px;
     background-color: var(--grey-000);
     border-radius: var(--border-rad-1);
     box-shadow: var(--box-shadow-3);
+
     img {
       width: 100%;
       max-width: 500px;

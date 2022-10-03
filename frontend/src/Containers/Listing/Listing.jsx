@@ -2,10 +2,41 @@ import React from "react";
 import "./Listing.scss";
 
 import { ListSearch, HouseCard, HouseModal } from "../../Components/index";
- import { houseData } from "../../Constants/homeData";
+import { houseData } from "../../Constants/homeData";
 
-const Listing = ({ totalProperties }) => {
-  const listProperties = houseData.map((home, index) => {
+const Listing = ({
+  totalProperties,
+  location,
+  minValue,
+  maxValue,
+  bedValue,
+  bathValue,
+  livingValue,
+  squareFoot,
+  houseType,
+  features,
+  garageValue,
+  getLocationHandler,
+  getMinValueHandler,
+  getMaxValueHandler,
+  getBedHandler,
+  getBathHandler,
+  getGarageHandler,
+  submitSearch,
+  getLivingHandler,
+}) => {
+  const filteredList = houseData.filter(function (home) {
+    if (
+      home.baths === bathValue &&
+      home.beds === bedValue &&
+      home.garage === garageValue &&
+      home.living === livingValue
+    ) {
+      return home;
+    }
+  });
+
+  const listProperties = filteredList.map((home, index) => {
     return (
       <HouseCard
         homeData={home}
@@ -21,14 +52,22 @@ const Listing = ({ totalProperties }) => {
         totalImages={home.images.length}
         details={home.description}
         key={`${index}-${home.address}`}
-        
       />
     );
   });
 
   return (
     <>
-      <ListSearch />
+      <ListSearch
+        getLocationHandler={getLocationHandler}
+        getMinValueHandler={getMinValueHandler}
+        getMaxValueHandler={getMaxValueHandler}
+        getBedHandler={getBedHandler}
+        getBathHandler={getBathHandler}
+        getGarageHandler={getGarageHandler}
+        getLivingHandler={getLivingHandler}
+        submitSearch={submitSearch}
+      />
       <div className="app__flex">
         <div className="app__container-width">
           <div className="listings__container">

@@ -9,14 +9,23 @@ import ChairIcon from "@mui/icons-material/Chair";
 import SquareFootIcon from "@mui/icons-material/SquareFoot";
 import "./ListSearch.scss";
 
-const ListSearch = () => {
+const ListSearch = ({
+  getLocationHandler,
+  getMinValueHandler,
+  getMaxValueHandler,
+  getBedHandler,
+  getBathHandler,
+  getGarageHandler,
+  submitSearch,
+  getLivingHandler,
+}) => {
   return (
     <nav className="app__flex search-navbar">
       <div className="app__container-width navbar__container">
         <div className="navbar__top">
           <div className="input-container">
             <input type="text" placeholder="Search region suburb or postcode" />
-            <button>
+            <button onClick={submitSearch}>
               <SearchIcon className="icon" />
             </button>
           </div>
@@ -41,7 +50,7 @@ const ListSearch = () => {
           {/* PRICE CONTAINER */}
           <div className="navbar__bottom-content price-nav active">
             <div className="input-container">
-              <input type="text" placeholder="Enter your minimum"  />
+              <input type="text" placeholder="Enter your minimum" />
               <button>Min</button>
             </div>
             <div className="input-container">
@@ -54,11 +63,15 @@ const ListSearch = () => {
           {/* ROOMS CONTAINER */}
           <div className="navbar__bottom-content rooms-nav active">
             <div className="input-container">
-              <select name="" id="">
-                <option value="">1</option>
-                <option value="">2</option>
-                <option value="">3</option>
-                <option value="">4+</option>
+              <select onChange={getBedHandler} name="" id="">
+                <option value="all" default>
+                  All
+                </option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
               </select>
               <div className="select__type">
                 <BedIcon />
@@ -66,11 +79,14 @@ const ListSearch = () => {
               </div>
             </div>
             <div className="input-container">
-              <select name="" id="">
-                <option value="">1</option>
-                <option value="">2</option>
-                <option value="">3</option>
-                <option value="">4+</option>
+              <select onChange={getBathHandler} name="" id="">
+                <option value="all" default>
+                  All
+                </option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4+</option>
               </select>
               <div className="select__type">
                 <ShowerIcon />
@@ -78,11 +94,14 @@ const ListSearch = () => {
               </div>
             </div>
             <div className="input-container">
-              <select name="" id="">
-                <option value="">1</option>
-                <option value="">2</option>
-                <option value="">3</option>
-                <option value="">4+</option>
+              <select onChange={getGarageHandler} name="bath-value" id="">
+                <option value="all" default>
+                  All
+                </option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4+</option>
               </select>
               <div className="select__type">
                 <TimeToLeaveIcon />
@@ -90,11 +109,14 @@ const ListSearch = () => {
               </div>
             </div>
             <div className="input-container">
-              <select name="" id="">
-                <option value="">1</option>
-                <option value="">2</option>
-                <option value="">3</option>
-                <option value="">4+</option>
+              <select onChange={getLivingHandler} name="" id="">
+                <option value="all" default>
+                  All
+                </option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4+</option>
               </select>
               <div className="select__type">
                 <ChairIcon />

@@ -1,6 +1,35 @@
-.explore__grid{
+.explore__grid {
   display: grid;
-	gap:10px; 
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
- 
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.explore__buttons-container {
+  display: flex;
+  gap: 15px;
+
+  @media screen and (max-width: 500px) {
+    gap: 5px;
+  }
+
+  .explore-btn {
+    padding: 0.5rem 0.8rem;
+    border: 1px solid var(--grey-300);
+    border-radius: var(--border-rad-1);
+    font-size: 1rem;
+    background-color: white;
+    font-weight: 500;
+    color: var(--grey-400);
+
+    @media screen and (max-width: 500px) {
+			font-size: 0.8rem;
+			padding: 0.5rem 0.5rem;
+    }
+  }
+
+  .explore-btn.active {
+    border-color: var(--grey-500);
+    background-color: var(--grey-000);
+    color: var(--grey-500);
+  }
 }

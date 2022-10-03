@@ -4,7 +4,7 @@ $card-tag-image: rgba(8, 8, 8, 0.534);
 .housecard__container {
   border-radius: $house-card-radius;
   box-shadow: var(--box-shadow-3);
-
+  max-width: 376px;
   .housecard__img {
     display: flex;
     flex-direction: column;
