@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-
+import { motion } from "framer-motion";
 import "./HouseCard.scss";
 
 import { InfoModal, HouseModal, AgentModal } from "../index";
@@ -58,7 +58,11 @@ const HouseCard = ({
   }
 
   return (
-    <div className={`housecard__container ${listProperties.length < 2 ? "max-width" : ""}`}>
+    <motion.div
+      className={`housecard__container ${listProperties.length < 2 ? "max-width" : ""}`}
+      whileInView={{ opacity: [0, 1] }}
+      transition={{ duration: 1 }}
+    >
       <div className="housecard__img" style={{ backgroundImage: `url(${image})` }}>
         <div className="image__top">
           <p className="image-tag">{postedAgo} Days Ago</p>
@@ -139,7 +143,7 @@ const HouseCard = ({
       {toggleAgentModal && (
         <AgentModal agentData={agentData} toggleAgentModalHandler={toggleAgentModalHandler} />
       )}
-    </div>
+    </motion.div>
   );
 };
 

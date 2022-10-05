@@ -143,6 +143,7 @@ const ListSearch = ({
             <div className="input-container">
               <input
                 onChange={getSquareFootHandler}
+                
                 type="text"
                 placeholder="Enter your mininmun size in feet"
               />
