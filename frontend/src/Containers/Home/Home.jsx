@@ -35,42 +35,7 @@ const Home = ({
             Top <span>Features</span> this week
           </h1>
           <div className="house__grid">
-            <HouseCard
-              postedAgo={"3"}
-              sellType="Rent"
-              title="13 Averson Road"
-              price={500}
-              payType="Week"
-              image={images.house1_1}
-              details="Beautiful water front city house with a dream view."
-              square={5000}
-              beds={2}
-              baths={2}
-            />
-            <HouseCard
-              postedAgo={"3"}
-              sellType="Rent"
-              title="13 Averson Road"
-              price={500}
-              payType="Week"
-              image={images.house1_2}
-              details="Beautiful water front city house with a dream view."
-              square={5000}
-              beds={2}
-              baths={2}
-            />
-            <HouseCard
-              postedAgo={"3"}
-              sellType="Rent"
-              title="13 Averson Road"
-              price={500}
-              payType="Week"
-              image={images.house1_3}
-              details="Beautiful water front city house with a dream view."
-              square={5000}
-              beds={2}
-              baths={2}
-            />
+           
           </div>
         </div>
 

@@ -26,7 +26,8 @@ const HouseCard = ({
   totalImages,
   details,
   homeData,
-  agentData
+  agentData,
+  listProperties,
 }) => {
   const [toggleHouseModal, setToggleHouseModal] = useState(false);
   const [toggleAgentModal, setToggleAgentModal] = useState(false);
@@ -41,7 +42,6 @@ const HouseCard = ({
     // Disable in case the house Modal is open
     setToggleHouseModal(false);
     toggleAgentModal ? setToggleAgentModal(false) : setToggleAgentModal(true);
-    console.log("This works");
   };
 
   function displayFilterTags() {
@@ -58,7 +58,7 @@ const HouseCard = ({
   }
 
   return (
-    <div className="housecard__container">
+    <div className={`housecard__container ${listProperties.length < 2 ? "max-width" : ""}`}>
       <div className="housecard__img" style={{ backgroundImage: `url(${image})` }}>
         <div className="image__top">
           <p className="image-tag">{postedAgo} Days Ago</p>
@@ -136,7 +136,9 @@ const HouseCard = ({
           id={`${homeData.key}x${homeData.address}-x`}
         />
       )}
-      {toggleAgentModal && <AgentModal agentData={agentData} toggleAgentModalHandler={toggleAgentModalHandler} />}
+      {toggleAgentModal && (
+        <AgentModal agentData={agentData} toggleAgentModalHandler={toggleAgentModalHandler} />
+      )}
     </div>
   );
 };

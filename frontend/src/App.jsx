@@ -17,25 +17,20 @@ const App = () => {
     living: 1,
     squareFoot: 4000,
     houseType: "house",
-    features: [""],
+    features: [],
   });
 
   const [location, setLocation] = useState("");
-  const [minValue, setMinValue] = useState(100000);
-  const [maxValue, setMaxValue] = useState(500000);
-  const [bedValue, setBedValue] = useState(3);
-  const [bathValue, setBathValue] = useState(2);
-  const [livingValue, setLivingValue] = useState(1);
-  const [squareFoot, setSquareFoot] = useState(4000);
-  const [houseType, setHouseType] = useState("house");
+  const [minValue, setMinValue] = useState(0);
+  const [maxValue, setMaxValue] = useState(1800000);
+  const [bedValue, setBedValue] = useState("all");
+  const [bathValue, setBathValue] = useState("all");
+  const [livingValue, setLivingValue] = useState("all");
+  const [garageValue, setGarageValue] = useState("all");
+  const [squareFoot, setSquareFoot] = useState(0);
   const [features, setFeatures] = useState([]);
-  const [garageValue, setGarageValue] = useState(1);
 
   // Location, Min Max, Bed, Bath, Garage, Living , SquareFoot, House Type, Features
-
-  const getLocationHandler = (e) => {
-    setLocation(e.target.value);
-  };
 
   const getMinValueHandler = (e) => {
     setMinValue(e.target.value);
@@ -45,38 +40,29 @@ const App = () => {
     setMaxValue(e.target.value);
   };
 
+  const getSquareFootHandler = (e) => {
+    setSquareFoot(e.target.value);
+    console.log(squareFoot);
+  };
+
   const getBedHandler = (e) => {
-    setBedValue(parseInt(e.target.value));
-    console.log("Bed Handler");
+    e.target.value !== "all" ? setBedValue(parseInt(e.target.value)) : setBedValue("all");
   };
 
   const getBathHandler = (e) => {
-    setBathValue(parseInt(e.target.value));
-    console.log("Bath Handler");
+    e.target.value !== "all" ? setBathValue(parseInt(e.target.value)) : setBathValue("all");
   };
 
   const getGarageHandler = (e) => {
-    setGarageValue(parseInt(e.target.value));
-    console.log(e.target.value);
+    e.target.value !== "all" ? setGarageValue(parseInt(e.target.value)) : setGarageValue("all");
   };
 
   const getLivingHandler = (e) => {
-    setLivingValue(parseInt(e.target.value ))
-    
-    console.log(e.target.value);
+    e.target.value !== "all" ? setLivingValue(parseInt(e.target.value)) : setLivingValue("all");
   };
-
-  const getSquareFootHandler = (e) => {
-    console.log(e.target.value);
-  };
-
-  const getHouseTypeHandler = (e) => {
-    console.log(e.target.value);
-  };
-
-  const getFeaturesHandler = () => {};
 
   const submitSearch = () => {
+    // Update all the info on Submit
     console.log("Search is being Submitted");
     console.log(bathValue);
   };
@@ -84,6 +70,13 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="portal"></div>
+      <button
+        onClick={() => {
+          console.log(squareFoot);
+        }}
+      >
+        Test button
+      </button>
       <Navbar />
       <div>
         <Routes>
@@ -91,7 +84,6 @@ const App = () => {
             path="/"
             element={
               <Home
-                getLocationHandler={getLocationHandler}
                 getMinValueHandler={getMinValueHandler}
                 getMaxValueHandler={getMaxValueHandler}
                 getBedHandler={getBedHandler}
@@ -112,16 +104,15 @@ const App = () => {
                 bathValue={bathValue}
                 livingValue={livingValue}
                 squareFoot={squareFoot}
-                houseType={houseType}
                 features={features}
                 garageValue={garageValue}
-                getLocationHandler={getLocationHandler}
                 getMinValueHandler={getMinValueHandler}
                 getMaxValueHandler={getMaxValueHandler}
                 getBedHandler={getBedHandler}
                 getBathHandler={getBathHandler}
                 getGarageHandler={getGarageHandler}
                 getLivingHandler={getLivingHandler}
+                getSquareFootHandler={getSquareFootHandler}
                 submitSearch={submitSearch}
               />
             }

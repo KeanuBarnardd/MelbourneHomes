@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+
 import SearchIcon from "@mui/icons-material/Search";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
@@ -16,57 +17,60 @@ const ListSearch = ({
   getBedHandler,
   getBathHandler,
   getGarageHandler,
+  getSquareFootHandler,
   submitSearch,
   getLivingHandler,
 }) => {
+  const [toggleFilters, setToggleFilters] = useState(false);
+  const [toggleRooms, setToggleRooms] = useState(false);
+
+  const displayFiltersNav = () => {
+    setToggleRooms(false);
+    toggleFilters ? setToggleFilters(false) : setToggleFilters(true);
+  };
+
+  const displayRoomNav = () => {
+    setToggleFilters(false);
+    toggleRooms ? setToggleRooms(false) : setToggleRooms(true);
+  };
+
   return (
     <nav className="app__flex search-navbar">
       <div className="app__container-width navbar__container">
         <div className="navbar__top">
-          <div className="input-container">
-            <input type="text" placeholder="Search region suburb or postcode" />
-            <button onClick={submitSearch}>
-              <SearchIcon className="icon" />
-            </button>
-          </div>
-          <button className="searchList-btn">
-            Price
-            <KeyboardArrowDownIcon className="arrow-down" />
+          <button className="list__search-btn">
+            Search <SearchIcon />
           </button>
-          <button className="searchList-btn">
+          <div className="input-container">
+            <input onChange={getMinValueHandler} type="text" placeholder="Enter your minimum" />
+            <button>Min</button>
+          </div>
+          <div className="input-container">
+            <input onChange={getMaxValueHandler} type="text" placeholder="Enter your maximum" />
+            <button>Max</button>
+          </div>
+
+          <button
+            onClick={displayRoomNav}
+            className={`searchList-btn room ${toggleRooms ? "active" : ""}`}
+          >
             Rooms
             <KeyboardArrowDownIcon className="arrow-down" />
           </button>
-          <button className="searchList-btn">
-            Type
-            <KeyboardArrowDownIcon className="arrow-down" />
-          </button>
-          <button className="searchList-btn">
-            Filter
+          <button
+            onClick={displayFiltersNav}
+            className={`searchList-btn fill ${toggleFilters ? "active" : ""}`}
+          >
+            Filters
             <KeyboardArrowDownIcon className="arrow-down" />
           </button>
         </div>
         <div className="navbar__bottom">
-          {/* PRICE CONTAINER */}
-          <div className="navbar__bottom-content price-nav active">
-            <div className="input-container">
-              <input type="text" placeholder="Enter your minimum" />
-              <button>Min</button>
-            </div>
-            <div className="input-container">
-              <input type="text" placeholder="Enter your maximum" />
-              <button>Max</button>
-            </div>
-            <button>Clear</button>
-            <button>Confirm</button>
-          </div>
           {/* ROOMS CONTAINER */}
-          <div className="navbar__bottom-content rooms-nav active">
+          <div className={`navbar__bottom-content rooms-nav ${toggleRooms ? "active" : ""}`}>
             <div className="input-container">
               <select onChange={getBedHandler} name="" id="">
-                <option value="all" default>
-                  All
-                </option>
+                <option value="all">All</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -80,9 +84,7 @@ const ListSearch = ({
             </div>
             <div className="input-container">
               <select onChange={getBathHandler} name="" id="">
-                <option value="all" default>
-                  All
-                </option>
+                <option value="all">All</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -95,9 +97,7 @@ const ListSearch = ({
             </div>
             <div className="input-container">
               <select onChange={getGarageHandler} name="bath-value" id="">
-                <option value="all" default>
-                  All
-                </option>
+                <option value="all">All</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -110,9 +110,7 @@ const ListSearch = ({
             </div>
             <div className="input-container">
               <select onChange={getLivingHandler} name="" id="">
-                <option value="all" default>
-                  All
-                </option>
+                <option value="all">All</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -123,34 +121,28 @@ const ListSearch = ({
                 Living
               </div>
             </div>
-            <button>Clear</button>
-            <button>Confirm</button>
           </div>
           {/* TYPE CONTAINER */}
-          <div className="navbar__bottom-content type-nav active">
+          <div className={`navbar__bottom-content filter ${toggleFilters ? "active" : ""}`}>
             <div className="input-container">
-              <input type="text" />
+              <input
+                onChange={getSquareFootHandler}
+                type="text"
+                placeholder="Enter your mininmun size in feet"
+              />
               <button>
                 <SquareFootIcon />
                 Sqft
               </button>
             </div>
-            <button>Apartment</button>
-            <button>House</button>
-            <button>Commercial</button>
-            <button>Other</button>
-            <button>Apartment</button>
-          </div>
-          {/* FILTER CONTAINER */}
-          <div className="navbar__bottom-content filter active">
             <button>Aircon</button>
             <button>Pool</button>
             <button>Study</button>
             <button>Dishwasher</button>
-            <button>Built in robes</button>
+            <button>WIR</button>
             <button>Heating</button>
-            <button>Solar Panels</button>
-            <button>Outdoor area</button>
+            <button>Solar</button>
+            <button>Outdoor</button>
             <button>balcony</button>
           </div>
         </div>

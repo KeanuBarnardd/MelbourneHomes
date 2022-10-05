@@ -4,7 +4,7 @@ $card-tag-image: rgba(8, 8, 8, 0.534);
 .housecard__container {
   border-radius: $house-card-radius;
   box-shadow: var(--box-shadow-3);
-  max-width: 376px;
+
   .housecard__img {
     display: flex;
     flex-direction: column;
@@ -88,7 +88,7 @@ $card-tag-image: rgba(8, 8, 8, 0.534);
 
           &:hover {
             background-color: var(--grey-400);
-            
+
             .interaction__btn-logo {
               transform: scale(1.2);
               color: white;
@@ -134,4 +134,8 @@ $card-tag-image: rgba(8, 8, 8, 0.534);
       }
     }
   }
+}
+
+.housecard__container.max-width {
+  max-width: 375px;
 }

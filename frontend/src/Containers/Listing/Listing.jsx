@@ -1,20 +1,16 @@
 import React from "react";
 import "./Listing.scss";
-
+import { useState } from "react";
 import { ListSearch, HouseCard, HouseModal } from "../../Components/index";
 import { houseData } from "../../Constants/homeData";
 
 const Listing = ({
-  totalProperties,
-  location,
   minValue,
   maxValue,
   bedValue,
   bathValue,
   livingValue,
   squareFoot,
-  houseType,
-  features,
   garageValue,
   getLocationHandler,
   getMinValueHandler,
@@ -24,13 +20,17 @@ const Listing = ({
   getGarageHandler,
   submitSearch,
   getLivingHandler,
+  getSquareFootHandler,
 }) => {
   const filteredList = houseData.filter(function (home) {
     if (
-      home.baths === bathValue &&
-      home.beds === bedValue &&
-      home.garage === garageValue &&
-      home.living === livingValue
+      (home.baths === bathValue || bathValue === "all") &&
+      (home.beds === bedValue || bedValue === "all") &&
+      (home.living === livingValue || livingValue === "all") &&
+      (home.garage === garageValue || garageValue === "all") &&
+      home.price <= maxValue &&
+      home.price >= minValue &&
+      home.squareFeet >= squareFoot
     ) {
       return home;
     }
@@ -52,6 +52,7 @@ const Listing = ({
         totalImages={home.images.length}
         details={home.description}
         key={`${index}-${home.address}`}
+        listProperties={filteredList}
       />
     );
   });
@@ -62,6 +63,7 @@ const Listing = ({
         getLocationHandler={getLocationHandler}
         getMinValueHandler={getMinValueHandler}
         getMaxValueHandler={getMaxValueHandler}
+        getSquareFootHandler={getSquareFootHandler}
         getBedHandler={getBedHandler}
         getBathHandler={getBathHandler}
         getGarageHandler={getGarageHandler}
@@ -78,7 +80,7 @@ const Listing = ({
             </div>
             <div className="listings__container-filters">
               <p>
-                Showing <span>10</span> total properties
+                Showing <span>{listProperties.length}</span> total properties
               </p>
               <select name="" id="">
                 <option value="">Most Recent</option>
@@ -88,7 +90,9 @@ const Listing = ({
               </select>
             </div>
           </div>
-          <div className="listings__grid">{listProperties}</div>
+          <div className="listings__grid">
+            {listProperties.length !== 0 ? listProperties : <h1>No results found</h1>}
+          </div>
         </div>
       </div>
     </>
@@ -96,3 +100,15 @@ const Listing = ({
 };
 
 export default Listing;
+
+//  // Create an array of homeData values so we can loop through them...
+
+//  if (bedValue !== "all") {
+//   // Check how many beds we have...
+// }
+
+// if (bedValue === "all") {
+//   // THEN we just ignore this step because we dont need to check a value to return.
+// } else {
+//   // Check WHAT our bed value is...
+// }

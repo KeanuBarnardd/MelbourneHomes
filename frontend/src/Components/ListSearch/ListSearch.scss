@@ -31,7 +31,7 @@
       button {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
-        background-color: var(--secondary-color);
+        background-color: var(--grey-400);
         color: white;
         .icon {
           color: white;
@@ -58,7 +58,7 @@
       .select__type {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
-        background-color: var(--secondary-color);
+        background-color: var(--grey-400);
         color: white;
         display: flex;
         gap: 8px;
@@ -68,46 +68,51 @@
       display: flex;
       justify-content: center;
       gap: 10px;
+
+
+      .searchList-btn{
+        transition: all ease-in-out var(--timer-short);
+      }
+
+      .searchList-btn.room.active{
+        background-color: var(--secondary-color);
+        color: white;
+      }
+      .searchList-btn.fill.active{
+        background-color: var(--secondary-color);
+        color: white;
+      }
+
+      .list__search-btn {
+        padding: 0px 3rem;
+        background-color: var(--secondary-color);
+        font-weight: bold;
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 3px;
+      }
     }
   }
-
-  // !!!!!!!!!!!!!!THIS NEEDS TO BE CLEANED UP!!!!!!!!!!!!!!!!!!!!!!!!!!
   .navbar__bottom {
     .navbar__bottom-content {
       transition: all 1s ease-in-out;
-    }
-    .price-nav {
-      display: none;
-    }
-
-    .navbar__bottom-content.price-nav.active {
-      margin-top: 1rem;
-      display: flex;
-      gap: 10px;
+     
     }
 
     .rooms-nav {
       display: none;
+      opacity: 0;
     }
 
     .navbar__bottom-content.rooms-nav.active {
       margin-top: 1rem;
-
+      opacity: 1;
       display: flex;
       gap: 8px;
       select {
         width: 100%;
       }
-    }
-
-    .type-nav {
-      display: none;
-    }
-
-    .type-nav.active {
-      margin-top: 1rem;
-      display: flex;
-      gap: 8px;
     }
 
     .filter {
