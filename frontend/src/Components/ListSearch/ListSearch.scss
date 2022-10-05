@@ -69,16 +69,30 @@
       justify-content: center;
       gap: 10px;
 
+      .buy__select-container {
+        display: flex;
+        min-width: 200px;
+        button {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          text-align: center;
+          font-weight: bold;
+          color: var(--grey-500);
+        }
+        .buy-btn.active,
+        .rent-btn.active {
+          background-color: var(--secondary-color);
+          color: white;
+        }
+      }
 
-      .searchList-btn{
+      .searchList-btn {
         transition: all ease-in-out var(--timer-short);
       }
 
-      .searchList-btn.room.active{
-        background-color: var(--secondary-color);
-        color: white;
-      }
-      .searchList-btn.fill.active{
+      .searchList-btn.room.active,
+      .searchList-btn.fill.active {
         background-color: var(--secondary-color);
         color: white;
       }
@@ -97,7 +111,6 @@
   .navbar__bottom {
     .navbar__bottom-content {
       transition: all 1s ease-in-out;
-     
     }
 
     .rooms-nav {

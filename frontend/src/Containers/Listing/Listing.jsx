@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Listing.scss";
-import { useState } from "react";
 import { ListSearch, HouseCard, HouseModal } from "../../Components/index";
 import { houseData } from "../../Constants/homeData";
 
 const Listing = ({
+  isBuying,
+  setIsBuying,
   minValue,
   maxValue,
   bedValue,
@@ -23,6 +24,9 @@ const Listing = ({
   getSquareFootHandler,
 }) => {
   const filteredList = houseData.filter(function (home) {
+    let saleType = "purchase";
+    isBuying ? (saleType = "purchase") : (saleType = "rent");
+
     if (
       (home.baths === bathValue || bathValue === "all") &&
       (home.beds === bedValue || bedValue === "all") &&
@@ -30,7 +34,8 @@ const Listing = ({
       (home.garage === garageValue || garageValue === "all") &&
       home.price <= maxValue &&
       home.price >= minValue &&
-      home.squareFeet >= squareFoot
+      home.squareFeet >= squareFoot &&
+      home.sellType === saleType
     ) {
       return home;
     }
@@ -60,6 +65,8 @@ const Listing = ({
   return (
     <>
       <ListSearch
+        setIsBuying={setIsBuying}
+        isBuying={isBuying}
         getLocationHandler={getLocationHandler}
         getMinValueHandler={getMinValueHandler}
         getMaxValueHandler={getMaxValueHandler}

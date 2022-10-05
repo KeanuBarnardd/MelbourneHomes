@@ -11,14 +11,14 @@ import SquareFootIcon from "@mui/icons-material/SquareFoot";
 import "./ListSearch.scss";
 
 const ListSearch = ({
-  getLocationHandler,
+  isBuying,
+  setIsBuying,
   getMinValueHandler,
   getMaxValueHandler,
   getBedHandler,
   getBathHandler,
   getGarageHandler,
   getSquareFootHandler,
-  submitSearch,
   getLivingHandler,
 }) => {
   const [toggleFilters, setToggleFilters] = useState(false);
@@ -38,9 +38,25 @@ const ListSearch = ({
     <nav className="app__flex search-navbar">
       <div className="app__container-width navbar__container">
         <div className="navbar__top">
-          <button className="list__search-btn">
-            Search <SearchIcon />
-          </button>
+          <div className="buy__select-container">
+            <button
+              onClick={() => {
+                setIsBuying(true);
+              }}
+              className={`buy-btn ${isBuying ? "active" : ""}`}
+            >
+              Buy
+            </button>
+            <button
+              onClick={() => {
+                setIsBuying(false);
+              }}
+              className={`rent-btn ${isBuying !== true ? "active" : ""}`}
+            >
+              Rent
+            </button>
+          </div>
+
           <div className="input-container">
             <input onChange={getMinValueHandler} type="text" placeholder="Enter your minimum" />
             <button>Min</button>

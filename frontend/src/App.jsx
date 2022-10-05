@@ -6,21 +6,6 @@ import { Navbar, Footer } from "./Components/index";
 import "./App.scss";
 
 const App = () => {
-  const [searchData, setSearchData] = useState({
-    // Default State of our Search Data so when we search it will come up with results matching these...
-    location: "",
-    minValue: 100000,
-    maxValue: 500000,
-    bed: 3,
-    bath: 2,
-    garage: 1,
-    living: 1,
-    squareFoot: 4000,
-    houseType: "house",
-    features: [],
-  });
-
-  const [location, setLocation] = useState("");
   const [minValue, setMinValue] = useState(0);
   const [maxValue, setMaxValue] = useState(1800000);
   const [bedValue, setBedValue] = useState("all");
@@ -29,42 +14,29 @@ const App = () => {
   const [garageValue, setGarageValue] = useState("all");
   const [squareFoot, setSquareFoot] = useState(0);
   const [features, setFeatures] = useState([]);
+  const [isBuying, setIsBuying] = useState(true);
 
-  // Location, Min Max, Bed, Bath, Garage, Living , SquareFoot, House Type, Features
 
   const getMinValueHandler = (e) => {
     setMinValue(e.target.value);
   };
-
   const getMaxValueHandler = (e) => {
     setMaxValue(e.target.value);
   };
-
   const getSquareFootHandler = (e) => {
     setSquareFoot(e.target.value);
-    console.log(squareFoot);
   };
-
   const getBedHandler = (e) => {
     e.target.value !== "all" ? setBedValue(parseInt(e.target.value)) : setBedValue("all");
   };
-
   const getBathHandler = (e) => {
     e.target.value !== "all" ? setBathValue(parseInt(e.target.value)) : setBathValue("all");
   };
-
   const getGarageHandler = (e) => {
     e.target.value !== "all" ? setGarageValue(parseInt(e.target.value)) : setGarageValue("all");
   };
-
   const getLivingHandler = (e) => {
     e.target.value !== "all" ? setLivingValue(parseInt(e.target.value)) : setLivingValue("all");
-  };
-
-  const submitSearch = () => {
-    // Update all the info on Submit
-    console.log("Search is being Submitted");
-    console.log(bathValue);
   };
 
   return (
@@ -89,7 +61,6 @@ const App = () => {
                 getBedHandler={getBedHandler}
                 getBathHandler={getBathHandler}
                 getGarageHandler={getGarageHandler}
-                submitSearch={submitSearch}
               />
             }
           />
@@ -97,7 +68,8 @@ const App = () => {
             path="/listings"
             element={
               <Listing
-                location={location}
+                setIsBuying={setIsBuying}
+                isBuying={isBuying}
                 minValue={minValue}
                 maxValue={maxValue}
                 bedValue={bedValue}
@@ -113,7 +85,6 @@ const App = () => {
                 getGarageHandler={getGarageHandler}
                 getLivingHandler={getLivingHandler}
                 getSquareFootHandler={getSquareFootHandler}
-                submitSearch={submitSearch}
               />
             }
           />
