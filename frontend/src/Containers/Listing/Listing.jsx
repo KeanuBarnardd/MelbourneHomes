@@ -98,7 +98,19 @@ const Listing = ({
             </div>
           </div>
           <div className="listings__grid">
-            {listProperties.length !== 0 ? listProperties : <h1>No results found</h1>}
+            {listProperties.length !== 0 ? (
+              listProperties
+            ) : (
+              <div className="no__results-container">
+                <h1 className="content__title-text">
+                  No   
+                  <span>Results</span> found
+                </h1>
+                <p className="p-text">
+                  Can't seem to find any houses your looking for. Try adjusting your search.
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -107,15 +119,3 @@ const Listing = ({
 };
 
 export default Listing;
-
-//  // Create an array of homeData values so we can loop through them...
-
-//  if (bedValue !== "all") {
-//   // Check how many beds we have...
-// }
-
-// if (bedValue === "all") {
-//   // THEN we just ignore this step because we dont need to check a value to return.
-// } else {
-//   // Check WHAT our bed value is...
-// }
