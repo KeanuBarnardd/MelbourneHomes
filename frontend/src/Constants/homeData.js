@@ -1,24 +1,4 @@
-/*
-Types of DATA fields we will need to have 
------------------------------------------
-address = Name of house 
-area = Name of the area the house is in
-Price = Price of property
-description = Description of the property
-sellType = Is it being rented or sold ?
-listedTime = How many days since it was listed
 
-beds = How many bedrooms 
-baths = How many bathrooms 
-garage = How many car spots (garage's)
-living = How many living areas
-
-squarefeet = How many square feet 
-Type = Type of property that the house is eg. (Apartment, House etc.)
-
-filters =[What types of features you have true or false. 
-images = Images of the houses.
-*/
 
 import { images } from "./index";
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { FeatureCheckBox } from "../index";
 import SearchIcon from "@mui/icons-material/Search";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
@@ -9,6 +9,7 @@ import TimeToLeaveIcon from "@mui/icons-material/TimeToLeave";
 import ChairIcon from "@mui/icons-material/Chair";
 import SquareFootIcon from "@mui/icons-material/SquareFoot";
 import "./ListSearch.scss";
+import { houseData } from "../../Constants/homeData";
 
 const ListSearch = ({
   isBuying,
@@ -20,9 +21,22 @@ const ListSearch = ({
   getGarageHandler,
   getSquareFootHandler,
   getLivingHandler,
+  features,
+  setFeatures,
 }) => {
   const [toggleFilters, setToggleFilters] = useState(false);
   const [toggleRooms, setToggleRooms] = useState(false);
+  const featuresList = [
+    "Aircon",
+    "Pool",
+    "Study",
+    "Dishwasher",
+    "WIR",
+    "Heating",
+    "Solar",
+    "Outdoor",
+    "Balcony",
+  ];
 
   const displayFiltersNav = () => {
     setToggleRooms(false);
@@ -143,7 +157,6 @@ const ListSearch = ({
             <div className="input-container">
               <input
                 onChange={getSquareFootHandler}
-                
                 type="text"
                 placeholder="Enter your mininmun size in feet"
               />
@@ -152,15 +165,9 @@ const ListSearch = ({
                 Sqft
               </button>
             </div>
-            <button>Aircon</button>
-            <button>Pool</button>
-            <button>Study</button>
-            <button>Dishwasher</button>
-            <button>WIR</button>
-            <button>Heating</button>
-            <button>Solar</button>
-            <button>Outdoor</button>
-            <button>balcony</button>
+            {featuresList.map((featureBtn, idx) => {
+              return <FeatureCheckBox key={idx} text={featureBtn} />;
+            })}
           </div>
         </div>
       </div>

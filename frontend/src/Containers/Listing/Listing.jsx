@@ -22,6 +22,8 @@ const Listing = ({
   submitSearch,
   getLivingHandler,
   getSquareFootHandler,
+  features,
+  setFeatures,
 }) => {
   const filteredList = houseData.filter(function (home) {
     let saleType = "purchase";
@@ -76,6 +78,8 @@ const Listing = ({
         getGarageHandler={getGarageHandler}
         getLivingHandler={getLivingHandler}
         submitSearch={submitSearch}
+        features={features}
+        setFeatures={setFeatures}
       />
       <div className="app__flex">
         <div className="app__container-width">
@@ -103,7 +107,7 @@ const Listing = ({
             ) : (
               <div className="no__results-container">
                 <h1 className="content__title-text">
-                  No   
+                  No
                   <span>Results</span> found
                 </h1>
                 <p className="p-text">

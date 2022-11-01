@@ -16,7 +16,6 @@ const App = () => {
   const [features, setFeatures] = useState([]);
   const [isBuying, setIsBuying] = useState(true);
 
-
   const getMinValueHandler = (e) => {
     setMinValue(e.target.value);
   };
@@ -41,7 +40,6 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <div className="portal"></div>
       <button
         onClick={() => {
           console.log(squareFoot);
@@ -77,6 +75,7 @@ const App = () => {
                 livingValue={livingValue}
                 squareFoot={squareFoot}
                 features={features}
+                setFeatures={setFeatures}
                 garageValue={garageValue}
                 getMinValueHandler={getMinValueHandler}
                 getMaxValueHandler={getMaxValueHandler}

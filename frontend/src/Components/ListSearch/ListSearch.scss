@@ -38,6 +38,10 @@
         }
       }
 
+      button.active{
+        background-color: var(--secondary-color);
+      }
+
       select {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
