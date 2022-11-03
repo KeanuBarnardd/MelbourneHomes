@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "./FeatureCheckBox.scss";
 
-const FeatureCheckBox = ({ text, feaetureType, feature }) => {
+const FeatureCheckBox = ({ text, featureArray, feature }) => {
   const [toggleFeature, setToggleFeature] = useState(false);
 
   const addFeature = () => {
