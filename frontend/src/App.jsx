@@ -13,7 +13,17 @@ const App = () => {
   const [livingValue, setLivingValue] = useState("all");
   const [garageValue, setGarageValue] = useState("all");
   const [squareFoot, setSquareFoot] = useState(0);
-  const [features, setFeatures] = useState([]);
+  const [features, setFeatures] = useState([
+    "Aircon",
+    "Pool",
+    "Study",
+    "Dishwasher",
+    "WIR",
+    "Heating",
+    "Solar",
+    "Outdoor",
+    "Balcony",
+  ]);
   const [isBuying, setIsBuying] = useState(true);
 
   const getMinValueHandler = (e) => {

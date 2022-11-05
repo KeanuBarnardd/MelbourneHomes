@@ -166,7 +166,15 @@ const ListSearch = ({
               </button>
             </div>
             {featuresList.map((featureBtn, idx) => {
-              return <FeatureCheckBox key={idx} text={featureBtn} />;
+              return (
+                <FeatureCheckBox
+                  key={idx}
+                  text={featureBtn}
+                  feature={featureBtn}
+                  features={features}
+                  setFeatures={setFeatures}
+                />
+              );
             })}
           </div>
         </div>

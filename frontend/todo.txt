@@ -4,5 +4,6 @@
 To do list 
 
 
-- Make mortgage Calculator Responsive ( Done )
-- Add content to mortgage calculator 
+Add Feature Buttons 
+- When you loop through all the variables give the text value eg. 'Outdoor' to the 
+component. 
