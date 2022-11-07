@@ -3,6 +3,7 @@ import "./Home.scss";
 import { images } from "../../Constants/index";
 import SearchHeader from "./../../Components/SearchHeader/SearchHeader";
 import ExploreGrid from "../ExploreGrid/ExploreGrid";
+import { featuredHomes } from "../../Constants/homeData";
 import { Link } from "react-router-dom";
 import { HouseCard } from "../../Components";
 
@@ -13,7 +14,7 @@ const Home = ({
   getBedHandler,
   getBathHandler,
   getGarageHandler,
-  submitSearch
+  submitSearch,
 }) => {
   return (
     <div className="app__flex home">
@@ -35,7 +36,22 @@ const Home = ({
             Top <span>Features</span> this week
           </h1>
           <div className="house__grid">
-           
+            {featuredHomes.map((home, index) => {
+              return <HouseCard     homeData={home}
+              agentData={home.agent}
+              title={home.address}
+              image={home.images[0]}
+              postedAgo={home.listedTime}
+              price={home.price}
+              beds={home.beds}
+              baths={home.baths}
+              sellType={home.sellType}
+              square={home.squareFeet}
+              totalImages={home.images.length}
+              details={home.description}
+              key={`${index}-${home.address}`}
+              listProperties={3} />;
+            })} 
           </div>
         </div>
 

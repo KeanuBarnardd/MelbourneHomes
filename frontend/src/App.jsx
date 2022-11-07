@@ -24,6 +24,19 @@ const App = () => {
     "Outdoor",
     "Balcony",
   ]);
+
+  const resetFeatures = [
+    "Aircon",
+    "Pool",
+    "Study",
+    "Dishwasher",
+    "WIR",
+    "Heating",
+    "Solar",
+    "Outdoor",
+    "Balcony",
+  ];
+
   const [isBuying, setIsBuying] = useState(true);
 
   const getMinValueHandler = (e) => {
@@ -48,16 +61,20 @@ const App = () => {
     e.target.value !== "all" ? setLivingValue(parseInt(e.target.value)) : setLivingValue("all");
   };
 
+  const resetFeaturesHandler = () => {
+    setFeatures(resetFeatures);
+  };
+
   return (
     <BrowserRouter>
       <button
         onClick={() => {
-          console.log(squareFoot);
+          console.log(features);
         }}
       >
         Test button
       </button>
-      <Navbar />
+      <Navbar resetFeaturesHandler={resetFeaturesHandler} />
       <div>
         <Routes>
           <Route

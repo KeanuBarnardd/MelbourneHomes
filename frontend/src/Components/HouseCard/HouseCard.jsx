@@ -58,18 +58,20 @@ const HouseCard = ({
   }
 
   return (
-    <motion.div
-      className={`housecard__container ${listProperties.length < 2 ? "max-width" : ""}`}
-      whileInView={{ opacity: [0, 1] }}
-      transition={{ duration: 1 }}
-    >
+    <div className={`housecard__container ${listProperties.length < 2 ? "max-width" : ""}`}>
       <div className="housecard__img" style={{ backgroundImage: `url(${image})` }}>
         <div className="image__top">
           <p className="image-tag">{postedAgo} Days Ago</p>
           <p className="image-tag">For {sellType}</p>
         </div>
         <div className="image__bottom">
-          <button className="image-tag">
+          <button
+            onClick={() => {
+              toggleHouseModalHandler();
+              displayFilterTags();
+            }}
+            className="image-tag"
+          >
             <CameraAltIcon /> {totalImages}
           </button>
         </div>
@@ -81,13 +83,28 @@ const HouseCard = ({
             {sellType === "purchase" ? "" : "/Weekly"}
           </p>
           <div className="interactions__container">
-            <button className="interaction__btn">
+            <button
+              onClick={() => {
+                toggleAgentModalHandler();
+              }}
+              className="interaction__btn"
+            >
               <PhoneIcon className="interaction__btn-logo" />
             </button>
-            <button className="interaction__btn">
+            <button
+              onClick={() => {
+                toggleAgentModalHandler();
+              }}
+              className="interaction__btn"
+            >
               <FavoriteIcon className="interaction__btn-logo" />
             </button>
-            <button className="interaction__btn">
+            <button
+              onClick={() => {
+                toggleAgentModalHandler();
+              }}
+              className="interaction__btn"
+            >
               <EmailIcon className="interaction__btn-logo" />
             </button>
           </div>
@@ -143,7 +160,7 @@ const HouseCard = ({
       {toggleAgentModal && (
         <AgentModal agentData={agentData} toggleAgentModalHandler={toggleAgentModalHandler} />
       )}
-    </motion.div>
+    </div>
   );
 };
 
