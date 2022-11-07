@@ -1,11 +1,8 @@
-
-
 import { images } from "./index";
 
+// ERROR CANT FIND agentsData ......
 
-// ERROR CANT FIND agentsData ...... 
-
- const agentsData = {
+const agentsData = {
   paul: {
     name: "Paul Sharma",
     email: "psharma@melbhomes.com.au",
@@ -32,8 +29,6 @@ import { images } from "./index";
   },
 };
 
-
-
 export const houseData = [
   {
     // ==================== HOUSE 1 ===================
@@ -52,15 +47,15 @@ export const houseData = [
     type: "house",
 
     filters: [
-      { aircon: true },
-      { pool: false },
-      { study: true },
-      { dw: true },
-      { wir: true },
-      { heating: true },
-      { solar: true },
-      { outdoor: true },
-      { balcony: false },
+      { Aircon: false },
+      { Pool: false },
+      { Study: true },
+      { Dishwasher: true },
+      { WIR: true },
+      { Heating: true },
+      { Solar: true },
+      { Outdoor: true },
+      { Balcony: false },
     ],
     images: [
       images.house1_1,
@@ -90,15 +85,15 @@ export const houseData = [
     type: "house",
 
     filters: [
-      { aircon: true },
-      { pool: false },
-      { study: false },
-      { dw: true },
-      { wir: false },
-      { heating: true },
-      { solar: false },
-      { outdoor: true },
-      { balcony: false },
+      { Aircon: false },
+      { Pool: false },
+      { Study: false },
+      { Dishwasher: true },
+      { WIR: false },
+      { Heating: true },
+      { Solar: false },
+      { Outdoor: true },
+      { Balcony: false },
     ],
     images: [
       images.house2_1,
@@ -120,7 +115,7 @@ export const houseData = [
     price: 1525000,
     sellType: "purchase",
     description:
-      "Luxurious 5 bedroom mansion hidden away inside the high end streets of Brighton. With 3 car spots you will have space to store your cars and with a large pool you can spend heaps of time with family.",
+      "Luxurious 5 bedroom mansion hidden away inside the high end streets of Brighton. With 3 car spots you will have space to store your cars and with a large Pool you can spend heaps of time with family.",
     listedTime: 10,
     beds: 5,
     baths: 3,
@@ -130,15 +125,15 @@ export const houseData = [
     type: "house",
 
     filters: [
-      { aircon: true },
-      { pool: true },
-      { study: true },
-      { dw: true },
-      { wir: true },
-      { heating: true },
-      { solar: true },
-      { outdoor: true },
-      { balcony: true },
+      { Aircon: false },
+      { Pool: true },
+      { Study: true },
+      { Dishwasher: true },
+      { WIR: true },
+      { Heating: true },
+      { Solar: true },
+      { Outdoor: true },
+      { Balcony: true },
     ],
     images: [
       images.house4_1,
@@ -161,7 +156,7 @@ export const houseData = [
     price: 952000,
     sellType: "purchase",
     description:
-      "A 6 bedroom large family resort style home outside of the busy Melbourne city. If your family that loves nature and being outdoors then this is the dream home for you.  ",
+      "A 6 bedroom large family resort style home outside of the busy Melbourne city. If your family that loves nature and being Outdoors then this is the dream home for you.  ",
     listedTime: 23,
     beds: 6,
     baths: 2,
@@ -171,15 +166,15 @@ export const houseData = [
     type: "house",
 
     filters: [
-      { aircon: true },
-      { pool: true },
-      { study: true },
-      { dw: true },
-      { wir: true },
-      { heating: true },
-      { solar: true },
-      { outdoor: true },
-      { balcony: true },
+      { Aircon: true },
+      { Pool: true },
+      { Study: true },
+      { Dishwasher: true },
+      { WIR: true },
+      { Heating: true },
+      { Solar: true },
+      { Outdoor: true },
+      { Balcony: true },
     ],
     images: [
       images.house5_1,
@@ -210,15 +205,15 @@ export const houseData = [
     type: "house",
 
     filters: [
-      { aircon: true },
-      { pool: false },
-      { study: false },
-      { dw: true },
-      { wir: true },
-      { heating: true },
-      { solar: true },
-      { outdoor: true },
-      { balcony: false },
+      { Aircon: true },
+      { Pool: false },
+      { Study: false },
+      { Dishwasher: true },
+      { WIR: true },
+      { Heating: true },
+      { Solar: true },
+      { Outdoor: true },
+      { Balcony: false },
     ],
     images: [
       images.house6_1,
@@ -239,7 +234,7 @@ export const houseData = [
     price: 400,
     sellType: "rent",
     description:
-      "3 Bedroom family's dream in Melton, Melbourne. If your looking for a nice safe and easy going suburb to live in look no further. Next to public schools, local shopping centers and public transport. It is the ideal home for all types of familys. Also is located down the road from a indoor swimming pool which is super popular in the summer.   ",
+      "3 Bedroom family's dream in Melton, Melbourne. If your looking for a nice safe and easy going suburb to live in look no further. Next to public schools, local shopping centers and public transport. It is the ideal home for all types of familys. Also is located down the road from a indoor swimming Pool which is super popular in the summer.   ",
     listedTime: 9,
     beds: 3,
     baths: 1,
@@ -249,15 +244,15 @@ export const houseData = [
     type: "house",
 
     filters: [
-      { aircon: true },
-      { pool: false },
-      { study: false },
-      { dw: true },
-      { wir: true },
-      { heating: true },
-      { solar: true },
-      { outdoor: true },
-      { balcony: false },
+      { Aircon: true },
+      { Pool: false },
+      { Study: false },
+      { Dishwasher: true },
+      { WIR: true },
+      { Heating: true },
+      { Solar: true },
+      { Outdoor: true },
+      { Balcony: false },
     ],
     images: [
       images.house7_1,
@@ -288,15 +283,15 @@ export const houseData = [
     type: "house",
 
     filters: [
-      { aircon: true },
-      { pool: true },
-      { study: true },
-      { dw: true },
-      { wir: true },
-      { heating: true },
-      { solar: true },
-      { outdoor: true },
-      { balcony: true },
+      { Aircon: true },
+      { Pool: true },
+      { Study: true },
+      { Dishwasher: true },
+      { WIR: true },
+      { Heating: true },
+      { Solar: true },
+      { Outdoor: true },
+      { Balcony: true },
     ],
     images: [
       images.house8_1,
@@ -327,15 +322,15 @@ export const houseData = [
     type: "house",
 
     filters: [
-      { aircon: true },
-      { pool: false },
-      { study: true },
-      { dw: true },
-      { wir: true },
-      { heating: true },
-      { solar: true },
-      { outdoor: true },
-      { balcony: false },
+      { Aircon: true },
+      { Pool: false },
+      { Study: true },
+      { Dishwasher: true },
+      { WIR: true },
+      { Heating: true },
+      { Solar: true },
+      { Outdoor: true },
+      { Balcony: false },
     ],
     images: [
       images.house10_1,
@@ -366,15 +361,15 @@ export const houseData = [
     type: "house",
 
     filters: [
-      { aircon: true },
-      { pool: true },
-      { study: false },
-      { dw: true },
-      { wir: true },
-      { heating: true },
-      { solar: false },
-      { outdoor: true },
-      { balcony: true },
+      { Aircon: true },
+      { Pool: true },
+      { Study: false },
+      { Dishwasher: true },
+      { WIR: true },
+      { Heating: true },
+      { Solar: false },
+      { Outdoor: true },
+      { Balcony: true },
     ],
     images: [
       images.house11_1,
@@ -404,15 +399,15 @@ export const houseData = [
     type: "house",
 
     filters: [
-      { aircon: true },
-      { pool: true },
-      { study: false },
-      { dw: true },
-      { wir: true },
-      { heating: true },
-      { solar: false },
-      { outdoor: true },
-      { balcony: true },
+      { Aircon: true },
+      { Pool: true },
+      { Study: false },
+      { Dishwasher: true },
+      { WIR: true },
+      { Heating: true },
+      { Solar: false },
+      { Outdoor: true },
+      { Balcony: true },
     ],
     images: [
       images.house12_1,
@@ -444,15 +439,15 @@ export const houseData = [
     type: "house",
 
     filters: [
-      { aircon: true },
-      { pool: true },
-      { study: false },
-      { dw: true },
-      { wir: false },
-      { heating: true },
-      { solar: true },
-      { outdoor: true },
-      { balcony: true },
+      { Aircon: true },
+      { Pool: true },
+      { Study: false },
+      { Dishwasher: true },
+      { WIR: false },
+      { Heating: true },
+      { Solar: true },
+      { Outdoor: true },
+      { Balcony: true },
     ],
     images: [
       images.house13_2,
@@ -483,15 +478,15 @@ export const houseData = [
     type: "house",
 
     filters: [
-      { aircon: true },
-      { pool: true },
-      { study: false },
-      { dw: true },
-      { wir: false },
-      { heating: true },
-      { solar: true },
-      { outdoor: true },
-      { balcony: false },
+      { Aircon: true },
+      { Pool: true },
+      { Study: false },
+      { Dishwasher: true },
+      { WIR: false },
+      { Heating: true },
+      { Solar: true },
+      { Outdoor: true },
+      { Balcony: false },
     ],
     images: [
       images.house14_1,
@@ -523,15 +518,15 @@ export const houseData = [
     type: "house",
 
     filters: [
-      { aircon: true },
-      { pool: false },
-      { study: true },
-      { dw: false },
-      { wir: true },
-      { heating: false },
-      { solar: false },
-      { outdoor: true },
-      { balcony: false },
+      { Aircon: true },
+      { Pool: false },
+      { Study: true },
+      { Dishwasher: false },
+      { WIR: true },
+      { Heating: false },
+      { Solar: false },
+      { Outdoor: true },
+      { Balcony: false },
     ],
     images: [
       images.house15_1,
@@ -563,15 +558,15 @@ export const houseData = [
     type: "house",
 
     filters: [
-      { aircon: true },
-      { pool: true },
-      { study: true },
-      { dw: true },
-      { wir: true },
-      { heating: false },
-      { solar: true },
-      { outdoor: true },
-      { balcony: true },
+      { Aircon: true },
+      { Pool: true },
+      { Study: true },
+      { Dishwasher: true },
+      { WIR: true },
+      { Heating: false },
+      { Solar: true },
+      { Outdoor: true },
+      { Balcony: true },
     ],
     images: [
       images.house16_1,
@@ -601,15 +596,15 @@ export const houseData = [
     type: "house",
 
     filters: [
-      { aircon: true },
-      { pool: true },
-      { study: true },
-      { dw: true },
-      { wir: true },
-      { heating: false },
-      { solar: true },
-      { outdoor: true },
-      { balcony: true },
+      { Aircon: true },
+      { Pool: true },
+      { Study: true },
+      { Dishwasher: true },
+      { WIR: true },
+      { Heating: false },
+      { Solar: true },
+      { Outdoor: true },
+      { Balcony: true },
     ],
     images: [
       images.house17_1,

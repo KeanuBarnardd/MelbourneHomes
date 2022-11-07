@@ -25,6 +25,18 @@ const Listing = ({
   features,
   setFeatures,
 }) => {
+  const featuresList = [
+    "Aircon",
+    "Pool",
+    "Study",
+    "Dishwasher",
+    "WIR",
+    "Heating",
+    "Solar",
+    "Outdoor",
+    "Balcony",
+  ];
+
   const filteredList = houseData.filter(function (home) {
     let saleType = "purchase";
     isBuying ? (saleType = "purchase") : (saleType = "rent");
@@ -43,7 +55,24 @@ const Listing = ({
     }
   });
 
-  const listProperties = filteredList.map((home, index) => {
+  const featuredFilteredList = filteredList.filter(function (home) {
+    for (let x = 0; x < home.filters.length; x++) {
+      for (let i = 0; i < features.length; i++) {
+        let keyVal = Object.keys(home.filters[x]).toString();
+        let fVal = features[i];
+        if (keyVal === fVal) {
+          const objVal = Object.values(home.filters[x]).toString();
+          if (objVal === "true") {
+            return home;
+          }
+        }
+      }
+    }
+  });
+
+  const testButton2 = () => {};
+
+  const listProperties = featuredFilteredList.map((home, index) => {
     return (
       <HouseCard
         homeData={home}
@@ -66,6 +95,13 @@ const Listing = ({
 
   return (
     <>
+      <button
+        onClick={() => {
+          testButton2();
+        }}
+      >
+        TEST BUTTON 2{" "}
+      </button>
       <ListSearch
         setIsBuying={setIsBuying}
         isBuying={isBuying}
@@ -80,6 +116,7 @@ const Listing = ({
         submitSearch={submitSearch}
         features={features}
         setFeatures={setFeatures}
+        featuresList={featuresList}
       />
       <div className="app__flex">
         <div className="app__container-width">

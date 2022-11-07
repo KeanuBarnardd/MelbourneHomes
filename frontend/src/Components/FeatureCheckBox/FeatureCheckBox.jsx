@@ -4,7 +4,6 @@ import "./FeatureCheckBox.scss";
 
 const FeatureCheckBox = ({ text, feature, features, setFeatures }) => {
   const [toggleFeature, setToggleFeature] = useState(true);
-  const [featureType, setFeatureType] = useState(feature);
 
   const addFeature = () => {
     console.log("Add Feature");
@@ -17,13 +16,10 @@ const FeatureCheckBox = ({ text, feature, features, setFeatures }) => {
 
   const removeFeature = () => {
     if (toggleFeature === true) {
-      // Remove Item from Array
       let index = features.findIndex((f) => {
         return f === feature;
       });
       if (index !== -1) {
-        console.log(`${feature} is at index [${index}]`);
-        // Remove Feature from list...
         let newList = features;
         newList.splice(index, 1);
         setFeatures([...newList]);
@@ -42,12 +38,6 @@ const FeatureCheckBox = ({ text, feature, features, setFeatures }) => {
       setToggleFeature(true);
       addFeature();
     }
-  };
-
-  const hello = () => {
-    toggleFeature ? setToggleFeature(false) : setToggleFeature(true);
-    addFeature();
-    console.log(features);
   };
 
   return (

@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { FeatureCheckBox } from "../index";
-import SearchIcon from "@mui/icons-material/Search";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import BedIcon from "@mui/icons-material/Bed";
 import ShowerIcon from "@mui/icons-material/Shower";
 import TimeToLeaveIcon from "@mui/icons-material/TimeToLeave";
@@ -23,20 +21,11 @@ const ListSearch = ({
   getLivingHandler,
   features,
   setFeatures,
+  featuresList
 }) => {
   const [toggleFilters, setToggleFilters] = useState(false);
   const [toggleRooms, setToggleRooms] = useState(false);
-  const featuresList = [
-    "Aircon",
-    "Pool",
-    "Study",
-    "Dishwasher",
-    "WIR",
-    "Heating",
-    "Solar",
-    "Outdoor",
-    "Balcony",
-  ];
+
 
   const displayFiltersNav = () => {
     setToggleRooms(false);
