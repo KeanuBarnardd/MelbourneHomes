@@ -18,6 +18,8 @@ const SearchHeader = ({
   getBathHandler,
   getGarageHandler,
   submitSearch,
+  setIsBuying,
+  getSquareFootHandler,
 }) => {
   const [isRent, setIsRent] = useState(false);
 
@@ -25,22 +27,23 @@ const SearchHeader = ({
     <div className="search__header-form">
       <div className="select__section">
         <button
-          onClick={() => setIsRent(false)}
+          onClick={() => {
+            setIsRent(false);
+            setIsBuying(true);
+          }}
           className={`select-section__button ${isRent !== true ? "active" : ""}`}
         >
           Buy
         </button>
         <button
-          onClick={() => setIsRent(true)}
+          onClick={() => {
+            setIsRent(true);
+            setIsBuying(false);
+          }}
           className={`select-section__button ${isRent ? "active" : ""}`}
         >
           Rent
         </button>
-      </div>
-      <div className="input-field">
-        <p>Location</p>
-        <input type="text" onChange={getLocationHandler}></input>
-        <SearchIcon className="input-icon" />
       </div>
       <div className="form-row rooms">
         <div className="input-field">
@@ -54,10 +57,17 @@ const SearchHeader = ({
           <AttachMoneyIcon className="input-icon" />
         </div>
       </div>
+      <div className="input-field">
+        <p>Square Foot</p>
+        <input type="text" onChange={getSquareFootHandler}></input>
+        <SquareFootIcon className="input-icon" />
+      </div>
+
       <div className="form-row">
         <div className="input-field">
           <p>Bed</p>
           <select onChange={getBedHandler} name="" id="bed-select">
+            <option value="all">All</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -68,6 +78,7 @@ const SearchHeader = ({
         <div className="input-field">
           <p>Bath</p>
           <select onChange={getBathHandler} name="" id="bath-select">
+            <option value="all">All</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -78,6 +89,7 @@ const SearchHeader = ({
         <div className="input-field">
           <p>Garage</p>
           <select onChange={getGarageHandler} name="" id="garage-select">
+            <option value="all">All</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -86,9 +98,9 @@ const SearchHeader = ({
           <TimeToLeaveIcon className="input-icon" />
         </div>
       </div>
-      <button onClick={() => submitSearch()} className="search__btn" type="submit">
+      <Link to="/listings" className="search__btn" type="submit">
         Search
-      </button>
+      </Link>
     </div>
   );
 };

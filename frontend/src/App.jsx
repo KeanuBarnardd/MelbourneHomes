@@ -24,6 +24,15 @@ const App = () => {
     "Outdoor",
     "Balcony",
   ]);
+  const resetValues = {
+    minVal: 0,
+    maxVal: 1800000,
+    bedValue: "all",
+    bathValue: "all",
+    livingValue: "all",
+    garageValue: "all",
+    squareFoot: 0,
+  };
 
   const resetFeatures = [
     "Aircon",
@@ -63,6 +72,18 @@ const App = () => {
 
   const resetFeaturesHandler = () => {
     setFeatures(resetFeatures);
+
+    setMinValue(0);
+    setMaxValue(1800000);
+    setBedValue("all");
+    setBathValue("all");
+    setLivingValue("all");
+    setGarageValue("all");
+    setSquareFoot(0);
+
+    console.log(
+      `${minValue} ${maxValue} ${bedValue} ${bathValue} ${livingValue} ${garageValue} ${squareFoot}`
+    );
   };
 
   return (
@@ -86,6 +107,8 @@ const App = () => {
                 getBedHandler={getBedHandler}
                 getBathHandler={getBathHandler}
                 getGarageHandler={getGarageHandler}
+                setIsBuying={setIsBuying}
+                getSquareFootHandler={getSquareFootHandler}
               />
             }
           />

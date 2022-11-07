@@ -15,6 +15,8 @@ const Home = ({
   getBathHandler,
   getGarageHandler,
   submitSearch,
+  setIsBuying,
+  getSquareFootHandler,
 }) => {
   return (
     <div className="app__flex home">
@@ -28,6 +30,8 @@ const Home = ({
           getBathHandler={getBathHandler}
           getGarageHandler={getGarageHandler}
           submitSearch={submitSearch}
+          setIsBuying={setIsBuying}
+          getSquareFootHandler={getSquareFootHandler}
         />
       </header>
       <div className="app__container-width">
@@ -37,21 +41,25 @@ const Home = ({
           </h1>
           <div className="house__grid">
             {featuredHomes.map((home, index) => {
-              return <HouseCard     homeData={home}
-              agentData={home.agent}
-              title={home.address}
-              image={home.images[0]}
-              postedAgo={home.listedTime}
-              price={home.price}
-              beds={home.beds}
-              baths={home.baths}
-              sellType={home.sellType}
-              square={home.squareFeet}
-              totalImages={home.images.length}
-              details={home.description}
-              key={`${index}-${home.address}`}
-              listProperties={3} />;
-            })} 
+              return (
+                <HouseCard
+                  homeData={home}
+                  agentData={home.agent}
+                  title={home.address}
+                  image={home.images[0]}
+                  postedAgo={home.listedTime}
+                  price={home.price}
+                  beds={home.beds}
+                  baths={home.baths}
+                  sellType={home.sellType}
+                  square={home.squareFeet}
+                  totalImages={home.images.length}
+                  details={home.description}
+                  key={`${index}-${home.address}`}
+                  listProperties={3}
+                />
+              );
+            })}
           </div>
         </div>
 

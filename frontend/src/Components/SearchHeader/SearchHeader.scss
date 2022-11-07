@@ -2,8 +2,6 @@
   h1 {
     text-align: center;
     color: var(--grey-500);
-
-   
   }
 
   max-width: 600px;
@@ -89,5 +87,11 @@
     border-radius: var(--border-rad-1);
     margin-left: auto;
     margin-right: auto;
+    text-decoration: none;
+    text-align: center;
+    transition: all ease-in-out var(--timer-short);
+    &:hover {
+      background-color: var(--secondary-dark);
+    }
   }
 }
