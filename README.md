@@ -2,6 +2,7 @@
 
 ( Work in Progress )
 MelbourneHomes is a mock real estate website showcasing the beautiful homes available to buy or rent in all surrounding suburbs of Melbourne. In order to design and develop this website independently, languages utilised alongside React-Router, are JavaScript, React, Html, and CSS/SCSS. A functional web app was also developed to work within the website being the mortgage calculator.
+<br>
 [![My Skills](https://skills.thijs.gg/icons?i=js,html,css,react)](https://skills.thijs.gg)
 
 ## How it works
@@ -70,6 +71,8 @@ const FeatureCheckBox = ({ text, feature, features, setFeatures }) => {
 ## How I structured this project
 
 What I did when structuring this project was seperate my folders into Containers, Components, Constants and Assets. I watched a React Developer lecture online where he discussed a seperation of concerns. Where containers hold all the components, components are all re-usable, Assets are for images and miscellaneous files. While constants is for non-changing files such as data bases.
+<br>
+
 ![Listings Image](./frontend/src/Assets/ReadmeImages/folderSetup.PNG)
 
 I did'nt want to use an API as I could'nt find a good API that was free and included alot of features for the homes that I could use. So I created a local database and set up my array of objects as such. So my listings page could refer to this array and display all the required data on search.
