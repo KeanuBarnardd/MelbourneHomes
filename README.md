@@ -12,7 +12,7 @@ MelbourneHomes is a mock real estate website showcasing the beautiful homes avai
 
 ## How it works
 
-MelboureHomes allows users to search from a listing of homes that are stored on a local database. Houses can be sorted by Rent or Buying status, minimum and maximum purchase range, the minimum square foot size and rooms count eg.(3 Bedroom, 2 Bathroom). I also included a filters feature we users can toggle if they want their search to include features such as Aircons, Outdoor areas etc.
+MelbourneHomes allows users to search from a listing of homes that are stored on a local database. Houses can be sorted by Rent or Buying status, minimum and maximum purchase range, the minimum square foot size and rooms count eg.(3 Bedroom, 2 Bathroom). I also included a filters feature we users can toggle if they want their search to include features such as Aircons, Outdoor areas etc.
 ![Listings Image](./frontend/src/Assets/ReadmeImages/listing.PNG)
 
 I've also added an in built mortgage calculator (in progress).The user will input their loan amount, interest rate and how long they have to pay off the loan. Then it will process those inputs and output the total pay including the interest rate overtime, how much interest will be paid alone and the mortgage total. These values can also be filtered be displayed as either annually, monthly, daily or weekly etc.
