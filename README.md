@@ -1,7 +1,10 @@
 # MelbourneHomes
 
-( Work in Progress )
+( Work in Progress ) https://kaleidoscopic-crostata-20385c.netlify.app/
+
+<br>
 MelbourneHomes is a mock real estate website showcasing the beautiful homes available to buy or rent in all surrounding suburbs of Melbourne. In order to design and develop this website independently, languages utilised alongside React-Router, are JavaScript, React, Html, and CSS/SCSS. A functional web app was also developed to work within the website being the mortgage calculator.
+
 <br>
 [![My Skills](https://skills.thijs.gg/icons?i=js,html,css,react)](https://skills.thijs.gg)
 
