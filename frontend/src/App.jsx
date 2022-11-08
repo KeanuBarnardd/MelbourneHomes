@@ -88,13 +88,6 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <button
-        onClick={() => {
-          console.log(features);
-        }}
-      >
-        Test button
-      </button>
       <Navbar resetFeaturesHandler={resetFeaturesHandler} />
       <div>
         <Routes>

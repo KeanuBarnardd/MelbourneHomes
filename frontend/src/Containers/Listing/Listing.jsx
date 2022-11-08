@@ -95,13 +95,6 @@ const Listing = ({
 
   return (
     <>
-      <button
-        onClick={() => {
-          testButton2();
-        }}
-      >
-        TEST BUTTON 2{" "}
-      </button>
       <ListSearch
         setIsBuying={setIsBuying}
         isBuying={isBuying}

@@ -36,18 +36,6 @@ const Services = () => {
     filterAmount(filterType);
   });
 
-  // PROBLEM !!!!!!!!
-  /*
-
-  Bug 1. 
-  Interest Rate is being updated after our state render. So we dont see it render until after we click the button again. 
-
-  Bug 2. 
-  Stop values from compounding. Just resubmit the same values into the form so it shows the same thing- DONT compound.
-
-
-  */
-
   const calculateMortgage = (e) => {
     // Stop form from refreshing on Submit.
     e.preventDefault();
