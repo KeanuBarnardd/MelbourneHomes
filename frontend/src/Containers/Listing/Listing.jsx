@@ -37,6 +37,8 @@ const Listing = ({
     "Balcony",
   ];
 
+
+
   const filteredList = houseData.filter(function (home) {
     let saleType = "purchase";
     isBuying ? (saleType = "purchase") : (saleType = "rent");
@@ -55,6 +57,15 @@ const Listing = ({
     }
   });
 
+  const selectChangeFilter = (e) => {
+    const { value } = e.target;
+
+    if (value === "low_to_high"){
+      const lowFilter = filteredList.filter
+    }
+  };
+
+
   const featuredFilteredList = filteredList.filter(function (home) {
     for (let x = 0; x < home.filters.length; x++) {
       for (let i = 0; i < features.length; i++) {
@@ -69,8 +80,6 @@ const Listing = ({
       }
     }
   });
-
-  const testButton2 = () => {};
 
   const listProperties = featuredFilteredList.map((home, index) => {
     return (
@@ -124,10 +133,8 @@ const Listing = ({
                 Showing <span>{listProperties.length}</span> total properties
               </p>
               <select name="" id="">
-                <option value="">Most Recent</option>
-                <option value="">Least Recent</option>
-                <option value="">Price- Low to High</option>
-                <option value="">Price- High to low</option>
+                <option value="low_to_high">Price- Low to High</option>
+                <option value="high_to_low">Price- High to low</option>
               </select>
             </div>
           </div>

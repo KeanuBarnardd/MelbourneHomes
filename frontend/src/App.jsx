@@ -24,15 +24,6 @@ const App = () => {
     "Outdoor",
     "Balcony",
   ]);
-  const resetValues = {
-    minVal: 0,
-    maxVal: 1800000,
-    bedValue: "all",
-    bathValue: "all",
-    livingValue: "all",
-    garageValue: "all",
-    squareFoot: 0,
-  };
 
   const resetFeatures = [
     "Aircon",
