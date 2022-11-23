@@ -5,9 +5,9 @@ import { useState, useEffect } from "react";
 import { MortgageOutput } from "../../Components/index";
 const Services = () => {
   // Input Values
-  const [loanAmount, setLoanAmount] = useState(100); // Loan Amount
-  const [interestRate, setInterestRate] = useState(1); // Interest Rates
-  const [repaymentTerm, setRepaymentTerm] = useState(30); // Length of loan
+  const [loanAmount, setLoanAmount] = useState(0); // Loan Amount
+  const [interestRate, setInterestRate] = useState(0); // Interest Rates
+  const [repaymentTerm, setRepaymentTerm] = useState(0); // Length of loan
   // Display Values
   const [mortageTotal, setMortageTotal] = useState(0);
   const [interestTotal, setInterestTotal] = useState(0);
@@ -30,7 +30,6 @@ const Services = () => {
     setFilterType(e.target.value);
     filterAmount(filterType);
   };
-  // ------------------------------------------
 
   useEffect(() => {
     filterAmount(filterType);
@@ -39,12 +38,19 @@ const Services = () => {
   const calculateMortgage = (e) => {
     // Stop form from refreshing on Submit.
     e.preventDefault();
-    setInterestRate(interestRate / 100);
+
+    const convertInterest = interestRate / 100;
+    setInterestRate(convertInterest);
     // Convert Interest Rate into two decimal places
-    console.log(interestRate);
+    console.log("Interest Rate: " + interestRate);
     // Calculate Daily
     setMortageTotal(loanAmount * interestRate + loanAmount);
     setInterestTotal(loanAmount * interestRate);
+
+    // Reset all our Values back to 0
+    setInterestRate(0);
+    setMortageTotal(0);
+    setRepaymentTerm(0);
   };
 
   const filterAmount = (v) => {
@@ -80,8 +86,9 @@ const Services = () => {
     } else {
       console.error(`FilteredType : ${v} Has no value `);
     }
-    setFilteredInterest(i.toFixed(2));
-    setFilteredMortgage(m.toFixed(2));
+
+    setFilteredInterest(i);
+    setFilteredMortgage(m);
   };
 
   return (
@@ -114,13 +121,14 @@ const Services = () => {
         </div>
 
         <div className="mortgage__container app__container-width">
-          <form className="app__container-width mortgage__input-form">
+          <form onSubmit={calculateMortgage} className="app__container-width mortgage__input-form">
             {/* P = LOAN AMOUNT  */}
             <div className="form__input-container">
               <p>Loan Amount</p>
               <input
+                required
                 onChange={getLoanInputHandler}
-                type="text"
+                type="number"
                 name=""
                 placeholder="Amount Borrowed"
                 id=""
@@ -129,22 +137,28 @@ const Services = () => {
             <div className="form__input-container">
               <p>Interest Rate (%)</p>
               {/* R = INTEREST RATE   */}
-              <input onChange={getInterestInputHandler} type="text" placeholder="4.8%" />
+              <input
+                min={1}
+                max={100}
+                required
+                onChange={getInterestInputHandler}
+                type="number"
+                placeholder="4.8%"
+              />
             </div>
             <div className="form__input-container">
               <p>Repayment Term length</p>
               {/* T = NUMBER OF YEARS  */}
               <input
+                required
                 onChange={getTermHandler}
-                type="text"
+                type="number"
                 placeholder="Length of loan"
                 max={40}
-                min={0}
+                min={1}
               />
             </div>
-            <button className="mortgage__button" onClick={calculateMortgage}>
-              Calculate
-            </button>
+            <button className="mortgage__button">Calculate</button>
           </form>
           <MortgageOutput
             loanAmount={mortageTotal}

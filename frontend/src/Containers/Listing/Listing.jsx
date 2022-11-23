@@ -110,7 +110,6 @@ const Listing = ({
       });
       setFilteredHouseData(highestToLowest);
     }
-    console.log(filteredHouseData);
   };
 
   return (

@@ -10,7 +10,7 @@ const MortgageOutput = ({
   calculatedInterest,
   loanDuration,
   getFilterHandler,
-  displayText
+  displayText,
 }) => {
   return (
     <div className="mortgage__output">
