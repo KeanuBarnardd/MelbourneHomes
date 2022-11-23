@@ -21,7 +21,9 @@ const Services = () => {
     setLoanAmount(parseFloat(e.target.value));
   };
   const getInterestInputHandler = (e) => {
-    setInterestRate(parseFloat(e.target.value));
+    // setInterestRate(parseFloat(e.target.value));
+    // const convertInterest = e.target.value / 100;
+    setInterestRate( e.target.value / 100);
   };
   const getTermHandler = (e) => {
     setRepaymentTerm(parseFloat(e.target.value));
@@ -38,19 +40,11 @@ const Services = () => {
   const calculateMortgage = (e) => {
     // Stop form from refreshing on Submit.
     e.preventDefault();
-
-    const convertInterest = interestRate / 100;
-    setInterestRate(convertInterest);
-    // Convert Interest Rate into two decimal places
-    console.log("Interest Rate: " + interestRate);
-    // Calculate Daily
+    setInterestTotal(interestRate)
     setMortageTotal(loanAmount * interestRate + loanAmount);
     setInterestTotal(loanAmount * interestRate);
 
     // Reset all our Values back to 0
-    setInterestRate(0);
-    setMortageTotal(0);
-    setRepaymentTerm(0);
   };
 
   const filterAmount = (v) => {
