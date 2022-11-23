@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Listing.scss";
-import { ListSearch, HouseCard, HouseModal } from "../../Components/index";
+import { ListSearch, HouseCard } from "../../Components/index";
 import { houseData } from "../../Constants/homeData";
 
 const Listing = ({
@@ -37,9 +37,9 @@ const Listing = ({
     "Balcony",
   ];
 
+  const [filteredHouseData, setFilteredHouseData] = useState(houseData);
 
-
-  const filteredList = houseData.filter(function (home) {
+  const filteredList = filteredHouseData.filter(function (home) {
     let saleType = "purchase";
     isBuying ? (saleType = "purchase") : (saleType = "rent");
 
@@ -56,15 +56,6 @@ const Listing = ({
       return home;
     }
   });
-
-  const selectChangeFilter = (e) => {
-    const { value } = e.target;
-
-    if (value === "low_to_high"){
-      const lowFilter = filteredList.filter
-    }
-  };
-
 
   const featuredFilteredList = filteredList.filter(function (home) {
     for (let x = 0; x < home.filters.length; x++) {
@@ -102,6 +93,26 @@ const Listing = ({
     );
   });
 
+  const selectChangeFilter = (e) => {
+    if (e.target.value === "none") {
+      setFilteredHouseData(houseData);
+    }
+    if (e.target.value === "low_to_high") {
+      console.log("Lowest to Highest");
+      const lowestToHighest = featuredFilteredList.sort((a, b) => {
+        return a.price - b.price;
+      });
+      setFilteredHouseData(lowestToHighest);
+    }
+    if (e.target.value === "high_to_low") {
+      const highestToLowest = featuredFilteredList.sort((a, b) => {
+        return b.price - a.price;
+      });
+      setFilteredHouseData(highestToLowest);
+    }
+    console.log(filteredHouseData);
+  };
+
   return (
     <>
       <ListSearch
@@ -132,9 +143,16 @@ const Listing = ({
               <p>
                 Showing <span>{listProperties.length}</span> total properties
               </p>
-              <select name="" id="">
-                <option value="low_to_high">Price- Low to High</option>
-                <option value="high_to_low">Price- High to low</option>
+              <select
+                onChange={(e) => {
+                  selectChangeFilter(e);
+                }}
+                name=""
+                id=""
+              >
+                <option value="none">None</option>
+                <option value="low_to_high">Low to High</option>
+                <option value="high_to_low">High to low</option>
               </select>
             </div>
           </div>
