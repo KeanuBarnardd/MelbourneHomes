@@ -20,9 +20,39 @@ const Home = ({
 }) => {
   return (
     <div className="app__flex home">
-      <header className="header" style={{ backgroundImage: `url(${images.header1})` }}>
-        <h1>Find a home with us </h1>
-        <SearchHeader
+      <header className="header app__flex" style={{ backgroundImage: `url(${images.header1})` }}>
+        <div className="header__content app__container-width">
+          <h1>Discover a place you will love to live. </h1>
+          <p className="p-text">
+            Connect with our experts to find the right home in Melbourne. We are the best real
+            estate agents in Melbourne and have the best platform to find your place to live.
+          </p>
+
+          <SearchHeader
+            getLocationHandler={getLocationHandler}
+            getMinValueHandler={getMinValueHandler}
+            getMaxValueHandler={getMaxValueHandler}
+            getBedHandler={getBedHandler}
+            getBathHandler={getBathHandler}
+            getGarageHandler={getGarageHandler}
+            submitSearch={submitSearch}
+            setIsBuying={setIsBuying}
+            getSquareFootHandler={getSquareFootHandler}
+          />
+
+          <div className="header__info-container">
+            <div className="header__info-item">
+              <h2>1500+</h2>
+              <p>Property Ready</p>
+            </div>
+            <div className="header__info-item">
+              <h2>500+</h2>
+              <p>Happy Customers</p>
+            </div>
+          </div>
+        </div>
+
+        {/* <SearchHeader
           getLocationHandler={getLocationHandler}
           getMinValueHandler={getMinValueHandler}
           getMaxValueHandler={getMaxValueHandler}
@@ -32,7 +62,7 @@ const Home = ({
           submitSearch={submitSearch}
           setIsBuying={setIsBuying}
           getSquareFootHandler={getSquareFootHandler}
-        />
+        /> */}
       </header>
       <div className="app__container-width">
         <div className="page__content">

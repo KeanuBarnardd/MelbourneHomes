@@ -23,7 +23,7 @@ const Services = () => {
   const getInterestInputHandler = (e) => {
     // setInterestRate(parseFloat(e.target.value));
     // const convertInterest = e.target.value / 100;
-    setInterestRate( e.target.value / 100);
+    setInterestRate(e.target.value / 100);
   };
   const getTermHandler = (e) => {
     setRepaymentTerm(parseFloat(e.target.value));
@@ -40,7 +40,6 @@ const Services = () => {
   const calculateMortgage = (e) => {
     // Stop form from refreshing on Submit.
     e.preventDefault();
-    setInterestTotal(interestRate)
     setMortageTotal(loanAmount * interestRate + loanAmount);
     setInterestTotal(loanAmount * interestRate);
 
@@ -152,6 +151,7 @@ const Services = () => {
                 min={1}
               />
             </div>
+
             <button className="mortgage__button">Calculate</button>
           </form>
           <MortgageOutput

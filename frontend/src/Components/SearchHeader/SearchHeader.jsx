@@ -25,42 +25,12 @@ const SearchHeader = ({
 
   return (
     <div className="search__header-form">
-      <div className="select__section">
-        <button
-          onClick={() => {
-            setIsRent(false);
-            setIsBuying(true);
-          }}
-          className={`select-section__button ${isRent !== true ? "active" : ""}`}
-        >
-          Buy
-        </button>
-        <button
-          onClick={() => {
-            setIsRent(true);
-            setIsBuying(false);
-          }}
-          className={`select-section__button ${isRent ? "active" : ""}`}
-        >
-          Rent
-        </button>
-      </div>
       <div className="form-row rooms">
-        <div className="input-field">
-          <p>Min</p>
-          <input type="text" onChange={getMinValueHandler}></input>
-          <AttachMoneyIcon className="input-icon" />
-        </div>
         <div className="input-field">
           <p>Max</p>
           <input type="text" onChange={getMaxValueHandler} />
           <AttachMoneyIcon className="input-icon" />
         </div>
-      </div>
-      <div className="input-field">
-        <p>Square Foot</p>
-        <input type="text" onChange={getSquareFootHandler}></input>
-        <SquareFootIcon className="input-icon" />
       </div>
 
       <div className="form-row">
@@ -86,17 +56,6 @@ const SearchHeader = ({
           </select>
           <ShowerIcon className="input-icon" />
         </div>
-        <div className="input-field">
-          <p>Garage</p>
-          <select onChange={getGarageHandler} name="" id="garage-select">
-            <option value="all">All</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4+</option>
-          </select>
-          <TimeToLeaveIcon className="input-icon" />
-        </div>
       </div>
       <Link to="/listings" className="search__btn" type="submit">
         Search
@@ -106,3 +65,27 @@ const SearchHeader = ({
 };
 
 export default SearchHeader;
+
+/*
+<div className="select__section">
+        <button
+          onClick={() => {
+            setIsRent(false);
+            setIsBuying(true);
+          }}
+          className={`select-section__button ${isRent !== true ? "active" : ""}`}
+        >
+          Buy
+        </button>
+        <button
+          onClick={() => {
+            setIsRent(true);
+            setIsBuying(false);
+          }}
+          className={`select-section__button ${isRent ? "active" : ""}`}
+        >
+          Rent
+        </button>
+      </div>
+
+*/

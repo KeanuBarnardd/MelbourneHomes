@@ -46,5 +46,12 @@
         text-decoration: none;
       }
     }
+
+    .mortgage__button.reset{
+      background-color: var(--grey-400);
+      &:Hover{
+        background-color: var(--grey-500);
+      }
+    }
   }
 }
