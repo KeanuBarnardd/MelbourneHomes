@@ -1,18 +1,16 @@
-$house-card-radius: var(--border-rad-1);
+$house-card-radius: var(--border-rad-2);
 $card-padding: 0.7rem;
 $card-tag-image: rgba(8, 8, 8, 0.534);
 .housecard__container {
   border-radius: $house-card-radius;
   box-shadow: var(--box-shadow-3);
-
+  padding: 0.6rem;
   .housecard__img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: $card-padding;
-
-    border-top-left-radius: $house-card-radius;
-    border-top-right-radius: $house-card-radius;
+    border-radius: $house-card-radius;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -24,7 +22,7 @@ $card-tag-image: rgba(8, 8, 8, 0.534);
       color: white;
       background-color: $card-tag-image;
       padding: 0.4rem 0.5rem;
-      border-radius: var(--border-rad-1);
+      border-radius: var(--border-rad-2);
     }
     .image__top {
       display: flex;
@@ -97,12 +95,16 @@ $card-tag-image: rgba(8, 8, 8, 0.534);
         }
       }
     }
+
+    hr{
+      margin: 0px;
+      margin-top: 15px;
+    }
+
     .housecard__grid {
       display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      border: 1px solid var(--grey-300);
-      border-radius: var(--border-rad-1);
+      justify-content: space-between;
+      align-items: center;      
       margin-bottom: 0.7rem;
       margin-top: 0.4rem;
       p {
@@ -112,6 +114,14 @@ $card-tag-image: rgba(8, 8, 8, 0.534);
         gap: 5px;
         align-items: center;
         padding: 0.3rem;
+
+        .housecard__icon{
+          background-color: var(--shadow-color);
+          color: var(--secondary-color);
+          padding: 0.3rem;
+          font-size: 2rem;
+          border-radius: 100%;
+        }
       }
     }
 
@@ -125,7 +135,7 @@ $card-tag-image: rgba(8, 8, 8, 0.534);
         font-weight: bold;
         color: var(--secondary-color);
         background-color: var(--shadow-color);
-        border-radius: var(--border-rad-1);
+        border-radius: $house-card-radius;
         border: none;
         &:hover {
           background-color: var(--secondary-color);

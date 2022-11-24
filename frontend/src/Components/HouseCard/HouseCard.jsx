@@ -91,52 +91,29 @@ const HouseCard = ({
             >
               <PhoneIcon className="interaction__btn-logo" />
             </button>
-            <button
-              onClick={() => {
-                toggleAgentModalHandler();
-              }}
-              className="interaction__btn"
-            >
-              <FavoriteIcon className="interaction__btn-logo" />
-            </button>
-            <button
-              onClick={() => {
-                toggleAgentModalHandler();
-              }}
-              className="interaction__btn"
-            >
-              <EmailIcon className="interaction__btn-logo" />
-            </button>
+           
           </div>
         </div>
         <h1>{title}</h1>
         <div className="details__container">
           <p>{details}</p>
         </div>
-
+        <hr />
         <div className="housecard__grid">
           <p>
-            <SquareFootIcon className="" />
+            <SquareFootIcon className="housecard__icon" />
             {square} Sqft
           </p>
           <p>
-            <BedIcon className="" />
+            <BedIcon className="housecard__icon" />
             {beds} Beds
           </p>
           <p>
-            <ShowerIcon className="" />
+            <ShowerIcon className="housecard__icon" />
             {baths} Baths
           </p>
         </div>
         <div className="housecard__buttons-container">
-          <button
-            className="housecard__btn"
-            onClick={() => {
-              toggleAgentModalHandler();
-            }}
-          >
-            Request Info
-          </button>
           <button
             onClick={() => {
               toggleHouseModalHandler();
