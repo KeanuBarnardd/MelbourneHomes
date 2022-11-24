@@ -620,4 +620,4 @@ export const houseData = [
   },
 ];
 
-export const featuredHomes = [houseData[2], houseData[6], houseData[0]];
+export const featuredHomes = [houseData[1], houseData[2], houseData[0], houseData[11]];

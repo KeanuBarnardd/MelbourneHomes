@@ -13,3 +13,4 @@ export { default as HouseModal } from "./HouseModal/HouseModal";
 export { default as ImageSlider } from "./ImageSlider/ImageSlider";
 export { default as AgentModal } from "./AgentModal/AgentModal";
 export { default as FeatureCheckBox } from "./FeatureCheckBox/FeatureCheckBox";
+export { default as FeatureCard } from "./FeatureCard/FeatureCard";

@@ -1,11 +1,11 @@
 import React from "react";
 import "./Home.scss";
+import { Link } from "react-router-dom";
 import { images } from "../../Constants/index";
 import SearchHeader from "./../../Components/SearchHeader/SearchHeader";
 import ExploreGrid from "../ExploreGrid/ExploreGrid";
 import { featuredHomes } from "../../Constants/homeData";
-import { Link } from "react-router-dom";
-import { HouseCard } from "../../Components";
+import { HouseCard, FeatureCard } from "../../Components";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
 import LibraryBooksOutlinedIcon from "@mui/icons-material/LibraryBooksOutlined";
@@ -103,9 +103,34 @@ const Home = ({
         </div>
       </div>
       <div className="app__flex bg-primary">
-        <div className="app__container-width " >
+        <div className="app__container-width ">
           <div className="page__content">
+            <div className="row">
+              <div className="row__item">
+                <h3 className="page__tag">Featured Homes</h3>
+                <h1 className="head-text">Properties throughout Melbourne</h1>
+              </div>
 
+              <Link className="page__content-link" to="/listings">
+                View homes <i className="fa-solid fa-chevron-right"></i>{" "}
+              </Link>
+            </div>
+            <div className="house__grid">
+              {featuredHomes.map((house, index) => {
+                return (
+                  <FeatureCard
+                    key={index}
+                    image={house.images[0]}
+                    address={house.address}
+                    price={house.price}
+                    beds={house.beds}
+                    baths={house.baths}
+                    area={house.area}
+                    type={house.type}
+                  />
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
@@ -114,8 +139,6 @@ const Home = ({
 };
 
 export default Home;
-
-
 
 /*
 

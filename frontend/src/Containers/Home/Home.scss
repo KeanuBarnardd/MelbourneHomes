@@ -131,8 +131,9 @@
 
 .house__grid {
   display: grid;
-  gap: 35px;
-  grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-top: 2rem;
 }
 
 
@@ -166,10 +167,11 @@
 .row{
 
   .row__item{
-    max-width: 500px;
+    max-width: 600px;
   }
 
   p{
     max-width: 500px;
   }
 }
+

@@ -28,7 +28,7 @@
 
 .page__content {
   display: flex;
-  padding:6rem 0;
+  padding: 6rem 0;
   flex-direction: column;
   width: 100%;
 }
@@ -61,7 +61,6 @@
 .app__whitebg {
   color: var(--white-color);
 }
-
 
 .bg-primary {
   background-color: var(--shadow-color);
@@ -99,7 +98,6 @@ hr {
   display: flex;
   gap: 10px;
 }
-
 
 .brown__button {
   background-color: var(--primary-color);
@@ -210,7 +208,7 @@ select {
   }
 }
 
-.page__tag{
+.page__tag {
   color: var(--secondary-color);
   font-weight: 400;
 }
@@ -219,7 +217,6 @@ select {
   display: grid;
   gap: 40px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
 }
 
 .row {
@@ -231,4 +228,26 @@ select {
     flex-direction: column;
     gap: 15px;
   }
+}
+
+.page__content-link {
+  color: var(--grey-500);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  padding: 0.3rem 1rem;
+  border: 1px solid var(--grey-300);
+  border-radius: var(--border-rad-2);
+  transition:  ease-in-out all var(--timer-short);
+  &:hover{
+    color:white;
+    background-color: var(--grey-700);
+    border-color: var(--grey-700);
+  }
+}
+
+.grid__featured{
+  display: flex;
+  flex-direction: column;
 }
