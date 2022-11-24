@@ -5,7 +5,7 @@ import { images } from "../../Constants/index";
 import SearchHeader from "./../../Components/SearchHeader/SearchHeader";
 import ExploreGrid from "../ExploreGrid/ExploreGrid";
 import { featuredHomes } from "../../Constants/homeData";
-import { HouseCard, FeatureCard } from "../../Components";
+import { HouseCard, FeatureCard, Banner } from "../../Components";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
 import LibraryBooksOutlinedIcon from "@mui/icons-material/LibraryBooksOutlined";
@@ -138,6 +138,17 @@ const Home = ({
           </div>
         </div>
       </div>
+      <Banner
+        subTitle={"Find Home With Us"}
+        title={"Find the right house over 500 properties."}
+        text={
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt nesciunt minus consectetur maxime facilis cum sed tempore fugit maiores expedita?"
+        }
+        button={"Find Now"}
+        link={"/listings"}
+        image={images.spareHeader}
+      />
+
       <div className="app__flex">
         <div className="app__container-width">
           <div className="page__content">

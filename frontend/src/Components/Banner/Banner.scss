@@ -1,0 +1,48 @@
+.banner {
+  padding: 7rem 0rem;
+  .banner__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2,
+    h1,
+    p {
+      color: white;
+      text-align: center;
+      width: 100%;
+    }
+
+    h2 {
+      font-weight: 400;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      max-width: 600px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 1.1rem;
+    }
+
+    .banner-btn {
+      font-size: 1.1rem;
+      background-color: white;
+      padding: 0.6rem 2rem;
+      text-decoration: none;
+      color: var(--grey-700);
+      border-radius: var(--border-rad-2);
+      margin-left: auto;
+      margin-right: auto;
+      transition: all ease-in-out var(--timer-short);
+      &:hover{
+        background-color: var(--grey-100);
+      }
+    }
+  }
+}

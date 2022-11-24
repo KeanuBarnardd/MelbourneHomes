@@ -157,7 +157,6 @@ import serviceHeader from "../Assets/Images/Header/serviceHeader.jpg";
 import banner from "../Assets/Images/Header/banner1.jpg";
 import spareHeader from "../Assets/Images/Header/spareHeader.jpg";
 
-
 // Explore card Images
 
 // Dream home Section
@@ -171,6 +170,7 @@ export default {
   luxuryHome,
   luxuryContact,
   serviceHeader,
+  spareHeader,
   banner,
   // House 1
   house1_1,
