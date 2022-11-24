@@ -23,12 +23,12 @@ nav {
 
   .navbar__links-container {
     display: flex;
-    gap: 20px;
+    gap: 5px;
     .navlink {
-      font-size: 1.1rem;
+      font-size: 1rem;
       text-decoration: none;
       color: var(--grey-500);
-      padding: 0.3rem 0.5rem;
+      padding: 0.3rem 1rem;
       border-radius: var(--border-rad-1);
       transition: all ease-in-out var(--timer-short);
       border: 1px solid white;
@@ -40,8 +40,8 @@ nav {
     .navlink.active {
      // color: var(--secondary-color);
       //background-color: var(--shadow-color);
-
-      border-bottom: 1px solid var(--grey-700);
+      border-radius: var(--border-rad-2);
+      border: 1px solid var(--grey-200);
     }
   }
 

@@ -28,8 +28,9 @@
 
 .page__content {
   display: flex;
-  padding: 4rem 0;
+  padding:6rem 0;
   flex-direction: column;
+  width: 100%;
 }
 .content-title {
   margin-bottom: 1rem;
@@ -61,8 +62,9 @@
   color: var(--white-color);
 }
 
-.app__primarybg {
-  color: var(--primary-color);
+
+.bg-primary {
+  background-color: var(--shadow-color);
 }
 
 .bg-grey {
@@ -80,15 +82,9 @@ hr {
 }
 
 .head-text {
-  font-size: 2.75rem;
+  font-size: 2.2rem;
   font-weight: 800;
-  text-align: center;
-  // Colour here
-  text-transform: capitalize;
-
-  span {
-    color: var(--secondary-color);
-  }
+  color: var(--grey-700);
 
   @media screen and (min-width: 2000px) {
     font-size: 4rem;
@@ -99,21 +95,11 @@ hr {
   }
 }
 
-.button__container{
+.button__container {
   display: flex;
   gap: 10px;
 }
 
-// .p-text {
-//   font-size: 0.8rem;
-//   text-align: left;
-//   color: var(--gray-color);
-//   line-height: 1.5;
-
-//   @media screen and (min-width: 2000px) {
-//     font-size: 1.75rem;
-//   }
-// }
 
 .brown__button {
   background-color: var(--primary-color);
@@ -183,10 +169,11 @@ hr {
   }
 }
 
-input, select{
+input,
+select {
   border: none;
   border-bottom: 2px solid var(--grey-100);
-  padding: 0.2rem 0px ;
+  padding: 0.2rem 0px;
   font-size: 1rem;
   background-color: white;
 }
@@ -223,6 +210,25 @@ input, select{
   }
 }
 
-.grid{
-  
+.page__tag{
+  color: var(--secondary-color);
+  font-weight: 400;
+}
+
+.grid {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    gap: 15px;
+  }
 }

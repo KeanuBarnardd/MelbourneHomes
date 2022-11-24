@@ -134,3 +134,42 @@
   gap: 35px;
   grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
 }
+
+
+.grid{
+  margin-top: 2.2rem;
+ 
+  .list__grid-item{
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: var(--border-rad-2);
+    transition: all ease-in-out var(--timer-short);
+    box-shadow: var(--box-shadow-6);
+    .grid__item-icon{
+      font-size: 3.7rem;
+      color: var(--secondary-color);
+    }
+
+    h2{
+      color: var(--grey-700);
+      margin-top: 1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    &:hover{
+      box-shadow: var(--box-shadow-9);
+    }
+  }
+}
+
+
+.row{
+
+  .row__item{
+    max-width: 500px;
+  }
+
+  p{
+    max-width: 500px;
+  }
+}
