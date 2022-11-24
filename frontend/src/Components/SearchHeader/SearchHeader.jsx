@@ -25,17 +25,28 @@ const SearchHeader = ({
 
   return (
     <div className="search__header-form">
-      <div className="form-row rooms">
-        <div className="input-field">
-          <p>Max</p>
-          <input type="text" onChange={getMaxValueHandler} />
-          <AttachMoneyIcon className="input-icon" />
+      <div className="input-field"></div>
+
+      <div className="search__input-field">
+        <AttachMoneyIcon className="input-icon" />
+        <div className="search__input-container">
+          <p>Minimum Price</p>
+          <input placeholder="$2000" type="text" onChange={getMinValueHandler} />
         </div>
       </div>
 
-      <div className="form-row">
-        <div className="input-field">
-          <p>Bed</p>
+      <div className="search__input-field">
+        <AttachMoneyIcon className="input-icon" />
+        <div className="search__input-container">
+          <p>Maximum Price</p>
+          <input placeholder="$550000" type="text" onChange={getMaxValueHandler} />
+        </div>
+      </div>
+
+      <div className="search__input-field">
+        <BedIcon className="input-icon" />
+        <div className="search__input-container">
+          <p>Bedrooms</p>
           <select onChange={getBedHandler} name="" id="bed-select">
             <option value="all">All</option>
             <option value="1">1</option>
@@ -43,22 +54,25 @@ const SearchHeader = ({
             <option value="3">3</option>
             <option value="4">4+</option>
           </select>
-          <BedIcon className="input-icon" />
         </div>
-        <div className="input-field">
-          <p>Bath</p>
-          <select onChange={getBathHandler} name="" id="bath-select">
+      </div>
+
+      <div className="search__input-field">
+        <ShowerIcon className="input-icon" />
+        <div className="search__input-container">
+          <p>Bathrooms</p>
+          <select onChange={getBathHandler} name="" id="bed-select">
             <option value="all">All</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4+</option>
           </select>
-          <ShowerIcon className="input-icon" />
         </div>
       </div>
+
       <Link to="/listings" className="search__btn" type="submit">
-        Search
+        <i className="fa-solid fa-search"></i>
       </Link>
     </div>
   );

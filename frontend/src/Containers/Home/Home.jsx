@@ -46,6 +46,10 @@ const Home = ({
               <p>Property Ready</p>
             </div>
             <div className="header__info-item">
+              <h2>2000+</h2>
+              <p>Properties sold</p>
+            </div>
+            <div className="header__info-item">
               <h2>500+</h2>
               <p>Happy Customers</p>
             </div>
@@ -66,6 +70,16 @@ const Home = ({
       </header>
       <div className="app__container-width">
         <div className="page__content">
+          <div className="row">
+            <h3 className="page__tag">Why choose MelbourneHomes</h3>
+            <h1>Provide the most complete list of property</h1>
+          </div>
+          <div className="grid">
+            
+          </div>
+        </div>
+
+        {/* <div className="page__content">
           <h1 className="content-title">
             Top <span>Features</span> this week
           </h1>
@@ -91,7 +105,7 @@ const Home = ({
               );
             })}
           </div>
-        </div>
+        </div> */}
 
         <div className="page__content">
           <div className="dreamhouse__container">

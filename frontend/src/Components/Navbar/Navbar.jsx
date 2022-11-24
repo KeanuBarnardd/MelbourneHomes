@@ -31,12 +31,9 @@ const Navbar = ({ resetFeaturesHandler }) => {
           </NavLink>
         </div>
         <div className="navbar__buttons-container">
-          <button>
-            <FavoriteIcon />
-          </button>
-          <button>
-            <PersonIcon />
-          </button>
+          <NavLink onClick={() => resetFeaturesHandler()} className="navlink" to="listings">
+            View Homes
+          </NavLink>
         </div>
       </div>
     </nav>

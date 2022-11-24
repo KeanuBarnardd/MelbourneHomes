@@ -154,6 +154,10 @@ import header1 from "../Assets/Images/Header/header1.jpg";
 import luxuryHome from "../Assets/Images/Header/luxuryHome.jpg";
 import luxuryContact from "../Assets/Images/Header/luxuryContact.jpg";
 import serviceHeader from "../Assets/Images/Header/serviceHeader.jpg";
+import banner from "../Assets/Images/Header/banner1.jpg";
+import spareHeader from "../Assets/Images/Header/spareHeader.jpg";
+
+
 // Explore card Images
 
 // Dream home Section
@@ -167,6 +171,7 @@ export default {
   luxuryHome,
   luxuryContact,
   serviceHeader,
+  banner,
   // House 1
   house1_1,
   house1_2,

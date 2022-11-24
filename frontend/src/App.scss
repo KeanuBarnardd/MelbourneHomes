@@ -183,15 +183,12 @@ hr {
   }
 }
 
-input {
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
-  padding: 0.4rem 0.7rem;
+input, select{
   border: none;
-  border-radius: var(--border-rad-1);
-  color: var(--grey-800);
-  background-color: var(--grey-100);
+  border-bottom: 2px solid var(--grey-100);
+  padding: 0.2rem 0px ;
+  font-size: 1rem;
+  background-color: white;
 }
 
 .btn {
@@ -224,4 +221,8 @@ input {
   &:hover {
     background-color: rgb(47, 102, 173);
   }
+}
+
+.grid{
+  
 }
