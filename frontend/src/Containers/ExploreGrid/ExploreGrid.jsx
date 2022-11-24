@@ -9,9 +9,6 @@ const ExploreGrid = () => {
 
   return (
     <>
-      <h1 className="content-title">
-        <span>Exploring</span> all things property
-      </h1>
       <div className="explore__buttons-container">
         <button
           onClick={() => setToggleGrid(0)}

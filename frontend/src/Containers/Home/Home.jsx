@@ -109,6 +109,10 @@ const Home = ({
               <div className="row__item">
                 <h3 className="page__tag">Featured Homes</h3>
                 <h1 className="head-text">Properties throughout Melbourne</h1>
+                <p className="p-text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum quis blanditiis
+                  sunt facere perferendis sit nisi hic esse dolor harum.
+                </p>
               </div>
 
               <Link className="page__content-link" to="/listings">
@@ -134,6 +138,27 @@ const Home = ({
           </div>
         </div>
       </div>
+      <div className="app__flex">
+        <div className="app__container-width">
+          <div className="page__content">
+            <div className="row">
+              <div className="row__item">
+                <h3 className="page__tag">Information</h3>
+                <h1 className="head-text">We are the right team for any job</h1>
+                <p className="p-text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum quis blanditiis
+                  sunt facere perferendis sit nisi hic esse dolor harum.
+                </p>
+              </div>
+
+              <Link className="page__content-link" to="/about">
+                More About Us <i className="fa-solid fa-chevron-right"></i>{" "}
+              </Link>
+            </div>
+            <ExploreGrid />
+          </div>
+        </div>
+      </div>
     </>
   );
 };
@@ -143,30 +168,7 @@ export default Home;
 /*
 
 <div className="app__flex">
-          <div className="app__container-width">
-            <div className="page__content">
-              <ExploreGrid />
-            </div>
-            <div className="page__content">
-              <div className="dreamhouse__container">
-                <img src={images.dreamHomeImage} alt="" />
-                <div className="dreamhouse__container-content">
-                  <h2>
-                    Melbourne<span>Homes</span>
-                  </h2>
-                  <h1>Your dream home is one search away.</h1>
-                  <p>
-                    With MelbourneHomes you can be sure to work with the industries best. We come
-                    with variety of services and products to help you find your dream home, and we
-                    know that your dream home is only a search away.
-                  </p>
-                  <Link to="listings" className="link">
-                    <button>Find your home</button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
+          
         </div>
 
 */

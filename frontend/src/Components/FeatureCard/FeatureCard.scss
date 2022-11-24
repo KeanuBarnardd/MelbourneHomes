@@ -7,6 +7,10 @@
   box-shadow: var(--box-shadow-5);
   padding: 0.5rem;
   text-decoration: none;
+  transition: all ease-in-out var(--timer-short);
+  &:hover{
+    box-shadow: var(--box-shadow-7);
+  }
 
   .image__container {
     height: 180px;

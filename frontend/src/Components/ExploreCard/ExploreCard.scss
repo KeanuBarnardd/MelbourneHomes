@@ -4,14 +4,18 @@
   gap: 10px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 0.0625rem 0.25rem 0px;
   padding: 1rem 2rem;
-  border-radius:var(--border-rad-1);
+  border-radius: var(--border-rad-2);
+  transition: all ease-in-out var(--timer-short);
+  &:hover{
+    box-shadow: var(--box-shadow-1);
+  }
   img {
     margin-left: auto;
     margin-right: auto;
     width: 120px;
     margin-bottom: 1rem;
   }
-  .explore__card-details{
+  .explore__card-details {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -29,11 +33,11 @@
       cursor: pointer;
       background-color: var(--shadow-color);
       text-align: center;
-      border-radius:var(--border-rad-1);
+      border-radius: var(--border-rad-1);
       padding: 0.3rem;
+      border-radius: var(--border-rad-2);
     }
   }
- 
 
   @media screen and (max-width: 600px) {
     display: flex;
@@ -42,9 +46,6 @@
 
     img {
       width: 80px;
-    }
-
-    .explore__card-details {
     }
   }
 }
