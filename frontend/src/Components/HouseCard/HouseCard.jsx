@@ -82,17 +82,6 @@ const HouseCard = ({
             ${price.toLocaleString("en-US")}
             {sellType === "purchase" ? "" : "/Weekly"}
           </p>
-          <div className="interactions__container">
-            <button
-              onClick={() => {
-                toggleAgentModalHandler();
-              }}
-              className="interaction__btn"
-            >
-              <PhoneIcon className="interaction__btn-logo" />
-            </button>
-           
-          </div>
         </div>
         <h1>{title}</h1>
         <div className="details__container">
@@ -106,11 +95,11 @@ const HouseCard = ({
           </p>
           <p>
             <BedIcon className="housecard__icon" />
-            {beds} Beds
+            {beds} Bedroom
           </p>
           <p>
             <ShowerIcon className="housecard__icon" />
-            {baths} Baths
+            {baths} Bathroom
           </p>
         </div>
         <div className="housecard__buttons-container">
@@ -122,6 +111,14 @@ const HouseCard = ({
             className="housecard__btn"
           >
             View Details
+          </button>
+          <button
+            onClick={() => {
+              toggleAgentModalHandler();
+            }}
+            className="interaction__btn"
+          >
+            <PhoneIcon className="interaction__btn-logo" />
           </button>
         </div>
       </div>

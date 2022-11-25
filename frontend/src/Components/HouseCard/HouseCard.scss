@@ -5,6 +5,12 @@ $card-tag-image: rgba(8, 8, 8, 0.534);
   border-radius: $house-card-radius;
   box-shadow: var(--box-shadow-3);
   padding: 0.6rem;
+  transition:  all ease-in-out var(--timer-short);
+
+  &:hover{
+    box-shadow: var(--box-shadow-1);
+  }
+
   .housecard__img {
     display: flex;
     flex-direction: column;
@@ -43,8 +49,7 @@ $card-tag-image: rgba(8, 8, 8, 0.534);
   .housecard-content {
     display: flex;
     flex-direction: column;
-    padding: $card-padding;
-
+    margin-top: 10px;
     h1 {
       font-size: 1.6rem;
       color: var(--grey-700);
@@ -65,38 +70,17 @@ $card-tag-image: rgba(8, 8, 8, 0.534);
       .price {
         font-size: 1.3rem;
         font-weight: bolder;
-        color: var(--secondary-color);
+        color: var(--grey-600);
       }
 
       .interactions__container {
         display: flex;
         gap: 5px;
-        .interaction__btn {
-          padding: 0.5rem;
-          font-size: 0.2rem;
-          border: none;
-          border-radius: $house-card-radius;
-          background-color: var(--grey-200);
-          transition: all ease-in-out 0.2s;
-          .interaction__btn-logo {
-            font-size: 1.3rem;
-            color: var(--grey-400);
-            transition: all ease-in-out 0.2s;
-          }
-
-          &:hover {
-            background-color: var(--grey-400);
-
-            .interaction__btn-logo {
-              transform: scale(1.2);
-              color: white;
-            }
-          }
-        }
+        
       }
     }
 
-    hr{
+    hr {
       margin: 0px;
       margin-top: 15px;
     }
@@ -104,18 +88,18 @@ $card-tag-image: rgba(8, 8, 8, 0.534);
     .housecard__grid {
       display: flex;
       justify-content: space-between;
-      align-items: center;      
-      margin-bottom: 0.7rem;
-      margin-top: 0.4rem;
+      align-items: center;
+      margin-top: 3px;
+      margin: 7px 0px;
       p {
         display: flex;
         justify-content: center;
         font-size: 0.8rem;
         gap: 5px;
         align-items: center;
-        padding: 0.3rem;
+        color: var(--grey-700);
 
-        .housecard__icon{
+        .housecard__icon {
           background-color: var(--shadow-color);
           color: var(--secondary-color);
           padding: 0.3rem;
@@ -130,16 +114,46 @@ $card-tag-image: rgba(8, 8, 8, 0.534);
       gap: 5px;
 
       .housecard__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
         width: 100%;
         padding: 0.4rem;
         font-weight: bold;
-        color: var(--secondary-color);
-        background-color: var(--shadow-color);
+        color: var(--grey-600);
+        background-color: var(--grey-100);
         border-radius: $house-card-radius;
-        border: none;
+        border: 1px solid var(--grey-200);
+        i{
+          font-size: 1rem;
+        }
         &:hover {
-          background-color: var(--secondary-color);
+          background-color: var(--grey-600);
+          border-color: var(--grey-600);
           color: white;
+        }
+      }
+
+      .interaction__btn {
+        padding: 0.5rem;
+        font-size: 0.2rem;
+        border: none;
+        border-radius: $house-card-radius;
+        background-color: var(--grey-200);
+        transition: all ease-in-out 0.2s;
+        .interaction__btn-logo {
+          font-size: 1.3rem;
+          color: var(--grey-400);
+          transition: all ease-in-out 0.2s;
+        }
+
+        &:hover {
+          background-color: var(--grey-400);
+
+          .interaction__btn-logo {
+            color: white;
+          }
         }
       }
     }
