@@ -2,8 +2,8 @@
   margin-top: 2rem;
   margin-bottom: 5rem;
   display: grid;
-	gap:35px; 
-	grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
+  gap: 35px;
+  grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
 }
 
 .listings__container {
@@ -30,17 +30,20 @@
       display: flex;
       align-items: center;
       font-size: 1rem;
-      padding: 0.4rem 0.7rem;
-      border: none;
-      border-radius:var(--border-rad-1);
-      color: var(--grey-800);
-      background-color: var(--grey-100);
+      padding: 0.3rem 0.7rem;
+      border: 1px solid var(--grey-300);
+      border-radius: var(--border-rad-2);
+      color: var(--grey-700);
+      transition: all ease-in-out var(--timer-short);
+      &:hover {
+        background-color: var(--grey-700);
+        color: white;
+      }
     }
   }
 }
 
-
-.no__results-container{
+.no__results-container {
   margin-top: 5rem;
   padding-bottom: 10rem;
 }

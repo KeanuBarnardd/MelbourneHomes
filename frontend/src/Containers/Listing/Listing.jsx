@@ -133,10 +133,11 @@ const Listing = ({
       <div className="app__flex">
         <div className="app__container-width">
           <div className="listings__container">
-            <div className="listings__container-title">
-              <h1 className="content__title-text">
-                Listing <span>Results</span>
-              </h1>
+            <div className="row">
+              <div className="row__item">
+                <h3 className="page__tag">Our listings</h3>
+                <h1 className="head-text">Search for your dream home</h1>
+              </div>
             </div>
             <div className="listings__container-filters">
               <p>
@@ -146,8 +147,6 @@ const Listing = ({
                 onChange={(e) => {
                   selectChangeFilter(e);
                 }}
-                name=""
-                id=""
               >
                 <option value="none">None</option>
                 <option value="low_to_high">Low to High</option>
