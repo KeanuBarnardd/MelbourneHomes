@@ -22,29 +22,31 @@
       display: flex;
       width: 100%;
       input {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
         width: 100%;
         background-color: var(--grey-100);
+        border-top-left-radius: var(--border-rad-2);
+        border-bottom-left-radius: var(--border-rad-2);
         border: none;
       }
       button {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
         background-color: var(--grey-400);
+        
+        border-top-right-radius: var(--border-rad-2);
+        border-bottom-right-radius: var(--border-rad-2);
+
         color: white;
         .icon {
           color: white;
         }
       }
 
-      button.active{
+      button.active {
         background-color: var(--secondary-color);
       }
 
       select {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
+        border-top-left-radius: var(--border-rad-2);
+        border-bottom-left-radius: var(--border-rad-2);
         cursor: pointer;
         padding-right: 0.2rem;
         letter-spacing: 2px;
@@ -60,8 +62,8 @@
       }
 
       .select__type {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
+        border-top-right-radius: var(--border-rad-2);
+        border-bottom-right-radius: var(--border-rad-2);
         background-color: var(--grey-400);
         color: white;
         display: flex;
@@ -84,6 +86,17 @@
           font-weight: bold;
           color: var(--grey-500);
         }
+
+        .buy-btn {
+          border-top-left-radius: var(--border-rad-2);
+          border-bottom-left-radius: var(--border-rad-2);
+        }
+
+        .rent-btn {
+          border-top-right-radius: var(--border-rad-2);
+          border-bottom-right-radius: var(--border-rad-2);
+        }
+
         .buy-btn.active,
         .rent-btn.active {
           background-color: var(--secondary-color);
@@ -93,6 +106,7 @@
 
       .searchList-btn {
         transition: all ease-in-out var(--timer-short);
+        border-radius: var(--border-rad-2);
       }
 
       .searchList-btn.room.active,

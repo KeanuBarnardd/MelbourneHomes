@@ -1,4 +1,9 @@
+.feature__check{
+  border-radius: var(--border-rad-2) !important;
+}
+
 .feature__check.active{
   background-color: var(--secondary-color) !important;
   color: white !important;
 }
+
