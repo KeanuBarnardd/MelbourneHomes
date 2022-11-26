@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import "./ImageSlider.scss";
 
-const ImageSlider = ({ slides }) => {
+const ImageSlider = ({ slides, daysPosted, sellType }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [toggleArrows, setToggleArrows] = useState(false);
 
@@ -34,9 +34,22 @@ const ImageSlider = ({ slides }) => {
         <i className="fa-solid fa-caret-right"></i>
       </div>
 
-      <div className="image__count">
+      <div className="image__count image__tag">
         <i className="fa-solid fa-camera"></i>
-        <p> {currentIndex + 1}/{slides.length}</p>
+        <p>
+          {" "}
+          {currentIndex + 1}/{slides.length}
+        </p>
+      </div>
+
+      <div className="image__tag-container">
+        <div className="image__tag">
+          <p>{daysPosted} Days Ago</p>
+        </div>
+
+        <div className="image__tag">
+          <p>For {sellType}</p>
+        </div>
       </div>
     </div>
   );

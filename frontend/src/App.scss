@@ -184,6 +184,7 @@ select {
   font-weight: bold;
   border: none;
   text-decoration: none;
+  border-radius: var(--border-rad-1);
 }
 
 .btn.close {

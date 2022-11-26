@@ -14,66 +14,60 @@ const HouseModal = ({
   return (
     <div className="modal__background">
       <div className="modal__content">
-        <ImageSlider slides={homeData.images} />
+        <ImageSlider
+          daysPosted={homeData.listedTime}
+          slides={homeData.images}
+          sellType={homeData.sellType}
+        />
         <div className="modal__content-parent">
           <div className="top-row">
-            <p className="modal-price">
-              ${homeData.price.toLocaleString("en-US")}
-              {homeData.sellType === "purchase" ? "" : "/Weekly"}
-            </p>
-            <p className="type-tag">
-              {homeData.sellType === "purchase" ? "For sale" : "For lease"}
-            </p>
+            <div className="features__container">
+              <div className="features__tag-parent">
+                {featureTags.map((tag, index) => {
+                  return (
+                    <p className="features__tag" key={index}>
+                      {tag}
+                    </p>
+                  );
+                })}
+              </div>
+            </div>
           </div>
+          <p className="modal-price">
+            ${homeData.price.toLocaleString("en-US")}
+            {homeData.sellType === "purchase" ? "" : "/Weekly"}
+          </p>
           <h1>
             {homeData.address} - <span>{homeData.area}</span>
           </h1>
           <div className="modal__details-container">
             <div>
-              <p className="features-title">Details</p>
               <p className="p-text">{homeData.description}</p>
               <div className="details-bottom">
-                <div className="features__container">
-                  <p className="features-title">Features</p>
-                  <div className="features__tag-parent">
-                    {featureTags.map((tag, index) => {
-                      return (
-                        <p className="features__tag" key={index}>
-                          {tag}
-                        </p>
-                      );
-                    })}
-                  </div>
-                </div>
-                <div className="features__container">
-                  <p className="features-title">Property Type</p>
-                  <p className="features__tag type">{homeData.type} </p>
-                </div>
+                <p className="rooms-tag">
+                  <i className="fa-solid fa-ruler-combined"></i>
+                  {homeData.squareFeet} Square Feet
+                </p>
+                <p className="rooms-tag">
+                  <i className="fa-solid fa-bed"></i>
+                  {homeData.baths} Bed
+                </p>
+                <p className="rooms-tag">
+                  <i className="fa-solid fa-shower"></i>
+                  {homeData.baths} Bath
+                </p>
+                <p className="rooms-tag">
+                  <i className="fa-solid fa-car"></i>
+                  {homeData.baths} Garage
+                </p>
+                <p className="rooms-tag">
+                  <i className="fa-solid fa-couch"></i>
+                  {homeData.living} Living
+                </p>
               </div>
             </div>
 
-            <div className="modal__rooms-container">
-              <p className="rooms-tag">
-                <i className="fa-solid fa-ruler-combined"></i>
-                {homeData.squareFeet} Square Feet
-              </p>
-              <p className="rooms-tag">
-                <i className="fa-solid fa-bed"></i>
-                {homeData.baths} Bed
-              </p>
-              <p className="rooms-tag">
-                <i className="fa-solid fa-shower"></i>
-                {homeData.baths} Bath
-              </p>
-              <p className="rooms-tag">
-                <i className="fa-solid fa-car"></i>
-                {homeData.baths} Garage
-              </p>
-              <p className="rooms-tag">
-                <i className="fa-solid fa-couch"></i>
-                {homeData.living} Living
-              </p>
-            </div>
+            <div className="modal__rooms-container"></div>
           </div>
         </div>
         <div className="modal__bottom-row">
