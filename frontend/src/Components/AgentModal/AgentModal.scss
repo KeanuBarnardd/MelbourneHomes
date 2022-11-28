@@ -3,16 +3,16 @@
   flex-direction: column;
   max-width: 400px;
   background-color: white;
-  padding: 1rem;
+  padding: 0.5rem;
   box-shadow: var(--box-shadow-3);
-
+  border-radius: var(--border-rad-2);
   .modal__logo {
     text-align: center;
     padding-bottom: 0.3rem;
     font-size: 1.2rem;
     color: var(--grey-500);
     font-weight: bold;
-    span{
+    span {
       color: var(--secondary-color);
     }
   }
@@ -21,8 +21,10 @@
     width: 100%;
     position: relative;
     margin-bottom: 0.5rem;
+    border-radius: var(--border-rad-2);
     img {
       min-width: 100%;
+      border-radius: var(--border-rad-2);
     }
 
     h1 {
@@ -34,6 +36,7 @@
       span {
         background-color: white;
         padding: 0.4rem 1rem;
+        border-radius: var(--border-rad-2);
       }
     }
   }
@@ -45,20 +48,25 @@
   .contacts__container {
     display: flex;
     flex-direction: column;
-
+    gap: 5px;
     margin-top: 0.8rem;
     .contact__tag {
-      background-color: var(--grey-300);
-      color: white;
       padding: 0.3rem;
       padding-left: 1rem;
       display: flex;
+      background-color: var(--shadow-color);
+      border-radius: 5px;
       align-items: center;
       gap: 20px;
-    }
-
-    .contact__tag.blue {
-      background-color: var(--secondary-color);
+      color: var(--grey-500);
+      text-align: center;
+      i {
+        font-size: 1rem;
+        color: var(--secondary-color);
+        background-color: var(--shadow-color);
+        padding: 10px;
+        border-radius: 100%;
+      }
     }
   }
 
@@ -66,11 +74,13 @@
     display: flex;
     gap: 10px;
     margin-top: 1rem;
-
+    .btn {
+      border-radius: 5px;
+    }
     @media screen and (max-width: 600px) {
-      flex-direction:column;
+      flex-direction: column;
       gap: 5px;
-      .btn.close{
+      .btn.close {
         max-width: 100%;
       }
     }

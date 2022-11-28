@@ -6,9 +6,9 @@ const AgentModal = ({ toggleAgentModalHandler, agentData }) => {
   return (
     <div className="modal__background">
       <div className="agent__modal-content">
-        <p className="modal__logo">
+        {/* <p className="modal__logo">
           Melbourne<span>Homes</span>
-        </p>
+        </p> */}
         <div className="image__container">
           <img src={agentData.image} alt="" />
           <h1>
