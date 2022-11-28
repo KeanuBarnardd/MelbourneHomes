@@ -55,7 +55,7 @@ const About = () => {
                 <img src={images.about_gallery4} alt="" />
                 <div className="gallery__side-container-content">
                   <h3>Best deals you can get your hands on</h3>
-                  <p>
+                  <p className="p-text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam suscipit
                     laudantium, nisi dignissimos quasi ab!
                   </p>
@@ -65,8 +65,8 @@ const About = () => {
               <div className="gallery__side-container">
                 <img src={images.about_gallery2} alt="" />
                 <div className="gallery__side-container-content">
-                  <h3>Best deals you can get your hands on</h3>
-                  <p>
+                  <h3>We provide the best services</h3>
+                  <p className="p-text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam suscipit
                     laudantium, nisi dignissimos quasi ab!
                   </p>
@@ -74,10 +74,10 @@ const About = () => {
               </div>
               <hr />
               <div className="gallery__side-container">
-                <img  src={images.about_gallery5} alt="" />
+                <img src={images.about_gallery5} alt="" />
                 <div className="gallery__side-container-content">
-                  <h3>Best deals you can get your hands on</h3>
-                  <p>
+                  <h3>Serving for 20+ years in Melbourne</h3>
+                  <p className="p-text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam suscipit
                     laudantium, nisi dignissimos quasi ab!
                   </p>
