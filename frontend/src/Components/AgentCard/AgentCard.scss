@@ -1,15 +1,21 @@
 .agent__card-container {
-  border-radius: var(--border-rad-1);
-
   box-shadow: var(--box-shadow-3);
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 10px;
+  background-color: white;
+  border-radius: var(--border-rad-2);
+  transition: all ease-in-out var(--timer-short);
+  &:hover {
+    box-shadow: var(--box-shadow-1);
+  }
   img {
     width: 100%;
     background-position: center;
     background-size: cover;
+    border-radius: var(--border-rad-2);
   }
   .agent__img-container {
     position: relative;
@@ -18,17 +24,22 @@
       width: 100%;
       text-align: center;
       color: var(--grey-500);
-      padding: 0.3rem;
       bottom: -2px;
       span {
         border-radius: 2px;
         background-color: white;
         padding: 0.3rem 0.7rem;
+        border-top-left-radius: var(--border-rad-2);
+        border-top-right-radius: var(--border-rad-2);
       }
     }
   }
+  hr {
+    margin: 5px;
+    margin-bottom: 10px;
+    border-color: var(--grey-100);
+  }
   .agent__card-details {
-    padding: 0.8rem;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -42,26 +53,25 @@
     }
   }
 
-  .agent__card-contact {
-    .agent__contact {
+  .contacts__container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    p {
+      background-color: var(--shadow-color);
       display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-
-      height: 100%;
-      p {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 5px;
-        background-color: var(--secondary-color);
-        color: white;
-        padding: 0.5rem;
-        font-size: 0.9rem;
-      }
-
-      .email-box {
-        background-color: var(--grey-300);
+      align-items: center;
+      gap: 5px;
+      font-size: 13px;
+      overflow: hidden;
+      border-radius: var(--border-rad-2);
+      color: var(--grey-700);
+      i {
+        padding: 10px;
+        font-size: 1rem;
+        color: var(--secondary-color);
+        background-color: var(--shadow-color);
       }
     }
   }

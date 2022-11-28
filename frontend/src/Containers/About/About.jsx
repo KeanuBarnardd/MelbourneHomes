@@ -91,15 +91,21 @@ const About = () => {
       <div className="page__content  app__flex bg-grey">
         <div className="app__container-width">
           <div className="team-intro">
-            <h1 className="content__title-text">
-              Our <span>team</span>
-            </h1>
-            <p className="p-text">
-              Here at Melbourne Homes we have a small but specialised team of 4 that keep the gears
-              moving. With specialities in marketting, property pricing and home selling. We provide
-              the best service across the board when it comes to selling,renting or buying local
-              homes in Melbourne.
-            </p>
+            <div className="row">
+              <div className="row__item">
+                <h3 className="page__tag">About us</h3>
+                <h1 className="head-text">What makes us the best team in Melbourne.</h1>
+                <p className="p-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates eos eum maxime aliquid consequuntur. Sequi laudantium officiis est magni voluptatem?
+                </p>
+              </div>
+              <div className="row__item">
+                <Link className="page__content-link" to="/listings">
+                  View homes <i className="fa-solid fa-chevron-right"></i>{" "}
+                </Link>
+              </div>
+            </div>
+
             <div className="about__team-grid">
               <AgentCard
                 image={images.agent1}

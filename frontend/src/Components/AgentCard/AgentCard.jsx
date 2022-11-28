@@ -8,14 +8,7 @@ const AgentCard = ({ image, name, position, phone, email, description }) => {
   return (
     <div className="agent__card-container">
       <div className="agent__img-container">
-        {/* <button className="agent__button">
-          <EmailIcon className="agent__icon" />
-          {email}
-        </button>
-        <button className="agent__button">
-          <LocalPhoneIcon className="agent__icon" />
-          {phone}
-        </button> */}
+     
         <img src={image} alt="" />
         <p className="agent__position">
           <span>{position}</span>
@@ -27,8 +20,9 @@ const AgentCard = ({ image, name, position, phone, email, description }) => {
 
         <p>{description}</p>
       </div>
+      <hr />
       <div className="agent__card-contact">
-        <div className="agent__contact">
+        <div className="contacts__container">
           <p className="email-box">
             <i className="fa-solid fa-envelope"></i>
             {email}
