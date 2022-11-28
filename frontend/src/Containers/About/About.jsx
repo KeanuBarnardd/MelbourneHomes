@@ -26,50 +26,69 @@ const About = () => {
           </div>
         </header>
       </div>
-      <div className="page__content app__flex app__primarybg bg-grey">
-        <div className="app__container-width about__stats-container">
-          <h1 className="content__title-text">
-            What do we <span>offer?</span>
-          </h1>
-          <div className="stats__grid">
-            <InfoCard
-              title={"Competetive rates"}
-              text={
-                <p className="p-text">
-                  We have the most competetive rates on the market, rated the{" "}
-                  <span>most affordable</span> agents in Melbourne <span>2 years running</span>. Get
-                  in contact with us to hear more.
-                </p>
-              }
-              link={"Find out about our rates"}
-            />
-            <InfoCard
-              title={"Marketting and Advertising"}
-              text={
-                <p className="p-text">
-                  We have the best team that specialises advertising properties. Using many facets
-                  such as <span>signage</span>, <span>flyers</span>, <span>online advertising</span>
-                  , magazine and <span>video/drone</span> footage. You can gurantee your house is
-                  going to be <span>sold</span> .
-                </p>
-              }
-              link={"More on advertising"}
-            />
-            <InfoCard
-              title={"Pricing properties"}
-              text={
-                <p className="p-text">
-                  Pricing properties is one of the most <span>important</span> parts of selling a
-                  house and we make sure that we have experts calculate best price to get you to
-                  sell your home.
-                </p>
-              }
-              link={"How we calculate properties"}
-            />
+
+      <div className="page__content app__flex ">
+        <div className="app__container-width">
+          <div className="row">
+            <div className="row__item">
+              <h3 className="page__tag">About us</h3>
+              <h1 className="head-text">What makes us the best team in Melbourne.</h1>
+            </div>
+            <div className="row__item">
+              <Link className="page__content-link" to="/listings">
+                View homes <i className="fa-solid fa-chevron-right"></i>{" "}
+              </Link>
+            </div>
+          </div>
+          <div className="about__gallery-container">
+            <div className="gallery__main">
+              <img src={images.about_gallery1} alt="" />
+              <h2>You'll save time and money with a team of experts.</h2>
+              <p className="p-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, tempora natus et
+                nisi blanditiis provident odit temporibus neque illo rerum veritatis nesciunt quas
+                voluptatibus harum facilis ipsa sed ipsam non!
+              </p>
+            </div>
+            <div className="gallery__side">
+              <div className="gallery__side-container">
+                <img src={images.about_gallery4} alt="" />
+                <div className="gallery__side-container-content">
+                  <h3>Best deals you can get your hands on</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam suscipit
+                    laudantium, nisi dignissimos quasi ab!
+                  </p>
+                </div>
+              </div>
+              <hr />
+              <div className="gallery__side-container">
+                <img src={images.about_gallery2} alt="" />
+                <div className="gallery__side-container-content">
+                  <h3>Best deals you can get your hands on</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam suscipit
+                    laudantium, nisi dignissimos quasi ab!
+                  </p>
+                </div>
+              </div>
+              <hr />
+              <div className="gallery__side-container">
+                <img  src={images.about_gallery5} alt="" />
+                <div className="gallery__side-container-content">
+                  <h3>Best deals you can get your hands on</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam suscipit
+                    laudantium, nisi dignissimos quasi ab!
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div className="page__content  app__flex">
+
+      <div className="page__content  app__flex bg-grey">
         <div className="app__container-width">
           <div className="team-intro">
             <h1 className="content__title-text">
@@ -122,28 +141,6 @@ const About = () => {
                   "Vanessa is our marketing and advertising specialist with over 14+ years of experience with melbourne real estate."
                 }
               />
-            </div>
-            <div className="page__content">
-              <div className="dreamhouse__container">
-                <img src={images.dreamHome2} alt="" />
-                <div className="dreamhouse__container-content">
-                  <h2>
-                    Melbourne<span>Homes</span>
-                  </h2>
-                  <h1>How we can help you ?</h1>
-                  <p>
-                    We have the resources to assist you on finding your home, getting the knowledge you need to make the right decision and helping you find your family a new home. Coming into our office and working with us, is the best way we can help. Otherwise we have these two options below.
-                  </p>
-                  <div className="dreamhouse__btn-container">
-                    <Link to="/services" className="link">
-                      <button>Mortgage Calculator</button>
-                    </Link>
-                    <Link to="/listings" className="link">
-                      <button className="dreamhouse-blue">Find a home</button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

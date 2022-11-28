@@ -157,11 +157,20 @@ import serviceHeader from "../Assets/Images/Header/serviceHeader.jpg";
 import banner from "../Assets/Images/Header/banner1.jpg";
 import spareHeader from "../Assets/Images/Header/spareHeader.jpg";
 
+// About Imaages
+
+import about_gallery1 from "../Assets/Images/About/about_gallery1.jpg";
+import about_gallery2 from "../Assets/Images/About/about_gallery2.jpg";
+import about_gallery3 from "../Assets/Images/About/about_gallery3.jpg";
+import about_gallery4 from "../Assets/Images/About/about_gallery4.jpg";
+import about_gallery5 from "../Assets/Images/About/about_gallery5.jpg";
+
 // Explore card Images
 
 // Dream home Section
 import dreamHomeImage from "../Assets/Images/Misc/dreamHome.jpg";
 import dreamHome2 from "../Assets/Images/Misc/dreamHometwo.jpg";
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   //Header Images
   header1,
@@ -325,4 +334,12 @@ export default {
   agent2,
   agent3,
   agent4,
+
+  // About Images
+
+  about_gallery1,
+  about_gallery2,
+  about_gallery3,
+  about_gallery4,
+  about_gallery5,
 };
