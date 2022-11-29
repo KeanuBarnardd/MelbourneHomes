@@ -3,6 +3,9 @@ import "./About.scss";
 import { images } from "../../Constants/index";
 import { InfoCard, AgentCard } from "../../Components";
 import { Link } from "react-router-dom";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
+import LibraryBooksOutlinedIcon from "@mui/icons-material/LibraryBooksOutlined";
 const About = () => {
   return (
     <>
@@ -96,12 +99,13 @@ const About = () => {
                 <h3 className="page__tag">About us</h3>
                 <h1 className="head-text">What makes us the best team in Melbourne.</h1>
                 <p className="p-text">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates eos eum maxime aliquid consequuntur. Sequi laudantium officiis est magni voluptatem?
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates eos eum
+                  maxime aliquid consequuntur. Sequi laudantium officiis est magni voluptatem?
                 </p>
               </div>
               <div className="row__item">
-                <Link className="page__content-link" to="/listings">
-                  View homes <i className="fa-solid fa-chevron-right"></i>{" "}
+                <Link className="page__content-link" to="/contact">
+                  Contact Us <i className="fa-solid fa-chevron-right"></i>{" "}
                 </Link>
               </div>
             </div>
@@ -147,6 +151,49 @@ const About = () => {
                   "Vanessa is our marketing and advertising specialist with over 14+ years of experience with melbourne real estate."
                 }
               />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="page__content app__flex">
+        <div className="app__container-width">
+          <div className="row">
+            <div className="row__item">
+              <h3 className="page__tag">Our Stats</h3>
+              <h1 className="head-text">Check out our real estate stats</h1>
+             
+            </div>
+            <div className="row__item">
+            <p className="p-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates eos eum maxime
+                aliquid consequuntur. Sequi laudantium officiis est magni voluptatem?
+              </p>
+            </div>
+          </div>
+          <div className="grid">
+            <div className="list__grid-item">
+              <AccountBalanceWalletOutlinedIcon className="grid__item-icon" />
+              <h2>Smart feature rich</h2>
+              <p className="p-text">
+                There are 100's of property ads. But you can explore everything you need here and
+                use smart features like our mortgage calculator.{" "}
+              </p>
+            </div>
+            <div className="list__grid-item">
+              <LibraryBooksOutlinedIcon className="grid__item-icon" />
+              <h2>Find a place of business</h2>
+              <p className="p-text">
+                Renting a place of business and buying and sellijng houses becomes easier. Meet your
+                business and investment needs faster.
+              </p>
+            </div>
+            <div className="list__grid-item">
+              <HomeOutlinedIcon className="grid__item-icon" />
+              <h2>Find your dream house</h2>
+              <p className="p-text">
+                Many ads for apartments and houses for sasle in various locations around Melbourne.
+                Check out what we have in store for you in our listings.{" "}
+              </p>
             </div>
           </div>
         </div>
