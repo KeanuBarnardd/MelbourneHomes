@@ -17,41 +17,25 @@
 }
 
 .header-small {
-  height: 45vh;
+  height: 30vh;
   background-position: center;
   background-size: cover;
 
   width: 100%;
   display: flex;
-  h1 {
-    color: var(--accent-color);
-    font-size: 2.6rem;
-    width: 100%;
-    max-width: 900px;
-    line-height: 45px;
-    margin-bottom: 0.2rem;
-  }
-  p {
-    color: white;
-    font-size: 1.2rem;
-  }
 
-  :nth-child(3) {
-    margin-top: 1rem;
-    background-color: var(--secondary-color);
-    padding: 0.8rem 3rem;
-    font-size: 1.4rem;
-    text-decoration: none;
-    color: white;
-    border: none;
-    border-radius: var(--border-rad-2);
-    transition: all ease-in-out 1s;
-    &:hover {
-      background-color: var(--secondary-dark);
-    }
-    :nth-child(1) {
+  .header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    h1 {
       color: white;
-      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 3rem;
+      width: 100%;
+      text-align: center;
     }
   }
 }

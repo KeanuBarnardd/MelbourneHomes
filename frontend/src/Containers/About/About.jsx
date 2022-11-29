@@ -16,16 +16,8 @@ const About = () => {
         >
           <div className="app__container-width header-content">
             <h1>
-              What makes us the <span>number 1</span> in selling homes for Melbourne.{" "}
+             About Us{" "}
             </h1>
-            <p className="p-text">
-              Here a <span>Melbourne Homes</span> We pride ourselves on giving you the best services
-              we can. With a team of skilled real estate agents we have more than 10+ years of
-              experience in the Melbourne house market.
-            </p>
-            <button>
-              <Link to="/contact">Contact</Link>
-            </button>
           </div>
         </header>
       </div>
@@ -161,10 +153,9 @@ const About = () => {
             <div className="row__item">
               <h3 className="page__tag">Our Stats</h3>
               <h1 className="head-text">Check out our real estate stats</h1>
-             
             </div>
             <div className="row__item">
-            <p className="p-text">
+              <p className="p-text">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates eos eum maxime
                 aliquid consequuntur. Sequi laudantium officiis est magni voluptatem?
               </p>
