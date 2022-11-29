@@ -5,9 +5,9 @@ $card-tag-image: rgba(8, 8, 8, 0.534);
   border-radius: $house-card-radius;
   box-shadow: var(--box-shadow-3);
   padding: 0.6rem;
-  transition:  all ease-in-out var(--timer-short);
+  transition: all ease-in-out var(--timer-short);
 
-  &:hover{
+  &:hover {
     box-shadow: var(--box-shadow-1);
   }
 
@@ -76,7 +76,6 @@ $card-tag-image: rgba(8, 8, 8, 0.534);
       .interactions__container {
         display: flex;
         gap: 5px;
-        
       }
     }
 
@@ -125,13 +124,12 @@ $card-tag-image: rgba(8, 8, 8, 0.534);
         background-color: var(--grey-100);
         border-radius: $house-card-radius;
         border: 1px solid var(--grey-200);
-        i{
+        i {
           font-size: 1rem;
         }
         &:hover {
-          background-color: var(--grey-600);
-          border-color: var(--grey-600);
-          color: white;
+          background-color: var(--grey-200);
+          border-color: var(--grey-300);
         }
       }
 
@@ -142,6 +140,7 @@ $card-tag-image: rgba(8, 8, 8, 0.534);
         border-radius: $house-card-radius;
         background-color: var(--grey-200);
         transition: all ease-in-out 0.2s;
+        border: 1px solid var(--grey-200);
         .interaction__btn-logo {
           font-size: 1.3rem;
           color: var(--grey-400);
@@ -149,11 +148,8 @@ $card-tag-image: rgba(8, 8, 8, 0.534);
         }
 
         &:hover {
-          background-color: var(--grey-400);
-
-          .interaction__btn-logo {
-            color: white;
-          }
+          background-color: var(--grey-200);
+          border-color: var(--grey-300);
         }
       }
     }

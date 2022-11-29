@@ -11,10 +11,7 @@ const Contact = () => {
         style={{ backgroundImage: `url(${images.luxuryContact})` }}
       >
         <div className="app__container-width header-content">
-          <h1>Want to work with the best crew in melbourne. </h1>
-          <p>
-            If your sure you want to work with the best team in Melbourne be sure to email us below. Our response times will be from 7am-5pm Moday-Friday. We look forward to hearing from you and making you dream house come true.
-          </p>
+          <h1>Contact Us </h1>
         </div>
       </header>
       <div className="page__content app__flex">
