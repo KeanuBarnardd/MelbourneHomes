@@ -91,26 +91,23 @@ const Services = () => {
         style={{ backgroundImage: `url(${images.serviceHeader})` }}
       >
         <div className="app__container-width header-content">
-          <h1>Our Services</h1>
-          <p className="p-text">
-            We have an array of services we provide with <span>Melbourne homes</span> that we hope
-            will boost your chances of finding a new home or getting the information you need to
-            make a decision. We have a mortgage calculator and articles to help in your home buying
-            ventures.
-          </p>
+          <h1> Services</h1>
         </div>
       </header>
       <div className="page__content app__flex ">
         <div className="app__container-width">
-          <h1 className="content__title-text">
-            Mortgage <span>Calculator</span>
-          </h1>
-          <p className="p-text app__container-width">
-            We’ve made it easy for you to better understand your finances with our handy
-            <span> home loan calculator.</span> By working out your estimated loan amount, monthly
-            repayments and upfront costs, you can enjoy the confidence of knowing what you can
-            afford.
-          </p>
+          <div className="row">
+            <div className="row__item">
+              <h3 className="page__tag">Find out your mortgage</h3>
+              <h1 className="head-text">Mortgage Calculator</h1>
+            </div>
+            <div className="row__item">
+              <p className="p-text">
+                Find the ideal property that is most suitable for you. Starting from houses for sale
+                that are minimalist, apartments for sale that are exclusive.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="mortgage__container app__container-width">

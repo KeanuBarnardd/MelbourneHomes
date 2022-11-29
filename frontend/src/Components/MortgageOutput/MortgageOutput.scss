@@ -3,6 +3,7 @@
   flex-direction: column;
   width: 100%;
   border: 1px solid var(--grey-100);
+  border-radius: var(--border-rad-2);
   .output__sub {
     color: var(--grey-500);
     font-size: 0.9rem;
@@ -25,6 +26,8 @@
     background-color: var(--grey-100);
     padding: 0.5rem 1rem 1rem 1rem;
     padding: 1rem;
+    border-top-left-radius: var(--border-rad-2);
+    border-top-right-radius: var(--border-rad-2);
     .output__title {
       h1 {
         color: var(--secondary-color);
@@ -39,9 +42,10 @@
       font-size: 1rem;
       padding: 0.4rem 0.7rem;
       border: none;
-      border-radius: var(--border-rad-1);
+      border-radius: 5px;
       color: white;
-      background-color: var(--secondary-color);
+      background-color: var(--grey-600);
+      
     }
   }
   .output__values {

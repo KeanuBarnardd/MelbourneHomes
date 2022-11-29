@@ -1,8 +1,9 @@
 .mortgage__container {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 50px;
   margin-top: 2.5rem;
+
   @media screen and (max-width: 600px) {
     flex-direction: column;
     margin-top: 2rem;
@@ -11,7 +12,7 @@
   .mortgage__input-form {
     display: flex;
     gap: 20px;
-    
+
     .form__input-container {
       width: 100%;
       p {
@@ -24,13 +25,14 @@
     }
 
     .mortgage__button {
-      background-color: var(--secondary-color);
+      background-color: var(--grey-600);
       padding: 0.8rem 3rem;
       font-size: 1rem;
       text-decoration: none;
       color: white;
       border: none;
-      border-radius: var(--border-rad-1);
+      border-radius: var(--border-rad-2);
+
       width: 100%;
       max-width: 200px;
 
@@ -39,7 +41,7 @@
       }
 
       &:hover {
-        background-color: rgb(29, 69, 177);
+        background-color: var(--grey-700);
       }
       :nth-child(1) {
         color: white;
@@ -47,9 +49,9 @@
       }
     }
 
-    .mortgage__button.reset{
+    .mortgage__button.reset {
       background-color: var(--grey-400);
-      &:Hover{
+      &:hover {
         background-color: var(--grey-500);
       }
     }
