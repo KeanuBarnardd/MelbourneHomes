@@ -10,9 +10,13 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 const ContactForm = () => {
   return (
     <form className="app__container-width" action="">
-      <h1 className="content-title">
-        Get in <span>contact</span> with us
-      </h1>
+      <div className="row">
+        <div className="row__item">
+          <h3 className="page__tag">About us</h3>
+          <h1 className="head-text">What makes us the best team in Melbourne.</h1>
+        </div>
+        <div className="row__item"></div>
+      </div>
       <div className="form__container">
         <div className="form__container-detail">
           <div className="form__detail-tag">
@@ -24,14 +28,14 @@ const ContactForm = () => {
             </div>
           </div>
           <div className="form__detail-tag">
-          <i className="fa-solid fa-phone form__icon"></i>
+            <i className="fa-solid fa-phone form__icon"></i>
             <div className="form__detail-info">
               <p className="form__detail-title">Phone</p>
               <p className="form__info-p">048766134</p>
             </div>
           </div>
           <div className="form__detail-tag">
-          <i className="fa-solid fa-envelope form__icon"></i>
+            <i className="fa-solid fa-envelope form__icon"></i>
             <div className="form__detail-info">
               <p className="form__detail-title">Email</p>
               <p className="form__info-p">melbournehomes@gmail.com.au</p>

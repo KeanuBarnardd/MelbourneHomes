@@ -2,13 +2,11 @@ form {
   display: flex;
   flex-direction: column;
 
-  h1 {
-    text-align: center;
-  }
+  
   .form__container {
     display: flex;
     gap: 0px;
-    margin-top: 1rem;
+    margin-top: 2rem;
 
     @media screen and (max-width: 600px) {
       flex-direction: column-reverse;
