@@ -41,7 +41,7 @@ $input-radius: 10px;
           }
           input {
             border-top-left-radius: $input-radius;
-            //border-bottom-left-radius: $input-radius;
+            border-bottom-left-radius: $input-radius;
             padding-left: 0.5rem;
           }
           button {
@@ -49,6 +49,7 @@ $input-radius: 10px;
             font-weight: bold;
             color: white;
             border-bottom-right-radius: $input-radius;
+            border-top-right-radius: $input-radius;
           }
         }
       }
