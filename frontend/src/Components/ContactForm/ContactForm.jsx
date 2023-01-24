@@ -1,7 +1,5 @@
 import React from "react";
 import "./ContactForm.scss";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -15,10 +13,17 @@ const ContactForm = () => {
           <h3 className="page__tag">About us</h3>
           <h1 className="head-text">What makes us the best team in Melbourne.</h1>
         </div>
-        <div className="row__item"></div>
+        <div className="row__item">
+          <p className="p-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quisquam veniam assumenda
+            accusantium quibusdam aut mollitia asperiores dignissimos molestiae.{" "}
+          </p>
+        </div>
       </div>
       <div className="form__container">
         <div className="form__container-detail">
+          <h1>MelbourneHomes</h1>
+
           <div className="form__detail-tag">
             <i className="fa-solid fa-location form__icon"></i>
             <div className="form__detail-info">

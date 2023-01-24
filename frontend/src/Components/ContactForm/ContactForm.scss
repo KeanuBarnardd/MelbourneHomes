@@ -2,12 +2,12 @@ form {
   display: flex;
   flex-direction: column;
 
-  
   .form__container {
     display: flex;
-    gap: 0px;
+    gap: 30px;
     margin-top: 2rem;
-
+    border-radius: var(--border-rad-2);
+   
     @media screen and (max-width: 600px) {
       flex-direction: column-reverse;
       gap: 20px;
@@ -19,6 +19,16 @@ form {
     gap: 20px;
     width: 100%;
     max-width: 300px;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    border-top-left-radius: var(--border-rad-2);
+    border-bottom-left-radius: var(--border-rad-2);
+
+    h1{
+      font-size: 1.5rem;
+      color: white;
+    }
+
     @media screen and (max-width: 600px) {
       justify-content: center;
       max-width: 100%;
@@ -28,7 +38,8 @@ form {
     .form__detail-tag {
       display: flex;
       gap: 10px;
-
+      color: white;
+      
       @media screen and (max-width: 600px) {
         flex-direction: column;
         align-items: center;
@@ -41,7 +52,7 @@ form {
       }
       .form__icon {
         font-size: 1.4rem;
-        color: var(--secondary-color);
+        color: white;
       }
     }
 
@@ -54,7 +65,7 @@ form {
         text-transform: uppercase;
         font-weight: bold;
         font-size: 0.9rem;
-        color: var(--grey-500);
+        color: white;
       }
     }
 
@@ -64,10 +75,9 @@ form {
       margin-top: 0.7rem;
       button {
         display: flex;
-        border-radius: var(--border-rad-1);
+        border-radius: var(--border-rad-2);
         padding: 0.3rem;
         border: none;
-
         color: var(--secondary-color);
         .socials-icon {
           font-size: 1.7rem;
@@ -81,6 +91,7 @@ form {
     gap: 20px;
     width: 100%;
     border: none;
+    padding: 1rem;
     input,
     textarea {
       width: 100%;
@@ -88,16 +99,19 @@ form {
       font-size: 1rem;
       padding: 0.4rem 0.7rem;
       border: none;
-      border-radius: var(--border-rad-1);
+      //border-radius: var(--border-rad-2);
       color: var(--grey-800);
       background-color: var(--grey-100);
       resize: none;
+      border-radius: 5px;
+      border-bottom: 2px solid var(--secondary-color);
     }
     .form__top-row {
       display: flex;
       justify-content: space-between;
       flex-direction: row;
-      gap: 5px;
+      gap: 15px;
+
       width: 100%;
       @media screen and (max-width: 600px) {
         gap: 10px;
@@ -111,7 +125,7 @@ form {
       text-decoration: none;
       color: white;
       border: none;
-      border-radius: var(--border-rad-1);
+      border-radius: var(--border-rad-2);
       width: 100%;
       max-width: 200px;
       text-transform: uppercase;
