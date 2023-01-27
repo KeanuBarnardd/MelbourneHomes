@@ -15,8 +15,7 @@ const ContactForm = () => {
         </div>
         <div className="row__item">
           <p className="p-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quisquam veniam assumenda
-            accusantium quibusdam aut mollitia asperiores dignissimos molestiae.{" "}
+          Contact us today to get started on finding your dream home. Fill out our contact form or call/email us for fast and efficient service.{" "}
           </p>
         </div>
       </div>

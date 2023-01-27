@@ -38,21 +38,18 @@ const About = () => {
           <div className="about__gallery-container">
             <div className="gallery__main">
               <img src={images.about_gallery1} alt="" />
-              <h2>You'll save time and money with a team of experts.</h2>
+              <h2>Advanced search functionality</h2>
               <p className="p-text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, tempora natus et
-                nisi blanditiis provident odit temporibus neque illo rerum veritatis nesciunt quas
-                voluptatibus harum facilis ipsa sed ipsam non!
+              Our website's advanced search functionality allows users to search properties based on location, price, and other criteria.
               </p>
             </div>
             <div className="gallery__side">
               <div className="gallery__side-container">
                 <img src={images.about_gallery4} alt="" />
                 <div className="gallery__side-container-content">
-                  <h3>Best deals you can get your hands on</h3>
+                  <h3>Professional support</h3>
                   <p className="p-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam suscipit
-                    laudantium, nisi dignissimos quasi ab!
+                  Our team of experienced real estate agents is available to provide professional support and guidance throughout the buying or renting process.
                   </p>
                 </div>
               </div>
@@ -60,10 +57,9 @@ const About = () => {
               <div className="gallery__side-container">
                 <img src={images.about_gallery2} alt="" />
                 <div className="gallery__side-container-content">
-                  <h3>We provide the best services</h3>
+                  <h3>Detailed property information</h3>
                   <p className="p-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam suscipit
-                    laudantium, nisi dignissimos quasi ab!
+                  Each listing includes detailed information about the property, including photos, floor plans, and key features.
                   </p>
                 </div>
               </div>
@@ -71,10 +67,9 @@ const About = () => {
               <div className="gallery__side-container">
                 <img src={images.about_gallery5} alt="" />
                 <div className="gallery__side-container-content">
-                  <h3>Serving for 20+ years in Melbourne</h3>
+                  <h3>Extensive property listings</h3>
                   <p className="p-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam suscipit
-                    laudantium, nisi dignissimos quasi ab!
+                  Our website offers a wide range of properties for sale and rent in Melbourne, including apartments, houses, and commercial properties.
                   </p>
                 </div>
               </div>
@@ -91,8 +86,7 @@ const About = () => {
                 <h3 className="page__tag">About us</h3>
                 <h1 className="head-text">What makes us the best team in Melbourne.</h1>
                 <p className="p-text">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates eos eum
-                  maxime aliquid consequuntur. Sequi laudantium officiis est magni voluptatem?
+                Our team at MelbourneHomes is composed of experienced and dedicated real estate professionals who are passionate about helping our clients find their dream property.
                 </p>
               </div>
               <div className="row__item">
@@ -156,8 +150,7 @@ const About = () => {
             </div>
             <div className="row__item">
               <p className="p-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates eos eum maxime
-                aliquid consequuntur. Sequi laudantium officiis est magni voluptatem?
+              We provide historical data on the Melbourne property market, allowing you to see how the market has evolved over time and make informed decisions about buying or renting a property.
               </p>
             </div>
           </div>
