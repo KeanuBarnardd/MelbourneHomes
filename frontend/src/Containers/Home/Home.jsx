@@ -110,8 +110,9 @@ const Home = ({
                 <h3 className="page__tag">Featured Homes</h3>
                 <h1 className="head-text">Properties throughout Melbourne</h1>
                 <p className="p-text">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum quis blanditiis
-                  sunt facere perferendis sit nisi hic esse dolor harum.
+                  Our real estate website features a variety of available houses for sale in
+                  Melbourne, Australia. From spacious family homes to trendy inner-city apartments,
+                  we have something for every buyer.
                 </p>
               </div>
 
@@ -142,7 +143,7 @@ const Home = ({
         subTitle={"Find Home With Us"}
         title={"Find the right house over 500 properties."}
         text={
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt nesciunt minus consectetur maxime facilis cum sed tempore fugit maiores expedita?"
+          "Our listings include properties in popular neighborhoods such as Hawthorn, Richmond, and South Yarra. Whether you are looking for a fixer-upper or a move-in ready home, our website has up-to-date listings and detailed information to help you find the perfect property. Browse our selection today and take the first step towards finding your dream home in Melbourne!"
         }
         button={"Find Now"}
         link={"/listings"}
@@ -157,8 +158,8 @@ const Home = ({
                 <h3 className="page__tag">Information</h3>
                 <h1 className="head-text">We are the right team for any job</h1>
                 <p className="p-text">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum quis blanditiis
-                  sunt facere perferendis sit nisi hic esse dolor harum.
+                  Our team is the right choice for any job in Melbourne because of our dedication to
+                  providing high-quality work and exceptional customer service.
                 </p>
               </div>
 
