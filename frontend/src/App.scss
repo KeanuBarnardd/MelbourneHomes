@@ -253,3 +253,10 @@ select {
   display: flex;
   flex-direction: column;
 }
+
+.content{
+  @media screen and (max-width: 900px) {
+    padding-top: 64px;
+  }
+  
+}

@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import { Home, Contact, Listing, Services, Agents, Featured, About } from "./Containers/index";
-import { Navbar, Footer } from "./Components/index";
+import { Navbar, Footer, MobileNavbar } from "./Components/index";
 import "./App.scss";
 
 const App = () => {
@@ -80,7 +80,8 @@ const App = () => {
   return (
     <BrowserRouter>
       <Navbar resetFeaturesHandler={resetFeaturesHandler} />
-      <div>
+      <MobileNavbar resetFeaturesHandler={resetFeaturesHandler} />
+      <div className="content">
         <Routes>
           <Route
             path="/"

@@ -15,3 +15,4 @@ export { default as AgentModal } from "./AgentModal/AgentModal";
 export { default as FeatureCheckBox } from "./FeatureCheckBox/FeatureCheckBox";
 export { default as FeatureCard } from "./FeatureCard/FeatureCard";
 export { default as Banner } from "./Banner/Banner";
+export {default as MobileNavbar} from "./MobileNavbar/MobileNavbar";

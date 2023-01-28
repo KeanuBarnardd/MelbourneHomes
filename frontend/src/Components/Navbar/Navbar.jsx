@@ -1,11 +1,13 @@
 import React from "react";
 import "./Navbar.scss";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import PersonIcon from "@mui/icons-material/Person";
+
 import { Link, NavLink } from "react-router-dom";
+import { useState } from "react";
+
 const Navbar = ({ resetFeaturesHandler }) => {
+
   return (
-    <nav className="app__flex">
+    <nav className="main__nav app__flex">
       <div className="navbar__content app__container-width">
         <Link onClick={() => resetFeaturesHandler()} className="link" to="/">
           <h1>

@@ -1,4 +1,4 @@
-nav {
+.main__nav {
   width: 100%;
   //box-shadow: var(--box-shadow-3);
 
@@ -15,7 +15,6 @@ nav {
         color: var(--secondary-color);
         span {
           color: var(--grey-500);
-          
         }
       }
     }
@@ -38,7 +37,7 @@ nav {
     }
 
     .navlink.active {
-     // color: var(--secondary-color);
+      // color: var(--secondary-color);
       //background-color: var(--shadow-color);
       border-radius: var(--border-rad-2);
       border: 1px solid var(--grey-200);
@@ -60,5 +59,8 @@ nav {
         background-color: var(--grey-600);
       }
     }
+  }
+  @media screen and (max-width: 900px) {
+    display: none !important;
   }
 }
