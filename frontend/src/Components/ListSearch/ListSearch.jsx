@@ -21,11 +21,10 @@ const ListSearch = ({
   getLivingHandler,
   features,
   setFeatures,
-  featuresList
+  featuresList,
 }) => {
   const [toggleFilters, setToggleFilters] = useState(false);
   const [toggleRooms, setToggleRooms] = useState(false);
-
 
   const displayFiltersNav = () => {
     setToggleRooms(false);
@@ -68,21 +67,22 @@ const ListSearch = ({
             <input onChange={getMaxValueHandler} type="text" placeholder="Enter your maximum" />
             <button>Max</button>
           </div>
-
-          <button
-            onClick={displayRoomNav}
-            className={`searchList-btn room ${toggleRooms ? "active" : ""}`}
-          >
-            Rooms
-            <KeyboardArrowDownIcon className="arrow-down" />
-          </button>
-          <button
-            onClick={displayFiltersNav}
-            className={`searchList-btn fill ${toggleFilters ? "active" : ""}`}
-          >
-            Filters
-            <KeyboardArrowDownIcon className="arrow-down" />
-          </button>
+          <div className="filter__container">
+            <button
+              onClick={displayRoomNav}
+              className={`searchList-btn room ${toggleRooms ? "active" : ""}`}
+            >
+              Rooms
+              <KeyboardArrowDownIcon className="arrow-down" />
+            </button>
+            <button
+              onClick={displayFiltersNav}
+              className={`searchList-btn fill ${toggleFilters ? "active" : ""}`}
+            >
+              Filters
+              <KeyboardArrowDownIcon className="arrow-down" />
+            </button>
+          </div>
         </div>
         <div className="navbar__bottom">
           {/* ROOMS CONTAINER */}
@@ -96,7 +96,7 @@ const ListSearch = ({
                 <option value="4">4</option>
                 <option value="5">5</option>
               </select>
-              <div className="select__type">
+              <div className="select__type max-w">
                 <BedIcon />
                 Bedrooms
               </div>
@@ -109,7 +109,7 @@ const ListSearch = ({
                 <option value="3">3</option>
                 <option value="4">4+</option>
               </select>
-              <div className="select__type">
+              <div className="select__type max-w">
                 <ShowerIcon />
                 Bath
               </div>
@@ -122,7 +122,7 @@ const ListSearch = ({
                 <option value="3">3</option>
                 <option value="4">4+</option>
               </select>
-              <div className="select__type">
+              <div className="select__type max-w">
                 <TimeToLeaveIcon />
                 Garage
               </div>
@@ -135,7 +135,7 @@ const ListSearch = ({
                 <option value="3">3</option>
                 <option value="4">4+</option>
               </select>
-              <div className="select__type">
+              <div className="select__type max-w">
                 <ChairIcon />
                 Living
               </div>

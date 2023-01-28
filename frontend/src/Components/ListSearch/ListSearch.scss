@@ -30,7 +30,7 @@
       }
       button {
         background-color: var(--grey-400);
-        
+
         border-top-right-radius: var(--border-rad-2);
         border-bottom-right-radius: var(--border-rad-2);
 
@@ -75,6 +75,14 @@
       justify-content: center;
       gap: 10px;
 
+      @media screen and (max-width: 900px) {
+        flex-direction: column;
+      }
+
+      .filter__container {
+        display: flex;
+        gap: 10px;
+      }
       .buy__select-container {
         display: flex;
         min-width: 200px;
@@ -140,9 +148,16 @@
       margin-top: 1rem;
       opacity: 1;
       display: flex;
+
       gap: 8px;
       select {
         width: 100%;
+      }
+      @media screen and (max-width: 900px) {
+        flex-wrap: wrap;
+        .select__type.max-w {
+          width: 200px;
+        }
       }
     }
 
@@ -154,6 +169,9 @@
       margin-top: 1rem;
       display: flex;
       gap: 8px;
+      @media screen and (max-width: 900px) {
+        flex-wrap: wrap;
+      }
     }
   }
 }
