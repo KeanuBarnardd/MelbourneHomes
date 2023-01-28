@@ -23,7 +23,7 @@ const Home = ({
   return (
     <>
       <div className="app__flex home">
-        <header className="header app__flex" style={{ backgroundImage: `url(${images.header1})` }}>
+        <header className="header app__flex" style={{ backgroundImage: `url(${images.spareHeader})` }}>
           <div className="header__content app__container-width">
             <h1>Discover a place you will love to live. </h1>
             <p className="p-text">
