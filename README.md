@@ -1,6 +1,6 @@
 ![Logo Image](./frontend/src/Assets/ReadmeImages/logo.PNG)
 
-(Work in Progress) https://vocal-mochi-fa4cd9.netlify.app/ 
+(Work in Progress) www.melbhomes.com 
 
 <br>
 MelbourneHomes is a mock real estate website showcasing the beautiful homes available to buy or rent in all surrounding suburbs of Melbourne. In order to design and develop this website independently, languages utilised alongside React-Router, are JavaScript, React, Html, and CSS/SCSS. A functional web app was also developed to work within the website being the mortgage calculator.
